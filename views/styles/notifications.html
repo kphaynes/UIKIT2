@@ -1,0 +1,49 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-4">
+            <h1 class="display-5">Notifications</h1>
+            <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-4">
+            <h4 id="basic" class="mb-1 mt-1">Basic Notifications</h4>
+            <p class="" ng-include src="'views/styles/notifications/basic.html'"></p>
+
+            <p class="h6 font-bold mt-1 mb-1">Dismissable Notifications</p>
+            <p class="" ng-include src="'views/styles/notifications/dismissable.html'"></p>
+
+            <p class="h6 font-bold mt-1 mb-1">Links in Notifications</p>
+            <p class="" ng-include src="'views/styles/notifications/links.html'"></p>
+
+            <h4 id="toast" class="mb-1 mt-3">Kendu UI Toast Notifications</h4>
+            <p class="" ng-include src="'views/styles/notifications/toast.html'"></p>
+
+            <h4 id="system" class="mb-1 mt-3">System Notifications</h4>
+            <p class="" ng-include src="'views/styles/notifications/system.html'"></p>
+
+            <h4 id="inline" class="mb-1 mt-3">Inline Notifications</h4>
+            <p class="" ng-include src="'views/styles/notifications/inline.html'"></p>
+
+            <h4 id="notices" class="mb-1 mt-3">Notices</h4>
+            <p class="" ng-include src="'views/styles/notifications/notice.html'"></p>
+
+            <h4 id="prompts" class="mb-1 mt-3">Prompts</h4>
+            <p class="" ng-include src="'views/styles/notifications/prompt.html'"></p>
+
+        </section>
+        <aside class="aside-md border-left hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll sticky-top w-100" role="navigation" jumpmenu>
+                <div class="text-muted text-uppercase hidden-nav padder mt-1 mb-1">On This Page:</div>
+                <ul class="nav nav-main flex-column" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#basic" class="nav-link active">Basic</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#toast" class="nav-link">Kendo UI Toast</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#system" class="nav-link">System</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#inline" class="nav-link">Inline</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#notices" class="nav-link">Notices</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#prompts" class="nav-link">Prompts</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

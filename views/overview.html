@@ -1,0 +1,121 @@
+<style type="text/css">
+#slideshow { 
+    margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+    width: 300px; 
+    height: 300px;
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    bottom: 0px; 
+}
+</style>
+
+<div class="text-center">
+    <div class="jumbotron jumbotron-fluid bg-light " style="background-image: url(../lib/images/docs/background.jpg); background-position: 50% 50%; background-size: cover; position: relative;">
+        <div class="container mx-auto">
+        	<div class="row text-center">
+        		<div class="col-lg-6 offset-lg-3">
+		        	<a href="javascript:void(0)" class="badge badge-pill badge-default pos-rlt text-white">0.2.1</a>
+		            <h1 class="display-1 pos-rlt">Spark UI</h1>
+		            <p class="lead pos-rlt font-normal">A design system and component library, built using kendo and bootstrap for building custom progress applications.</p>
+        		</div>
+        		
+        	</div>
+			<div id="slideshow">
+			    <div>
+			        <img src="lib/images/docs/phone1.png" class="img-fluid">
+			    </div>
+			    <div>
+			        <img src="lib/images/docs/ipad.png" class="img-fluid">
+			    </div>
+			    <div>
+			        <img src="lib/images/docs/phone2.png" class="img-fluid">
+			    </div>
+			    <div>
+			        <img src="lib/images/docs/desktop.png" class="img-fluid">
+				</div>
+			</div>
+        </div>
+    </div>
+    <div class="row p-4">
+        <div class="col-sm-12">
+            <div class="row m-y-3">
+	            <div class="col-sm-3"></div>
+	            <div class="col-sm-6">
+		            <img src="lib/images/docs/responsive.png" class="img-fluid">
+	        	</div>
+	            <div class="col-sm-3"></div>
+            </div>
+            <h2 id="benefits" class="display-5 my-3">Design Beautiful Applications Quicker</h2>
+            <p class="lead">The Spark Design System is a collection of modern design patterns for building custom progress applications with a unified look and feel. It combines and extends the power of Kendo UI and Twitter Bootstrap and includes CSS, HTML, icons, color palettes, and fonts. Our vision is to provide a clear way to communicate simple, personalized, multi-device user experiences to engineering teams.</p>
+			<div class="card-deck-wrapper my-3">
+			    <div class="card-deck">
+			        <div class="card py-2">
+			        	<span class="fa-stack fa-3x text-primary">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-ellipsis-h fa-stack-1x fa-inverse"></i>
+						</span>
+			            <div class="card-block">
+			                <h4 class="card-title">Build Consistently</h4>
+			                <p class="card-text">Leverage established visual and interaction design patterns for a consistent experience. Consistency in UI and UX makes users jobs easier, reducing complexity and technical debt.</p>
+			            </div>
+			        </div>
+			        <div class="card py-2 text-center">
+			        	<div class="fa-stack fa-3x text-info text-center">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-rocket fa-stack-1x fa-inverse"></i>
+						</div>
+			            <div class="card-block">
+			                <h4 class="card-title">Improve Production Speed</h4>
+			                <p class="card-text">With preset guidelines and a set of resources for all content, you can focus your energy on creating great workflows and logic, no UI.</p>
+			            </div>
+			        </div>
+			        <div class="card py-2">
+			        	<span class="fa-stack fa-3x text-success">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
+						</span>
+			            <div class="card-block">
+			                <h4 class="card-title">Flexibility</h4>
+			                <p class="card-text">In additiona to browser and mobile support the design system can be used with any technology stack you want. Additionally, we provide guidance around how to use it in conjunction Kendo UI.</p>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+            <!--<ul>
+                <li>Access to established visual and interaction design patterns so that you can build apps that have a consistent experience.</li>
+                <li>Balance high information density and readability with a modern appearance.</li>
+                <li>Reduce design and development time. The code samples and CSS class documentation allow for quick application markup.</li>
+                <li>Browser and mobile technology support</li>
+            </ul>
+            <div id="benefits" class="h4 mb-1 mt-1">Purpose and structure</div>
+            <p>Explaining reasons and way of thinking.</p>-->
+        </div>
+    </div>
+</div>
+<div class="row m-0 bg-light lt border-top text-muted ng-scope">
+	<div class="col-sm-12 text-center p-4">
+		<div class="mb-1">Based on Bootstrap — designed and built by the <a href="https://twitter.com/ProgressSW">@ProgressSW</a> design team</div>
+		<small class="text-muted ">Currently v0.2.1 </small>
+	</div>
+</div>
+<script type="text/javascript">
+
+
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+
+</script>

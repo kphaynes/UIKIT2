@@ -1,0 +1,109 @@
+<div class="alert alert-info alert-toast bg-white border-info mb-3" role="alert">
+    <i class="fa fa-info-circle fa-lg fa-fw text-info pull-left mt-1"></i> You new have 198 unread messages
+</div>
+
+<div class="alert alert-success alert-toast bg-white border-success mb-3" role="alert">
+    <i class="fa fa-check-circle fa-lg fa-fw text-success pull-left mt-1"></i> Your new record was successfully created.
+</div>
+
+<div class="alert alert-warning alert-toast bg-white border-warning mb-3" role="alert">
+    <i class="fa fa-warning fa-lg fa-fw text-warning pull-left mt-1"></i> <span class="pt-2">Oops, you've missed some required form inputs.</span>
+</div>
+
+<div class="alert alert-danger alert-toast bg-white border-danger mb-3" role="alert">
+    <i class="fa fa-ban fa-lg fa-fw text-danger pull-left mt-1"></i> <span class="pt-2">You've encountered some errors when trying to save edits.</span>
+</div>
+
+
+<span id="notification" style="display:none;"></span>
+
+<h5 class="m-t">Try it!</h5>
+<button id="showInfoNotification" class="btn btn-outline-info">Info</button>
+<button id="showSuccessNotification" class="btn btn-outline-success">Success</button>
+<button id="showWarningNotification" class="btn btn-outline-warning">Warning</button>
+<button id="showErrorNotification" class="btn btn-outline-danger">Error</button>
+
+<script id="infoTemplate" type="text/x-kendo-template">
+    <div class="alert alert-info alert-toast bg-white border-info" role="alert">
+        <i class="fa fa-info-circle fa-lg fa-fw text-info pull-left mt-1"></i>#= message #
+    </div>
+</script>
+
+<script id="successTemplate" type="text/x-kendo-template">
+    <div class="alert alert-success alert-toast bg-white border-success" role="alert">
+        <i class="fa fa-check-circle fa-lg fa-fw text-success pull-left mt-1"></i>#= message #
+    </div>
+</script>
+
+<script id="warningTemplate" type="text/x-kendo-template">
+    <div class="alert alert-warning alert-toast bg-white border-warning" role="alert">
+        <i class="fa fa-warning fa-lg fa-fw text-warning pull-left mt-1"></i> #= message #
+    </div>
+</script>
+
+<script id="errorTemplate" type="text/x-kendo-template">
+    <div class="alert alert-danger alert-toast bg-white border-danger" role="alert">
+        <i class="fa fa-ban fa-lg fa-fw text-danger pull-left mt-1"></i> #= message #
+    </div>
+</script>
+
+
+<script>
+    $(document).ready(function() {
+
+        var notification = $("#notification").kendoNotification({
+            position: {
+                pinned: true,
+                top: 30,
+                right: 30
+            },
+            autoHideAfter: 2000,
+            stacking: "down",
+            templates: [{
+                type: "info",
+                template: $("#infoTemplate").html()
+            },{
+                type: "success",
+                template: $("#successTemplate").html()
+            },{
+                type: "warning",
+                template: $("#warningTemplate").html()
+            },{
+                type: "error",
+                template: $("#errorTemplate").html()
+            }]
+
+        }).data("kendoNotification");
+
+        $("#showInfoNotification").click(function() {
+            notification.show({
+                message: "Your new record was successfully created."
+            }, "info");
+        });
+
+        $("#showSuccessNotification").click(function() {
+            notification.show({
+                message: "You new have 198 unread messages."
+            }, "success");
+        });
+
+        $("#showWarningNotification").click(function() {
+            notification.show({
+                message: "Oops, you've missed some required form inputs."
+            }, "warning");
+        });
+
+        $("#showErrorNotification").click(function() {
+            notification.show({
+                message: "You've encountered some errors when trying to save edits."
+            }, "error");
+        });
+
+        $(document).one("kendo:pageUnload", function() {
+            if (notification) {
+                notification.hide();
+            }
+        });
+
+    });
+</script>

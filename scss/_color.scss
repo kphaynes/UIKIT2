@@ -1,0 +1,116 @@
+// Custom Backround Color
+
+//
+// Background Color - dk dker lt lter ltest
+//
+
+.bg-primary {
+	@include color-variant($brand-primary, 5%, 10%, 45%, 5%, 10%);
+	@include font-variant($brand-primary, lighten($brand-primary,40%), lighten($brand-primary,50%), $white);
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}
+}
+.bg-success {
+	@include color-variant($brand-success, 5%, 10%, 42%, 5%, 10%);
+	@include font-variant($brand-success, lighten($brand-success,40%), lighten($brand-success,50%), $white);
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}
+}
+.bg-info {
+	@include color-variant($brand-info, 5%, 10%, 35%, 5%, 10%);
+	@include font-variant($brand-info, lighten($brand-info,40%), lighten($brand-info,50%), $white);
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}
+}
+.bg-warning {
+	@include color-variant($brand-warning, 5%, 10%, 35%, 5%, 10%);
+	@include font-variant($brand-warning, lighten($brand-warning,40%), lighten($brand-warning,50%), $white);
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}
+}
+.bg-danger {
+	@include color-variant($brand-danger, 5%, 10%, 40%, 5%, 10%);
+	@include font-variant($brand-danger, lighten($brand-danger,40%), lighten($brand-danger,50%), $white);
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}
+}
+.bg-default{
+	@include color-variant;
+	color: $gray-dark;
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}
+}
+.bg-white {
+	@include color-variant(#fff, 1.5%, 3%, 2.5%, 5%);
+	@include font-variant($brand-light, $gray-dark, $gray-dark, $link-hover-color);	
+	&.list-group{
+		border-radius: $list-group-border-radius;
+		a{
+	        color: $gray-dark;
+	        &:hover{
+	            color: $gray-dark;
+	        }
+	    }
+		&:active,
+	    &.active{
+	        color: $gray-dark;
+	    }
+	}
+	
+
+	//color: $gray-dark;
+	.text-muted{color: $text-muted !important;}
+}
+.bg-light {
+	@include color-variant($brand-light, 1.5%, 3%, 2.5%, 5%);
+	@include font-variant($brand-light, $gray-dark, $gray-dark, $link-hover-color);	
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}
+	//color: $gray-dark;
+}
+.bg-faded {
+	@include color-variant($brand-light, 1.5%, 3%, 50%, 2.5%, 5%);
+	@include font-variant($brand-light, $gray-dark, $gray-dark, $link-hover-color);	
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}
+	//color: $gray-dark;
+}
+
+.bg-dark {
+	@include color-variant($brand-dark, 5%, 10%, 75%, 5%, 10%);
+	@include font-variant($brand-dark, lighten($brand-dark,40%), lighten($brand-dark,50%), $white);
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}
+}
+.bg-inverse {
+	@include color-variant($brand-inverse, 5%, 10%, 75%, 5%, 10%);
+	@include font-variant($brand-inverse, lighten($brand-inverse,40%), lighten($brand-inverse,50%), $white);
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}	
+}
+.bg-black {
+	@include color-variant($brand-black, 5%, 10%, 75%, 5%, 10%);
+	@include font-variant($brand-black, lighten($brand-black,40%), lighten($brand-black,50%), $white);
+	&.list-group{
+		border-radius: $list-group-border-radius;
+	}
+}
+.bg-white-only{background-color:$white;}
+.bg-empty{background-color: transparent;}
+
+/*
+.bg-gradient{
+  #gradient > .vertical(rgba(40,50,60,0), rgba(40,50,60,0.05), 0, 100%);
+  filter:none;
+}
+*/

@@ -1,0 +1,204 @@
+// Custom Mixins
+
+//
+// Grid - 5 Columns
+//
+
+@mixin make-5columns-grid($number-cols,$size) {
+    @for $i from 1 through $number-cols{
+        .col-#{$size}-#{$i}-5 {
+            width: ($i * 100% / $number-cols);
+            float: left;
+            position: relative;
+            min-height: 1px;
+            padding-right: $grid-gutter-width-base/2;
+            padding-left: $grid-gutter-width-base/2;
+        }
+    }
+}
+
+//
+// Font
+//
+
+@mixin font-variant($bg-color, $font-color, $link-color, $hover-color){
+    color: $font-color;
+    .disabled {
+        color: transparentize($font-color, .5)!important;
+    }
+    a {
+        color: $font-color;
+        &:hover{
+            color: $hover-color;
+        }
+        &.disabled {
+          color: transparentize($font-color, .5)!important;
+        }
+        &.list-group-item{
+            color: $font-color;
+            &:hover,
+            &:focus{
+                background-color: inherit;
+            }
+            &.disabled{
+                color: transparentize($font-color, .5)!important;
+                &:hover,
+                &:focus{
+                    background-color: transparent!important;
+                }
+            }
+        }
+    }
+    &.navbar-header,
+    &.nav-sidebar {
+        .nav {
+            > li {
+                &:hover,
+                &:focus,
+                &:active,
+                &.active{
+                  > a{
+                    color: $font-color;
+                    background-color: saturate(darken($bg-color, 7.5%), 2.5%)!important;
+                  }
+                }
+                > a{
+                  color: $font-color;
+                  &:hover,
+                  &:focus{
+                    background-color: saturate(darken($bg-color, 5%), 2.5%)!important;
+                  }
+                }
+            }
+            .open > a{
+                background-color: saturate(darken($bg-color, 7.5%), 2.5%)!important;
+            }
+        }
+    }
+    .dropdown-item {
+        color: $dropdown-link-color;
+        @include hover-focus {
+            color: $dropdown-link-hover-color;
+            text-decoration: none;
+            background-color: $dropdown-link-hover-bg;
+        }
+
+        &.active,
+        &:active {
+            color: $dropdown-link-active-color;
+            text-decoration: none;
+            background-color: $dropdown-link-active-bg;
+        }
+    }
+    .caret{
+        border-top-color: $font-color;
+        border-bottom-color: $font-color;
+    }
+    .open > a {
+        &,
+        &:hover,
+        &:focus{
+          color: $hover-color;
+        }
+        }
+        .text-muted {
+            //color: darken($font-color, 10%) !important;
+        color: inherit;
+        opacity: 0.5;
+    }
+    .text-lt {
+        color: lighten($font-color, 25%) !important;
+    }
+    .icon-muted{
+        color: darken($font-color, 10%) !important;
+    }
+}
+
+//
+// Color
+//
+
+@mixin color-variant($bg-color: #555, $lt-percent: 10%, $lter-percent: 15%, $ltest-percent: 40%, $dk-percent: 10%, $dker-percent: 15%) {
+	background-color: $bg-color!important;
+    //border-radius: inherit;
+    @include list-group-item($bg-color)
+	&.lt,
+	.lt {
+        background-color: saturate(lighten($bg-color, $lt-percent), 2.5%)!important;
+        @include list-group-item(saturate(lighten($bg-color, $lt-percent), 2.5%))
+	}
+	&.lter,
+	.lter {
+        background-color: saturate(lighten($bg-color, $lter-percent), 5%)!important;
+        @include list-group-item(saturate(lighten($bg-color, $lter-percent), 5%))
+	}
+    &.ltest,
+    .ltest {
+        background-color: saturate(lighten($bg-color, $ltest-percent), 10%)!important;
+        @include list-group-item(saturate(lighten($bg-color, $ltest-percent), 10%))
+    }
+	&.dk,
+	.dk {
+        background-color: saturate(darken($bg-color, $dk-percent), 2.5%)!important;
+        @include list-group-item(saturate(darken($bg-color, $dk-percent), 2.5%))
+	}
+	&.dker,
+	.dker {
+        background-color: saturate(darken($bg-color, $dker-percent), 5%)!important;
+        @include list-group-item(saturate(darken($bg-color, $dker-percent), 5%))
+	}
+    &.bg,
+    .bg{
+        background-color: $bg-color;
+        @include list-group-item($bg-color)
+    }
+}
+
+//
+// Border
+//
+
+@mixin border-variant($b-color, $color) {
+  #{$b-color} {
+    border-color: lighten($color, 5%);
+  }
+}
+
+//
+// List Group
+//
+
+@mixin list-group-item($background) {
+  .list-group-item{
+    border-color: lighten($background, 3%) !important;
+    background-color: transparent;
+    @include border-top-radius($list-group-border-radius);
+    &:hover,
+    &:focus,
+    &:active,
+    &.active{
+        background-color: saturate(darken($background, 5%),2.5%)!important;
+    }
+    &:first-child {
+        @include border-top-radius($list-group-border-radius);
+    }
+    &:last-child {
+        margin-bottom: 0;
+        @include border-bottom-radius($list-group-border-radius);
+    }
+    &.disabled,
+    &:disabled {
+        color: inherit;
+        cursor: $cursor-disabled;
+        background-color: inherit;
+        
+        // Force color to inherit for custom content
+        .list-group-item-heading {
+          color: inherit;
+        }
+        .list-group-item-text {
+          color: inherit;
+        }
+    }
+  }
+}

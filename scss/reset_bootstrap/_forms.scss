@@ -1,0 +1,33 @@
+.form-control{
+    border-color: $input-border-color;
+    border-radius: $input-border-radius;
+    border-width: 1px;
+    &:focus{
+      border-color: $input-border-focus;
+    }
+}
+
+// Form validation states
+.has-success {
+  @include form-control-validation($brand-success);
+
+  .form-control-success {
+    background-image: $form-icon-success;
+  }
+}
+
+.has-warning {
+  @include form-control-validation($brand-warning);
+
+  .form-control-warning {
+    background-image: $form-icon-warning;
+  }
+}
+
+.has-danger {
+  @include form-control-validation($brand-danger);
+
+  .form-control-danger {
+    background-image: $form-icon-danger;
+  }
+}

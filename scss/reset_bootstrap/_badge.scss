@@ -1,0 +1,43 @@
+// 
+// Badge Colors
+// 
+
+.badge-default {
+  @include badge-variant($badge-default-bg);
+}
+
+.badge-primary {
+  @include badge-variant($badge-primary-bg);
+}
+
+.badge-success {
+  @include badge-variant($badge-success-bg);
+}
+
+.badge-info {
+  @include badge-variant($badge-info-bg);
+}
+
+.badge-warning {
+  @include badge-variant($badge-warning-bg);
+}
+
+.badge-danger {
+  @include badge-variant($badge-danger-bg);
+}
+
+//
+// Badge - Colors (Extend)
+//
+
+.badge-black {
+  @include badge-variant($badge-black-bg);
+}
+
+.badge-dark {
+  @include badge-variant($badge-dark-bg);
+}
+
+.badge-light {
+  @include badge-variant($badge-light-bg);
+}

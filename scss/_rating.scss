@@ -1,0 +1,62 @@
+// Custom star rating button
+//
+// 
+
+.rating {
+    float:left;
+    &:not(:checked) {
+	    > input {
+		    clip: rect(0px, 0px, 0px, 0px);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
+		> label {
+			float: right;
+		    width: 1em;
+		    padding: 0 .1em;
+		    overflow: hidden;
+		    white-space: nowrap;
+		    cursor: pointer;
+		    font-family: FontAwesome;
+		    color: darken($brand-light, 5%);
+
+		    &:hover,
+		    &:hover ~ label {
+			    content: "\f005";
+			    color: $brand-warning;
+			}
+
+		    &:before {
+			    content: "\f005";
+			}
+		}
+    }
+	> input {
+		&:checked {
+			~ label {
+			    content: "\f005";
+			    color: $brand-warning;
+			}
+		}
+	}
+	> label {
+		&:active {
+		    position:relative;
+		    top:0px;
+		    left:0px;
+		}
+	}
+
+}
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    content: "\f005";
+    color: $brand-warning;
+}

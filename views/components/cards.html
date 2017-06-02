@@ -1,0 +1,28 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-x-3">
+            <h1 class="display-5">Cards</h1>
+            <p class="lead">Text</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-x-3">
+            <div id="overview" class="h4 mb-1 mt-1">Overview</div>
+            <div ng-include src="'views/components/cards/cards.html'"></div>
+
+        </section>
+        <aside class="aside-md border-left hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll sticky-top w-100" role="navigation" jumpmenu>
+                <div class="text-muted text-uppercase hidden-nav padder mt-1 mb-1">On This Page:</div>
+                <ul class="nav nav-main flex-column" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#test" class="nav-link  active">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#test" class="nav-link">Classes</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

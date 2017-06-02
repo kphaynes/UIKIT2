@@ -1,0 +1,12 @@
+.input-group-addon,
+.input-group-btn,
+.input-group .form-control {
+  // Vertically centers the content of the addons within the input group
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  &:not(:first-child):not(:last-child) {
+    @include border-radius(0);
+  }
+}

@@ -1,0 +1,28 @@
+//
+// Buttons Groups
+// 
+
+// 
+// Justified button Groups (Extend)
+//
+
+// Need to revisit - this class only work when it is a link button not the actual button
+.btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  .btn,
+  .btn-group{
+    float: none;
+    display: table-cell;
+    width: 1%;
+    .btn {
+      width: 100%;
+    }
+    .dropdown-menu {
+      left: auto;
+    }
+  }
+}
+    

@@ -1,0 +1,244 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-4">
+            <h1 class="display-5">Cards</h1>
+            <p class="lead">A card, similar to a playing card, serves as an entry point to more detailed information. A card could contain a photo, text, and a link about a single subject.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-4">
+            <div id="overview" class="h4 mb-1 mt-1">Overview</div>
+            <p class="mb-1">Cards may contain a photo, text, and a link about a single subject. They may display content containing elements of varying size, such as photos with captions of variable length.</p>
+            <p>A card set is a layout of similar cards.</p>
+
+            <div class="h2 mb-1 mt-3 ">Cards</div>
+            <hr>
+
+            <div id="cardBlock" class="h4 mb-1 mt-3">Content</div>
+            <p class="mb-1">A card can contain blocks of content including metadata, titles and subtitles</p>
+            <p ng-include src="'views/styles/cards/card/block.html'" ></p>
+            <p class="h6 font-bold mt-1 mb-1">Example markup</p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/cards/card/block.html'" maketext></pre>
+
+            <p class="mb-1 mt-3">A card can also contain lists</p>
+            <div class="" ng-include src="'views/styles/cards/card/lists.html'" ></div>
+
+            <div id="colors" class="h4 mb-1 mt-3">Colors</div>
+            <p class="mb-1">Change the card color</p>
+            <p ng-include src="'views/styles/cards/card/colors.html'"></p>
+
+            <div id="actions" class="h4 mb-1 mt-3">Actions</div>
+            <p class="mb-1">A card may be linked or contain links and actions.</p>
+            <p ng-include src="'views/styles/cards/card/actions.html'" ></p>
+
+            <div id="empty" class="h4 mb-1 mt-3">Empty</div>
+            <p class="mb-1">When there's no content for a card display an empty state.</p>
+            <p ng-include src="'views/styles/cards/card/empty.html'" ></p>
+
+            <div id="headerFooter" class="h4 mb-1 mt-3">Header &amp; Footer</div>
+            <p class="mb-1">A card can have a header or footer.</p>
+            <p ng-include src="'views/styles/cards/card/headerFooter.html'" ></p>
+
+            <div id="image" class="h4 mb-1 mt-3">Images &amp; Placement</div>
+            <p class="mb-1">A card can contain an image on the top, middle or bottom</p>
+            <p ng-include src="'views/styles/cards/card/image.html'" ></p>
+
+            <div id="overlay" class="h4 mb-1 mt-3">Image Overlay</div>
+            <p class="mb-1">Card content can overlay on top of an image.</p>
+            <p ng-include src="'views/styles/cards/card/overlay.html'" ></p>
+
+            <div id="stacked" class="h4 mb-1 mt-3">Stack</div>
+            <p class="mb-1">A card can have the appearance of being stacked</p>
+            <p ng-include src="'views/styles/cards/card/stack.html'" ></p>
+
+            <div id="width" class="h4 mb-1 mt-3">Width</div>
+            <p class="mb-1">By default cards are fluid and will expand to the width of thier container. Individual card width may be controlled responsivly by grid sizing or manually using a helper class. If the card is part of a group, column or deck widths are determined automatically. Card become 100% when the viewport size is <code>XS</code></p>
+            <p ng-include src="'views/styles/cards/card/width.html'" ></p>
+
+            <div class="h2 mb-1 mt-3 ">Card Sets</div>
+            <hr>
+
+            <div id="groups" class="h4 mb-1 mt-3">Card Groups</div>
+            <p class="mb-1">Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use <code>display: flex;</code> to achieve their uniform sizing.</p>
+            <div class="" ng-include src="'views/styles/cards/card-sets/groups.html'"></div>
+
+            <div id="decks" class="h4 mb-1 mt-3">Card Decks</div>
+            <p class="mb-1">Need a set of equal width and height cards that aren’t attached to one another? Use card decks.</p>
+            <p ng-include src="'views/styles/cards/card-sets/decks.html'"></p>
+
+            <div id="grids" class="h4 mb-1 mt-3">Card Grids</div>
+            <p class="mb-1">A card grid, much like a card deck, will provide a set separated equal height cards. However, unlike a card deck, card grids can have multiple rows and may responsive grids for cards of varying sizes.</p>
+            <p ng-include src="'views/styles/cards/card-sets/grid.html'"></p>
+
+            <div id="columns" class="h4 mb-1 mt-3">Card Columns</div>
+            <p class="mb-1">Text</p>
+            <p ng-include src="'views/styles/cards/card-sets/types.html'"></p>
+
+            <div class="h2 mb-1 mt-3 ">Kendo</div>
+            <hr>
+
+            <div id="kcardlist" class="h4 mb-1 mt-3">Card List View</div>
+            <p class="mb-1">Text</p>
+            <p ng-include src="'views/styles/cards/kendo/kcardlist.html'"></p>
+
+            <div id="classes" class="h4 mb-1 mt-3">Classes</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.card</code></td>
+                        <td>Defines a basic card</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-header</code></td>
+                        <td>Initializes card header</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-block</code></td>
+                        <td>Text</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-footer</code></td>
+                        <td>Initializes card footer</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-title</code></td>
+                        <td>Initializes card title</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-subtitle</code></td>
+                        <td>Initializes card subtitle</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-text</code></td>
+                        <td>Initializes card text</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-link</code></td>
+                        <td>Applies margin-left settings</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-blockquote</code></td>
+                        <td>Remove default margins from blockquotes</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-img</code></td>
+                        <td>Initializes card image</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-img-top</code></td>
+                        <td>Applies rounded corners for top positioning</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-img-bottom</code></td>
+                        <td>Applies rounded corners for bottom positioning</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-img-overlay</code></td>
+                        <td>Position content absolutely over top of an image</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-*</code></td>
+                        <td>Use modifier classes to change the color of each card by adding <code>.card-*</code> to the <code>.cards</code> class. You may also apply variations by adding <code>.dk</code>, <code>.dker</code>, <code>.lt</code>, <code>.lter</code> to darken or lighten the base color.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-stacked</code></td>
+                        <td>Applies styling to create the appearance of being stacked</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-group</code></td>
+                        <td>Renders a single row of cards as an attached group with equal heights and widths.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-deck</code></td>
+                        <td>Renders a single row of cards as an detached group with equal heights and widths.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-deck-wrapper</code></td>
+                        <td>Removes default margins around the card deck.</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-columns</code></td>
+                        <td>Creates a staggered card group</td>
+                    </tr>
+                    <tr>
+                        <td><code>.card-grid</code></td>
+                        <td>Creates a responsive card grid. Use with <code>col-*</code> grids system to create a multi-row grid of equal heights and widths. Uses css3 <code>flexbox</code> model. Each card displays 100% for <code>XS</code> viewports.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <aside class="aside-md border-left hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll sticky-top w-100" role="navigation" jumpmenu>
+                <div class="text-muted text-uppercase hidden-nav padder mt-1 mb-1">On This Page:</div>
+                <ul class="nav nav-main flex-column" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#overview" class="nav-link active">Overview</a></li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link active">Cards</a>
+                        <ul class="nav">
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#cardBlock" class="nav-link ">Content Block</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#colors" class="nav-link ">Colors</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#actions" class="nav-link ">Actions</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#empty" class="nav-link ">Empty States</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#headerFooter" class="nav-link ">Header &amp; Footer</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#image" class="nav-link ">Image</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#overlay" class="nav-link ">Overlay</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#stacked" class="nav-link ">Stacked</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#width" class="nav-link ">Width</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link active">Card Sets</a>
+                        <ul class="nav">
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#groups" class="nav-link ">Groups</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#decks" class="nav-link ">Decks</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#grids" class="nav-link ">Grid</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#columns" class="nav-link ">Columns</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link active">Kendo Card List</a>
+                        <ul class="nav">
+                          <li class="nav-item">
+                              <a href="javascript:void(0)" data-target="#kcardlist" class="nav-link ">Basic</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#classes" class="nav-link active">Classes</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

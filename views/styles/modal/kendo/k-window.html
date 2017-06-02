@@ -1,0 +1,70 @@
+<div id="k-modal" class="p-0 border-box"></div>
+<script id="template" type="text/x-kendo-template">
+    <form>
+        <div class="p-3">
+            <div class="form-group row">
+                <label for="firstName" class="col-sm-3 col-form-label">First Name</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name" data-bind="value: firstName">
+                </div>
+            </div>
+            <div class="row">
+                <label for="lastName" class="col-sm-3 col-form-label">Last Name</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="lastName" placeholder="First Name" data-bind="value: lastName">
+                </div>
+            </div>
+        </div>
+        <div class="row border-top m-0">
+            <div class="col-sm-12 p-3">
+                <button type="button" class="btn btn-primary float-right ml-1">Save</button>
+                <button type="button" class="btn btn-secondary close-button float-right">Close</button>
+            </div>
+        </div>
+    </form>
+</script>
+
+<script>
+    $(document).ready(function() {
+        // Everyone loves data
+        var data = [{
+            firstName:'John', 
+            lastName: 'Doe'
+        }];
+
+        // Initialize Kendo window with boostrap modal template
+        var kendoWindow = $("#k-modal").kendoWindow({
+            width: "40%",
+            title: "Kendo UI Modal",
+            resizable: false,
+            modal: true,
+            resizable: false,
+            draggable: false,
+            visible: false,
+            scrollable: true,
+            content: {
+                template: $("#template").html()
+            }
+        }).data("kendoWindow");
+
+        // Binds the record to the modal
+        function openWindow(record) {
+            kendo.bind(kendoWindow.element, record);
+            kendoWindow.open().center();
+        }
+
+        // Removes kendo default styling
+        // border-box for correct grid layout
+        $('#k-modal').parent().addClass("no-window border-box");
+
+        // Bind close button in modal
+        $(".close-button").click(function(){
+            $(this).closest("[data-role=window]").kendoWindow("close");
+        });
+
+        // open kendo window
+        $("#openWindowBtn").click(function() {
+            openWindow(data[0]);
+        });
+    });
+</script>

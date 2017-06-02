@@ -1,0 +1,121 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-4">
+            <h1 class="display-5">Buttons</h1>
+            <p class="lead">Create a button with a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element to retain the native click function. Use a <code>.disabled</code> class when a button can’t be clicked.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-4">
+            <h4 id="colors" class="h4 mb-1 mt-1">Button Colors</h4>
+            <p class="m-b-md">The base <code>.btn</code> class defines the button element and looks like a plain text link. Adding a <code>.btn-*</code> class will define the button styling. In addition to the standard bootstrap symantic colors you may add a <code>.btn-dark</code>, <code>.btn-black</code>, and <code>.btn-white</code>
+            <p ng-include src="'views/styles/buttons/colors.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/colors.html'" maketext></pre>
+
+            <h4 id="outlines" class="mb-1 pt-3">Button Outlines</h4>
+            <p>Use the <code>.btn-outline-*</code> class instead of <code>.btn-*</code> for a outline button. You can increse the border size using <code>.border-width-2</code>, <code>.border-width-2</code>, <code>.border-width-4</code> or <code>.border-width-5</code>. In addition to the standard bootstrap symantic colors you may add a <code>.btn-secondary</code>, <code>.btn-white</code>, <code>.btn-dark</code>, and <code>.btn-black</code>.</p>
+            <p class="p-1" ng-include src="'views/styles/buttons/outlines.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/outlines.html'" maketext></pre>
+
+            <h4 id="size" class="mb-1 pt-3">Button Sizes</h4>
+            <p>This example shows the various sizes a button can be acheived. Beyond bootstrap sizes you can also apply <code>.btn-xl</code> and <code>.btn-xs</code> </p>
+            <p ng-include src="'views/styles/buttons/size.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/size.html'" maketext></pre>
+
+            <h6 class="mt-2">Button Widths</h6>
+            <p>Buttons are as wide as their text. For specific sizing use <code>.btn-w-xl</code>, <code>.btn-w-lg</code>, <code>.btn-w-md</code>, <code>.btn-w-sm</code> or <code>.btn-w-xs</code> </p>
+            <p ng-include src="'views/styles/buttons/size-horizontal.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/size-horizontal.html'" maketext></pre>
+
+            <h6 class="mt-2">Responsive Widths</h6>
+            <p>Add a <code>.btn-block</code> to acheive a reponsive button. You may also leverage various sizes.</p>
+            <p ng-include src="'views/styles/buttons/block.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/block.html'" maketext></pre>
+
+            <h4 id="rounded" class="mb-1 pt-3">Rounded Buttons</h4>
+            <p>Add a <code>.btn-rounded</code> class to acheive a rounded button</p>
+            <p ng-include src="'views/styles/buttons/rounded.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/rounded.html'" maketext></pre>
+
+            <h4 id="icon" class="mb-1 pt-3">Icon Buttons</h4>
+            <p>Add a <code>.btn-icon</code> class to acheive a icon button</p>
+            <p ng-include src="'views/styles/buttons/icon-buttons.html'"></p>
+
+            <h4 id="toggle" class="mt-2">Button Toggle</h6>
+            <p>Add <code>data-toggle="button"</code> to toggle a button’s active state.</p>
+            <p ng-include src="'views/styles/buttons/toggle.html'"></p>
+
+            <h4 id="groups" class="mb-1 pt-3">Button Groups</h4>
+            <p>Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.</p>
+            <p ng-include src="'views/styles/buttons/groups/basic.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/groups/basic.html'" maketext></pre>
+
+            <h6 class="mt-2">Button Group Select</h6>
+            <p ng-include src="'views/styles/buttons/groups/select.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/groups/select.html'" maketext></pre>
+
+            <h6 class="mt-2">Button Group Radio</h6>
+            <p ng-include src="'views/styles/buttons/groups/toggle.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/groups/toggle.html'" maketext></pre>
+
+            <h6 class="mt-2">Button Toolbar</h6>
+            <p>Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.</p>
+            <p ng-include src="'views/styles/buttons/groups/toolbar.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/groups/toolbar.html'" maketext></pre>
+
+            <h6 class="mt-2">Button Group Sizing</h6>
+            <p>Instead of applying button sizing classes to every button in a group, just add  <code>.btn-group-*</code> to <code>.btn-group</code> including each one when nesting multiple groups.</p>
+            <p ng-include src="'views/styles/buttons/groups/size.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/groups/size.html'" maketext></pre>
+
+            <h6 class="mt-2">Nested Button Groups</h6>
+            <p ng-include src="'views/styles/buttons/groups/nested.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/groups/nested.html'" maketext></pre>
+
+            <h6 class="mt-2">Vertical Button Groups</h6>
+            <p ng-include src="'views/styles/buttons/groups/vertical.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/groups/vertical.html'" maketext></pre>
+
+            <h6 class="mt-2">Justified Button Groups</h6>
+            <p ng-include src="'views/styles/buttons/groups/justified.html'"></p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/buttons/groups/justified.html'" maketext></pre>
+
+            <h4 id="dropdowns" class="mb-1 pt-3">Button Dropdowns</h4>
+            <h6 class="mt-2">Single Button Dropdown</h6>
+            <p ng-include src="'views/styles/buttons/dropdowns/single.html'"></p>
+            <h6 class="mt-2">Button Dropdown Sizing</h6>
+            <p ng-include src="'views/styles/buttons/dropdowns/size.html'"></p>
+            <h6 class="mt-2">Button Dropdown Direction</h6>
+            <p ng-include src="'views/styles/buttons/dropdowns/direction.html'"></p>
+            <h6 class="mt-2">Split Button Dropdown</h6>
+            <p ng-include src="'views/styles/buttons/dropdowns/split.html'"></p>
+
+            <h4 id="components" class="mb-1 pt-3">Button components</h4>
+            <p class="text-muted">
+                <span>There are a few easy ways to quickly get started with Bootstrap, each one ...</span>
+                <span class="text-muted hide" id="moreless"> appealing to a different skill level and use case. Read through to see what suits your particular needs.</span>
+            </p>
+            <p ng-include src="'views/styles/buttons/components/components.html'"></p>
+            <!--
+            <h6 class="mt-2">Select Button</h6>
+            <p ng-include src="'views/styles/buttons/components/select.html'"></p>
+            -->
+        </section>
+        <aside class="aside-md border-left hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll sticky-top w-100" role="navigation" jumpmenu>
+                <div class="text-muted text-uppercase hidden-nav padder mt-1 mb-1">On This Page:</div>
+                <ul class="nav nav-main flex-column" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#colors" class="nav-link active">Color</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#outlines" class="nav-link">Outline</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#size" class="nav-link">Size</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#rounded" class="nav-link">Rounded</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#icon" class="nav-link">Icon</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#toggle" class="nav-link">Toggle</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#groups" class="nav-link">Button Groups</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#dropdowns" class="nav-link">Button Dropdowns</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#components" class="nav-link">Button Components</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>

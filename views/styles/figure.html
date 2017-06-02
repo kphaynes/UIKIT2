@@ -1,0 +1,34 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-4">
+            <h1 class="display-5">Figures</h1>
+            <p class="lead">Anytime you need to display a piece of content—like an image—with an optional caption, consider using a <code>figure</code>.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-4">
+            <h4 id="right class="h4 mb-1 mt-1">Figure example default left</h4>
+            <p class="m-b-md">Use the included <code>.figure</code> , <code>.figure-img</code> and <code>.figure-caption</code> classes to provide some baseline styles for the HTML5 <code>figure</code> and <code>figcaption</code> elements. Images in figures have no explicit size, so be sure to add the <code>.img-fluid</code> class to your <code>img</code> to make it responsive.
+            </p>
+            <div class="p-1" ng-include src="'views/styles/figure/figure_left.html'" ></div>
+            <p class="h6 font-bold mt-1 mb-1">Example markup</p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/figure/figure_left.html'" maketext></pre>
+
+            <h4 id="right" class="h4 mb-1 mt-1">Figure example flush right</h4>
+            <div class="p-1" ng-include src="'views/styles/figure/figure_right.html'" ></div>
+            <p class="h6 font-bold mt-1 mb-1">Example markup</p>
+            <pre class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/figure/figure_right.html'" maketext></pre>
+        </section>
+        <aside class="aside-md border-left hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll sticky-top w-100" role="navigation" jumpmenu>
+                <div class="text-muted text-uppercase hidden-nav padder mt-1 mb-1">On This Page:</div>
+                <ul class="nav nav-main flex-column" data-ride="collapse">
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#left" class="nav-link active">Figure</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#right" class="nav-link">Figure (Caption Right)</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+
+</div>

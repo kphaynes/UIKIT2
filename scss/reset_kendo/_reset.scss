@@ -1,0 +1,25 @@
+// Reset All Kendo UI Components
+
+//
+// Changes to box model on all components
+//
+
+.border-box, .border-box * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    [class^="k-"] {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+}
+
+//
+// Kendo Listview
+// 
+
+.k-widget.k-listview {
+    border-width: 0px;
+}
