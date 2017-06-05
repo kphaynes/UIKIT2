@@ -1,8 +1,8 @@
 <style type="text/css">
 #slideshow { 
     margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
     width: 300px; 
     height: 300px;
 }
@@ -16,11 +16,11 @@
 </style>
 
 <div class="text-center">
-    <div class="jumbotron jumbotron-fluid bg-light " style="background-image: url(../lib/images/docs/background.jpg); background-position: 50% 50%; background-size: cover; position: relative;">
+    <div class="jumbotron jumbotron-fluid" style="background-image: url(../lib/images/docs/background.jpg); background-position: 50% 50%; background-size: cover; position: relative;">
         <div class="container mx-auto">
-        	<div class="row text-center">
+        	<div class="row text-center py-5">
         		<div class="col-lg-6 offset-lg-3">
-		        	<a href="javascript:void(0)" class="badge badge-pill badge-default pos-rlt text-white">0.2.1</a>
+		        	<a href="javascript:void(0)" class="badge badge-pill badge-default">0.2.1</a>
 		            <h1 class="display-1 pos-rlt">Spark UI</h1>
 		            <p class="lead pos-rlt font-normal">A design system and component library, built using kendo and bootstrap for building custom progress applications.</p>
         		</div>
@@ -56,7 +56,7 @@
 			<div class="card-deck-wrapper my-3">
 			    <div class="card-deck">
 			        <div class="card py-2">
-			        	<span class="fa-stack fa-3x text-primary">
+			        	<span class="fa-stack fa-3x text-primary mx-auto">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-ellipsis-h fa-stack-1x fa-inverse"></i>
 						</span>
@@ -66,7 +66,7 @@
 			            </div>
 			        </div>
 			        <div class="card py-2 text-center">
-			        	<div class="fa-stack fa-3x text-info text-center">
+			        	<div class="fa-stack fa-3x text-info text-center mx-auto">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-rocket fa-stack-1x fa-inverse"></i>
 						</div>
@@ -76,7 +76,7 @@
 			            </div>
 			        </div>
 			        <div class="card py-2">
-			        	<span class="fa-stack fa-3x text-success">
+			        	<span class="fa-stack fa-3x text-success mx-auto">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
 						</span>
@@ -107,15 +107,15 @@
 <script type="text/javascript">
 
 
-$("#slideshow > div:gt(0)").hide();
+	$("#slideshow > div:gt(0)").hide();
 
-setInterval(function() { 
-  $('#slideshow > div:first')
-    .fadeOut(1000)
-    .next()
-    .fadeIn(1000)
-    .end()
-    .appendTo('#slideshow');
-},  3000);
+	setInterval(function() { 
+	  $('#slideshow > div:first')
+	    .fadeOut(1000)
+	    .next()
+	    .fadeIn(1000)
+	    .end()
+	    .appendTo('#slideshow');
+	},  3000);
 
 </script>
