@@ -324,7 +324,7 @@
 //
 
 //NEED to Fix
-@include media-breakpoint-up(sm) { // Larger Screens
+@include media-breakpoint-up(xs) { // Larger Screens
     .card-grid { 
         display: flex;
         justify-content: flex-start;

@@ -4,9 +4,13 @@
 @import "variables";
 @import "bootstrap/mixins";
 @import "mixins";
-@import "color";
 
 @import "reset";
+@import "layout";
+
+
+@import "color";
+@import "nav";
 
 @import "utilities";
 @import "avatar";

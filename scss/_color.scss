@@ -47,7 +47,7 @@
 	}
 }
 .bg-white {
-	@include color-variant(#fff, 1.5%, 3%, 2.5%, 5%);
+	@include color-variant(#fff, 1.5%, 3%, 3.5%, 5%);
 	@include font-variant($brand-light, $gray-dark, $gray-dark, $link-hover-color);	
 	&.list-group{
 		border-radius: $list-group-border-radius;
@@ -68,7 +68,7 @@
 	.text-muted{color: $text-muted !important;}
 }
 .bg-light {
-	@include color-variant($brand-light, 1.5%, 3%, 2.5%, 5%);
+	@include color-variant($brand-light, 1.5%, 3%, 3.5%, 5%);
 	@include font-variant($brand-light, $gray-dark, $gray-dark, $link-hover-color);	
 	&.list-group{
 		border-radius: $list-group-border-radius;

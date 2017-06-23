@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" class="app" id="ng-app" ng-app="spark" >
-
 <head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
@@ -9,68 +8,69 @@
 
     <!-- Bootstrap CSS -->
     <!--<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">-->
-    <link rel="stylesheet" href="../../../lib/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../vendor/bootstrap/dist/css/bootstrap.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../lib/vendor/kendo/2016.1.125/kendo.common.min.css" type='text/css'>
-    <link rel="stylesheet" href="../../../lib/css/app.css" type='text/css'>
-    <link rel="stylesheet" href="../../../lib/css/override.css" type='text/css'>
+    <link rel="stylesheet" href="../../../vendor/kendo/styles/kendo.common.min.css" type='text/css'>
+    <link rel="stylesheet" href="../../../assets/css/app_less.css" type='text/css'>
+    <link rel="stylesheet" href="../../../assets/css/app_sass.css" type='text/css'>
+    <!--<link rel="stylesheet" href="../../../lib/css/override.css" type='text/css'>-->
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
-    <script type="text/javascript" src="../../../app/main.js"></script>
-    <script type="text/javascript" src="../../..//lib//vendor/kendo/2016.1.125/kendo.all.min.js"></script>
-    <script type="text/javascript" src="../../../lib/js/app.js"></script>
-    <script type="text/javascript" src="../../../lib/js/tether.js"></script>
-    <script type="text/javascript" src="../../../lib/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../assets/js/main.js"></script>
+    <script type="text/javascript" src="../../../assets/js/app.js"></script>
+    <script type="text/javascript" src="../../../vendor/kendo/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/main.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script type="text/javascript" src="../../../vendor/bootstrap/dist/js/bootstrap.js"></script>
 </head>
-
 <body>
-
-<section class="vbox">
-    <header class="header b-b">
-        <p>Header</p>
-    </header>
-    <section>
-        <section class="hbox stretch">
-            <aside class="aside b-r">
-                <section class="vbox">
-                    <section class="scrollable w-f p-1">
-                        <p>Scrollable</p>
+    <section class="vbox">
+        <header class="header border-light border-bottom">
+            <div class="py-2">Header</div>
+        </header>
+        <section>
+            <section class="hbox stretch">
+                <aside class="aside border-light border-right">
+                    <section class="vbox">
+                        <section class="scrollable w-f p-3">
+                            <p>scrollable</p>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </section>
+                        <footer class="footer border-light border-top">
+                            <div class="py-2">Footer</div>
+                        </footer>
                     </section>
-                    <footer class="footer b-t">
-                        <p>Footer</p>
-                    </footer>
-                </section>
-            </aside>
-            <section class="">
-                <section class="vbox">
-                    <section class="scrollable p-1">
-                        <p>Scrollable</p>
+                </aside>
+                <section>
+                    <section class="vbox">
+                        <section class="scrollable p-3">
+                            <p>scrollable</p>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </section>
                     </section>
                 </section>
+                <aside class="aside-sm lt border-light border-left">
+                    <section class="vbox">
+                        <header class="header border-light border-bottom">
+                            <div class="py-2">Header</div>
+                        </header>
+                        <section class="scrollable p-3 w-f">
+                            <p>scrollable</p>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </section>
+                        <footer class="footer border-light border-top">
+                            <div class="py-2">Footer</div>
+                        </footer>
+                    </section>
+                </aside>
             </section>
-            <aside class="aside-sm lt border-left">
-                <section class="vbox">
-                    <header class="header b-b">
-                        <p>Header</p>
-                    </header>
-                    <section class="scrollable p-1 w-f">
-                        <p>Scrollable</p>
-                    </section>
-                    <footer class="footer b-t">
-                        <p>Footer</p>
-                    </footer>
-                </section>
-            </aside>
         </section>
 
-
     </section>
-
-</section>
 
 </body>
 </html>

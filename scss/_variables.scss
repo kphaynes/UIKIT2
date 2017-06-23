@@ -108,7 +108,7 @@ $gray-dark:                 #383C3D !default; //#292b2c
 $gray:                      #4E5255 !default; //#464a4c
 $gray-light:                #828E96 !default; //#636c72
 $gray-lighter:              #eceeef !default;
-$gray-lightest:             #f7f7f9 !default;
+$gray-lightest:             #f2f2f6 !default;
 
 // Reassign color vars to semantic color scheme
 $brand-primary:             #5CE500 !default;
@@ -119,7 +119,7 @@ $brand-danger:              $red !default;
 $brand-inverse:             $gray-dark !default;
 
 ////////////////////////////////////////////////////////////////////////
-// App - custom variables
+// App - custom color
 
 $border-color: rgba($black,0.05) !default;
 
@@ -150,7 +150,7 @@ $btn-white-border:      $btn-white-bg !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-rounded:            true !default;
-$enable-shadows:            false !default;
+$enable-shadows:            true !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
 $enable-hover-media-query:  false !default;
@@ -991,6 +991,21 @@ $pre-bg:                      $gray-lightest !default;
 $pre-color:                   $gray-dark !default;
 $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
+
+////////////////////////////////////////////////////////////////////////
+// App - custom layput
+
+$off-screen-nav-width:          75%;
+$nav-sidebar-height:            36px;
+$nav-sm-width:                  100px;
+$nav-sm-height:                 80px;
+$nav-xs-width:                  70px;
+$nav-xs-height:                 50px;
+$header:                        3.125rem;
+$header-md-height:              4.3rem;
+
+$text-color:    $gray-dark !default;
+
 
 
 

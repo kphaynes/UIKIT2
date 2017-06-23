@@ -17,47 +17,166 @@
                 <li><strong>Simplify and Clarify</strong> - Reduce visual "noise". Create layouts that are lighter, faster and easy to read. Avoid distractions, jargon, and long loading times.</li>
                 <li><strong>Be consistent</strong> - Choose layouts that are predictable and familiar, this creates an experience that is recognizable across products.</li>
             </ul>
-
-            <div id="configurations" class="h4 mb-1 mt-3">Configurations</div>
+             <div id="configurations" class="h4 mb-1 mt-3">Configurations and Examples</div>
             <p>A page layout can take on a number of different configurations, based on the use cases an application aims to support. Provided here are some of the most common layout structures, but you are free to create the layout that works best for you.</p> 
             <p>Use the layout classes below to create as simple or robust a layout as you need. For guidance on arranging elements follow the layout principles in creating layouts that make the most sense for your application.</p>
-            <figure class="figure p-a-3">
-              <img src="lib/images/docs/layoutExamples.png" class="figure-img img-fluid">
-            </figure>
-
-
-            <div id="examples" class="h4 mb-1 mt-3">Example Layout</div>
-            <div class="text-sm-center">
-                <iframe src="views/layouts/layouts/default.html" class="pos-rlt mb-3 mt-2 border-box"  width="99%" height="500"></iframe>
+            <div class="row"">
+                <div class="col-3 mb-3">
+                    <div class="h6 mb-2"><a href="views/layouts/layouts/vbox.html" target="_blank" class="">.vbox layout</a></div>
+                    <div class="border border-width-2 border-light w-100"  style=":height: 100%;">
+                        <section class="bg-light">
+                            <div class="p-1">header</div>
+                        </section>
+                        <section style="height: 100px;">
+                            <div class="p-1">content</div>
+                        </section>
+                        <footer class="bg-light">
+                            <div class="p-1">footer</div>
+                        </footer>
+                    </div>
+                </div>
+                <div class="col-3 mb-3">
+                    <div class="h6 mb-2"><a href="views/layouts/layouts/vboxflex.html" target="_blank" class="">.vbox layout with .flex</a></div>
+                    <div class="border border-width-2 border-light w-100"  style=":height: 100%;">
+                        <section class="bg-light">
+                            <div class="px-1 py-4">big header</div>
+                        </section>
+                        <section style="height: 60px;">
+                            <div class="p-1">content</div>
+                        </section>
+                        <footer class="bg-light">
+                            <div class="p-1">footer</div>
+                        </footer>
+                    </div>
+                </div>
+                <div class="col-3 mb-3">
+                    <div class="h6 mb-2"><a href="views/layouts/layouts/hbox.html" target="_blank" class="">.hbox layout</a></div>
+                    <div>
+                        <div class="app border border-width-2 border-light"  style="height: 168px;">
+                            <div class="hbox">
+                                <aside><div class="p-1 bg-light">aside</div></aside>
+                                <section><div class="p-1">section</div></section>
+                                <aside><div class="p-1 bg-light">aside</div></aside>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mb-3">
+                    <div class="h6 mb-2"><a href="views/layouts/layouts/hboxstretch.html" target="_blank" class="">.hbox layout with .stretch</a></div>
+                    <div>
+                        <div class="app border border-width-2 border-light"  style="height: 168px;">
+                            <div class="hbox stretch">
+                                <aside class="bg-light"><div class="p-1">aside</div></aside>
+                                <section><div class="p-1">section</div></section>
+                                <aside class="bg-light"><div class="p-1">aside</div></aside>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mb-3">
+                    <div class="h6 mb-2"><a href="views/layouts/layouts/hboxvbox.html" target="_blank" class="">.hbox nested with .vbox</a></div>
+                    <div style=":height: 100px;">
+                        <div class="border border-width-2 border-light d-flex align-items-stretch w-100"  style="height: 168px;">
+                            <div class="p-1 bg-light">sidebar</div>
+                            <div class="p-1">content</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mb-3">
+                    <div class="h6 mb-2"><a href="views/layouts/layouts/vboxhbox.html" target="_blank" class="">.vbox nested with .hbox</a></div>
+                    <div style=":height: 100px;">
+                        <div class="border border-width-2 border-light w-100"  style=":height: 100%;">
+                            <section class="bg-light dk">
+                                <div class="p-1">header</div>
+                            </section>
+                            <section>
+                                <div class="d-flex">
+                                    <div class="p-1 bg-light">sidebar</div>
+                                    <div class="w-full app" style="height: 132px;" >
+                                        <div class="vbox">
+                                            <section class="p-1">
+                                                content
+                                            </section>
+                                            <footer>
+                                                <div class="p-1 bg-light lter">footer</div>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mb-3">
+                    <div class="h6 mb-2"><a href="views/layouts/layouts/container.html" target="_blank" class="">.container layout</a></div>
+                    <div class="border border-width-2 border-light w-100"  style=":height: 100%;">
+                        <section class="bg-light dk">
+                            <div class="p-1">header</div>
+                        </section>
+                        <section >    
+                            <div class="m-auto bg-light lt w-75" style="height: 100px;">
+                                <div class="p-1">content</div>
+                            </div>
+                        </section>
+                        <footer class="bg-light">
+                            <div class="p-1">footer</div>
+                        </footer>
+                    </div>
+                </div>
+                <div class="col-3 mb-3">
+                    <div class="h6 mb-2"><a href="views/layouts/layouts/containerfluid.html" target="_blank" class="">.container-fluid layout</a></div>
+                    <div class="border border-width-2 border-light w-100"  style=":height: 100%;">
+                        <section class="bg-light dk">
+                            <div class="p-1">header</div>
+                        </section>
+                        <section >    
+                            <div class="m-auto bg-light lt " style="height: 100px;">
+                                <div class="p-1">content</div>
+                            </div>
+                        </section>
+                        <footer class="bg-light dk">
+                            <div class="p-1">footer</div>
+                        </footer>
+                    </div>
+                </div>
             </div>
+            <div class="row"">
+                
+            </div>
+
+           
+            <!--
+            <figure class="figure p-3">
+                <img src="lib/images/docs/layoutExamples.png" class="figure-img img-fluid">
+            </figure>
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="h5 mb-1"><code>.hbox</code> layout</div>
+                    <div class="h5 mb-2"><code>.hbox</code> layout</div>
                     <div class="" style="height:250px">
-                        <div class="app b bg-white">
+                        <div class="app border border-width-2 border-light">
                             <section class="hbox">
-                                <aside class="b-r p-1">
-                                    <p>aside</p>
+                                <aside class="border-light border-right">
+                                    <div class="p-3">aside</div>
                                 </aside>
-                                <section class="p-1"><div class="m-b-xl">section</div></section>
-                                <aside class="border-left p-1">
-                                    <p>aside</p>
+                                <section class="p-3">section</section>
+                                <aside class="border-left border-light">
+                                    <div class="p-3">aside</div>
                                 </aside>
                             </section>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="h5 mb-1"><code>.vbox</code> layout</div>
+                    <div class="h5 mb-2"><code>.vbox</code> layout</div>
                     <div style="height:250px">
-                        <div class="app b bg-white">
+                        <div class="app border border-width-2 border-light">
                             <section class="vbox">
-                                <header class="header b-b">
-                                    <p>header</p>
+                                <header class="header border-light border-bottom">
+                                    <div class="py-2">header</div>
                                 </header>
-                                <section class="p-1">section</section>
-                                <footer class="footer b-t">
-                                    <p>footer</p>
+                                <section class="p-3">section</section>
+                                <footer class="footer border-light border-top">
+                                    <div class="py-2">footer</div>
                                 </footer>
                             </section>
                         </div>
@@ -66,50 +185,76 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="h5 mb-1 mt-2"><code>.hbox</code> layout with <code>.stretch</code></div>
+                    <div class="h5 mb-2 mt-4"><code>.hbox</code> layout with <code>.stretch</code></div>
                     <div class="" style="height:250px">
-                        <div class="app b bg-white">
+                        <div class="app border border-width-2 border-light">
                             <section class="hbox stretch">
-                                <aside class="b-r p-1">
-                                    <p>aside</p>
+                                <aside class="border-right">
+                                    <div class="p-3">aside</div>
                                 </aside>
-                                <section class="p-1"><div class="m-b-xl">section</div></section>
-                                <aside class="border-left p-1">
-                                    <p>aside</p>
+                                <section class="p-3">section</section>
+                                <aside class="border-left">
+                                    <div class="p-3">aside</div>
                                 </aside>
                             </section>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="h5 mb-1 mt-2"><code>.vbox</code> layout with <code>.flex</code></div>
+                    <div class="h5 mb-2 mt-4"><code>.vbox</code> layout with <code>.flex</code></div>
                     <div style="height:250px">
-                        <div class="app b bg-white">
+                        <div class="app border border-width-2 border-light">
                             <section class="vbox flex">
-                                <header class="header b-b">
-                                    <p>Flex Content</p>
-                                </header>
-                                <header class="header b-b">
-                                    <p>header</p>
+                                <header class="header border-light border-bottom">
+                                    <div class="py-2">Flex Content</div>
+                                    <div class="py-2">Flex Content</div>
                                 </header>
                                 <section class="">
-                                    <p class="m-a-1">Content</p>
+                                    <div class="p-3">Content</div>
                                 </section>
-                                <footer class="footer b-t">
-                                    <p>footer</p>
+                                <footer class="footer border-light border-top">
+                                    <div class="py-2">footer</div>
                                 </footer>
                             </section>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="h5 mb-2 mt-4"><code>.container</code> layout</div>
+                    <div class="" style="height:250px">
+                        <div class="border border-width-2 border-light" style="height: 100%;">
+                            <section class="m-auto bg-light" style="height:100%; width: 80%;">
+                                <div class="p-3">container</div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="h5 mb-2 mt-4"><code>.container-fluid</code> layout</div>
+                    <div style="height:250px">
+                        <div class="" style="height:250px">
+                            <div class="border border-width-2 border-light" style="height: 100%;">
+                                <section class="m-auto bg-light" style="height:100%; width: 100%;">
+                                    <div class="p-3">container-fluid</div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-sm-center">
+                <iframe src="views/layouts/layouts/default.html" class="border-width-2 border-light pos-rlt mb-3 mt-2 border-box"  width="100%" height="500"></iframe>
+            </div>
+            -->
             <div id="classes" class="h4 mb-1 mt-3">Classes</div>
             <p>This table gives you a quick overview of the CSS classes that can be applied to create various layouts.</p>
             <div class="table-responsive m-t-lg">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th style="width: 150px">Class</th>
+                            <th style="width: 200px">Class</th>
                             <th>Description</th>
                         </tr>
                     </thead>
@@ -152,11 +297,24 @@
                         </tr>
                         <tr>
                             <td><code>.footer</code></td>
-                            <td>Sets the height of the <code>&lt;footer&gt;</code> tag in a <code>.vbox</code> layout. A <code>.header-md</code> can be applied as well to increase the height of the <code>&lt;header&gt;</code></td>
+                            <td>Sets the height of the <code>&lt;footer&gt;</code> tag in a <code>.vbox</code> layout.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.page-wrapper</code></td>
+                            <td>Beside vbox and hbox layout you can use <code>.page-wrapper</code> to create the layout for your application by apply it inside the <code>&lt;body&gt;</code> tag. Wrap your page with <code>.main-content</code> and add <code>.site-footer</code> below it. This layout will flush the footer to the bottm of the page even though the content inside <code>.main-content</code> is shorter than the height of the page.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.container</code></td>
+                            <td>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Add this class for fixed-width container.</td>
+                        </tr>
+                        <tr>
+                            <td><code>.container-fluid</code></td>
+                            <td>Use for a full width container, spanning the entire width of the viewport.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <!--
             <div id="types" class="h4 mb-1 mt-3">Layout Types</div>
             <p>A type refers to either the function of a page — for example, a Home page —or its layout, such as master-detail.</p>
             <hr class="m-y-2">
@@ -168,16 +326,17 @@
             <hr class="m-y-2">
             <div class="h5 mb-1"><a href="#/layouts/splitView">Table Layout</a></div>
             <p>A table is the most basic format for displaying a list. Each record is represented by a single row of data that begins with the record’s primary field and shows additional fields in subsequent columns. The data is labeled using column headers that can be interactive.</p>
+            -->
         </section>
         <aside class="aside-md border-left hidden-md-down nav-sidebar bg-white">
             <nav class="nav-scroll sticky-top w-100" role="navigation" jumpmenu>
                 <div class="text-muted text-uppercase hidden-nav padder mt-1 mb-1">On This Page:</div>
                 <ul class="nav nav-main flex-column" data-ride="collapse">
-                        <li class="nav-item active"><a href="javascript:void(0)" data-target="#principles" class="nav-link active">Design Principles</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" data-target="#configurations" class="nav-link">Configurations</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" data-target="#examples" class="nav-link">Examples</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" data-target="#classes" class="nav-link">Classes</a></li>
-                        <li class="nav-item"><a href="javascript:void(0)" data-target="#types" class="nav-link">Types</a></li>
+                    <li class="nav-item active"><a href="javascript:void(0)" data-target="#principles" class="nav-link active">Design Principles</a></li>
+                    <!--<li class="nav-item"><a href="javascript:void(0)" data-target="#examples" class="nav-link">Examples</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#types" class="nav-link">Types</a></li>-->
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#configurations" class="nav-link">Configurations</a></li>
+                    <li class="nav-item"><a href="javascript:void(0)" data-target="#classes" class="nav-link">Classes</a></li>
                 </ul>
             </nav>
         </aside>

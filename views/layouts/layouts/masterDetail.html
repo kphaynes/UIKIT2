@@ -7,130 +7,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="../../../lib/css/bootstrap.css">
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">-->
+    <link rel="stylesheet" href="../../../vendor/bootstrap/dist/css/bootstrap.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="../../../lib/vendor/kendo/2016.1.125/kendo.common.min.css" type='text/css'>
-    <link rel="stylesheet" href="../../../lib/css/app.css" type='text/css'>
-    <link rel="stylesheet" href="../../../lib/css/override.css" type='text/css'>
+    <link rel="stylesheet" href="../../../vendor/kendo/styles/kendo.common.min.css" type='text/css'>
+    <link rel="stylesheet" href="../../../assets/css/app_less.css" type='text/css'>
+    <link rel="stylesheet" href="../../../assets/css/app_sass.css" type='text/css'>
+    <!--<link rel="stylesheet" href="../../../lib/css/override.css" type='text/css'>-->
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
-    <script type="text/javascript" src="../../../app/main.js"></script>
-    <script type="text/javascript" src="../../..//lib//vendor/kendo/2016.1.125/kendo.all.min.js"></script>
-    <script type="text/javascript" src="../../../lib/js/app.js"></script>
-    <script type="text/javascript" src="../../../lib/js/tether.js"></script>
-    <script type="text/javascript" src="../../../lib/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../assets/js/main.js"></script>
+    <script type="text/javascript" src="../../../assets/js/app.js"></script>
+    <script type="text/javascript" src="../../../vendor/kendo/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/main.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script type="text/javascript" src="../../../vendor/bootstrap/dist/js/bootstrap.js"></script>
 </head>
 
 <body>
-<section class="vbox">
-    <header class="header p-a-0 b-b border-leftight navbar navbar-fixed-top-xs">
-        <nav class="navbar navbar-header navbar-light bg-white p-a-0 text-xs-center">
-            <ul class="nav navbar-nav pull-xs-right">
-                <li class="nav-item">
-                    <a href="javascript:void(0)" class="nav-link"><i class="fa fa-search fa-fw"></i></a>
-                </li>
-                <li class="nav-item hidden-sm-down">
-                    <a href="javascript:void(0)" class="nav-link">
-                        <span class="avatar rounded-circle">
-                            <img class="img-fluid" src="/lib/images/avatar_default.jpg" alt="">
-                        </span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav pull-xs-left hidden-md-up">
-                <li class="nav-item">
-                    <a href="javascript:void(0)" class="nav-link navbar-toggler" data-toggle="class:nav-off-screen,open" data-target="#navbarSideBar,html">
-                        <i class="fa fa-bars fa-fw "></i>
-                    </a>
-                </li>
-            </ul>
-            <a href="javascript:void(0)" class="navbar-brand aside-sm hidden-sm-down m-l m-r" data-toggle="fullscreen"> <img src="../../../lib/images/logo_dark.png" class="img-fluid pull-left"></a>
-            <a href="javascript:void(0)" class="navbar-brand w-48 hidden-md-up pull-xs-none" data-toggle="fullscreen"> <img src="../../../lib/images/logo_dark_sm.png" class="img-fluid"></a>
-        </nav>
-    </header>
-    <section id="content" class="">
-        <section class="hbox stretch b-t">
-            <aside class="nav-sidebar nav-xs bg-dark hidden-sm-down b-r" id="navbarSideBar">
-                <section class="vbox">
-                    <section class="scrollable">
-                        <nav class="" role="navigation">
-                            <ul class="nav" data-ride="collapse">
-                                <li class=" nav-item">
-                                    <a href="javascript:void(0)" class="nav-link auto">
-                                        <i class="fa fa-home fa-fw "></i> Home
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:void(0)" class="nav-link auto">
-                                        <i class="fa fa-file-text-o fa-fw "></i> Orders
-                                    </a>
-                                </li>
-                                <li class=" nav-item">
-                                    <a href="javascript:void(0)" class="nav-link auto">
-                                        <i class="fa fa-tags fa-fw "></i> Inventory
-                                        <b class="label bg-light pull-right hidden-nav">NEW</b>
-                                    </a>
-                                </li>
-                                <li class=" nav-item">
-                                    <a href="javascript:void(0)" class="nav-link auto">
-                                        <i class="fa fa-dollar fa-fw "></i> Invoicing
-                                        <b class="label label-pill bg-danger pull-right hidden-nav">4</b>
-                                    </a>
-                                </li>
-                                <li class="active nav-item">
-                                    <a href="javascript:void(0)" class="nav-link auto">
-                                        <i class="fa fa-user fa-fw "></i> Employees
-                                    </a>
-                                </li>
-                                <li class=" nav-item">
-                                    <a href="javascript:void(0)" class="nav-link auto">
-                                        <i class="fa fa-bar-chart fa-fw "></i> Reports
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="line dk hidden-nav"></div>
-                        </nav>
+    <section class="vbox">
+        <header class="header fixed-top p-0 navbar-fixed-top-xs">
+            <nav class="navbar navbar-header navbar-light bg-white box-shadow d-flex flex-row">
+                <div class="nav navbar-nav d-flex mr-auto hidden-lg-up">
+                    <div class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link navbar-toggler border-0 rounded-0" data-toggle="class:nav-off-screen,open" data-target="#navbarSideBar">
+                            <i class="fa fa-bars fa-fw "></i>
+                        </a>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="navbar-brand p-0 hidden-sm-down d-flex" data-toggle="fullscreen"> <img src="../../../assets/images/logo_dark.png" height="50"></a>
+                <a href="javascript:void(0)" class="navbar-brand p-0 hidden-md-up d-flex mx-auto" data-toggle="fullscreen"> <img src="../../../assets/images/logo_dark_sm.png" height="50"></a>
+                <div class="nav navbar-nav d-flex flex-row ml-auto">
+                    <div class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link"><i class="fa fa-search fa-fw"></i></a>
+                    </div>
+                    <div class="nav-item hidden-sm-down">
+                        <a href="javascript:void(0)" class="nav-link">
+                            <img src="/lib/images/avatar_default.jpg" alt="" class="avatar-sm rounded-circle">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="content" class="">
+            <section class="hbox stretch border-top">
+                <aside class="aside-md nav-sidebar nav-xs bg-dark hidden-md-down" id="navbarSideBar">
+                    <section class="vbox">
+                        <section class="scrollable">
+                            <nav class="" role="navigation">
+                                <ul class="nav flex-column" data-ride="collapse">
+                                    <li class=" nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-home fa-fw "></i> Home
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-file-text-o fa-fw "></i> Orders
+                                        </a>
+                                    </li>
+                                    <li class=" nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-tags fa-fw "></i> Inventory
+                                            <b class="badge bg-light pull-right hidden-nav">NEW</b>
+                                        </a>
+                                    </li>
+                                    <li class=" nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-dollar fa-fw "></i> Invoicing
+                                            <b class="badge badge-pill bg-danger pull-right hidden-nav">4</b>
+                                        </a>
+                                    </li>
+                                    <li class="active nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-user fa-fw "></i> Employees
+                                        </a>
+                                    </li>
+                                    <li class=" nav-item">
+                                        <a href="javascript:void(0)" class="nav-link auto">
+                                            <i class="fa fa-bar-chart fa-fw "></i> Reports
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="line dk hidden-nav"></div>
+                            </nav>
+                        </section>
                     </section>
-                </section>
-            </aside>
-            <aside class="aside-md b-r">
-                <section class="vbox">
-                    <header class="header b-b wrapper-sm" >
-                        <div class="input-group m-t-sm">
-                            <span class="input-group-addon input-sm no-border bg-empty"><i class="fa fa-search icon-muted"></i></span>
-                            <input type="text" id="employeeFilter" class="form-control no-border no-padder bg-empty text-md" placeholder="Filter by Name">
-                        </div>
-                    </header>
-                    <section class="scrollable">
-                        <ul id="employeeGrid" class="list-group auto no-radius no-border" >
-                            <script id="template" type="text/x-kendo-tmpl">
-                                <li class="list-group-item">
-                                    <a href="javascript:void(0)">
-                                        <span class="avatar avatar-sm rounded-circle bg-light dker m-r-1 pull-left">
-                                            <img class="img-fluid" src="/lib/images/avatar_default.jpg" alt="">
-                                        </span>
-                                        <span class="clear">
-                                            <span class="block">#: first_name# #: last_name #</span>
-                                            <small class="text-muted text-ellipsis">#: title # in #: department # </small>
-                                        </span>
-                                    </a>
-                                </li>
-                            </script>
-                        </ul>
+                </aside>
+                <section>
+                    <section class="hbox stretch">
+                        <aside class="aside-lg border-right border-light">
+                            <section class="vbox">
+                                <header class="header p-2 border-bottom border-light">
+                                    <div class="input-group">
+                                        <span class="input-group-addon input-sm border-0 bg-empty"><i class="fa fa-search icon-muted"></i></span>
+                                        <input type="text" id="employeeFilter" class="form-control border-0 p-0 bg-empty text-md" placeholder="Filter by Name">
+                                    </div>
+                                </header>
+                                <section class="scrollable">
+                                    <ul id="employeeGrid" class="list-group auto rounded-0 border-0 mt-neg-1" >
+                                        <script id="template" type="text/x-kendo-tmpl">
+                                            <li class="list-group-item border-left-0 border-right-0 rounded-0">
+                                                <a href="javascript:void(0)" class="py-1">
+                                                    <span class="avatar avatar-sm rounded-circle bg-light dker m-r-1 pull-left">
+                                                        <img class="img-fluid" src="/lib/images/avatar_default.jpg" alt="">
+                                                    </span>
+                                                    <span class="clear">
+                                                        <span class="block">#: first_name# #: last_name #</span>
+                                                        <small class="text-muted text-ellipsis mt-1">#: title # in #: department # </small>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </script>
+                                    </ul>
+                                </section>
+                            </section>
+                        </aside>
+                        <aside>
+                            <section id="detail" class="vbox flex">
+                            </section>
+                        </aside>
                     </section>
+                    
                 </section>
-            </aside>
-            <section>
-                <section id="detail" class="vbox flex">
-                </section>
+                
             </section>
         </section>
     </section>
-</section>
 </body>
 <script type="text/javascript">
     
@@ -266,28 +274,25 @@
             }
         });
     }
-
     //$(document).ready(createChart);
-
-
 </script>
 
 <script id="detailTemplate" type="text/x-kendo-template">
-    <header class="header bg-light p-a-0">
-        <div class="b-b b-dark bg-white p-a-2">
-            <div class="btn-group pull-sm-right mb-1">
+    <header class="header bg-light p-0">
+        <div class="border-bottom border-light bg-white p-4">
+            <div class="btn-group float-sm-right mb-1">
                 <div class="btn-group" role="group">
-                    <a href="javascript:void(0)" class="btn btn-secondary-outline btn-icon dropdown-toggle" data-toggle="dropdown"></a>
+                    <a href="javascript:void(0)" class="btn btn-secondary btn-icon dropdown-toggle" data-toggle="dropdown"></a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="javascript:void(0)">Action</a>
                         <a class="dropdown-item" href="javascript:void(0)">Action</a>
                     </div>
                 </div>
             </div>
-            <a href="javascript:void(0)" class="btn btn-secondary-outline pull-sm-right mb-1 mr-1">Edit</a>
-            <div class="media m-a-0">
+            <button class="btn btn-secondary float-sm-right mb-1 mr-1">Edit</button>
+            <div class="media">
                 <div class="media-left">
-                    <span class="avatar avatar-md rounded-circle bg-light dker b b-white">
+                    <span class="avatar avatar-md rounded-circle bg-light dker mr-2">
                         <img class="img-fluid" src="/lib/images/avatar_default.jpg" alt="">
                     </span>
                 </div>
@@ -296,84 +301,89 @@
                     <h3 class="media-heading">#= first_name # #= last_name #</h3>
                 </div>
             </div>
-            <div class="row mt-1 padder-h collapse in" id="profileHeader">
-                <div class="col-sm-2 ">
-                    <div class="text-muted text-sm">DEPARTMENT</div>
-                    <p class="text-ellipsis text-dark">#= department #</p>
-                </div>
-                <div class="col-sm-2 ">
-                    <div class="text-muted text-sm">PHONE</div>
-                    <p class="text-ellipsis text-dark">#= phone #</p>
-                </div>
-                <div class="col-sm-3 ">
-                    <div class="text-muted text-sm">EMAIL</div>
-                    <p class="text-ellipsis text-dark"><a href="mailto:hrichards@progress.com?Subject=Hello%20again">#= email # </a></p>
-                </div>
-                <div class="col-sm-5 ">
-                    <div class="text-muted text-sm">Address</div>
-                    <address class="text-dark">#= address #<br>
-                        #= city #, #= state # #= zip # </address>
+            <div class="collapse in" id="profileHeader">
+                <div class="row mt-2 ">
+                    <div class="col-sm-2 ">
+                        <div class="text-muted small">DEPARTMENT</div>
+                        <p class="text-ellipsis text-dark">#= department #</p>
+                    </div>
+                    <div class="col-sm-2 ">
+                        <div class="text-muted small">PHONE</div>
+                        <p class="text-ellipsis text-dark">#= phone #</p>
+                    </div>
+                    <div class="col-sm-3 ">
+                        <div class="text-muted small">EMAIL</div>
+                        <p class="text-ellipsis text-dark"><a href="mailto:hrichards@progress.com?Subject=Hello%20again">#= email # </a></p>
+                    </div>
+                    <div class="col-sm-5 ">
+                        <div class="text-muted text-sm">Address</div>
+                        <address class="text-dark">#= address #<br>
+                            #= city #, #= state # #= zip # </address>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="text-xs-center block m-t-n-xxs">
-            <span class="bg-white inline b-b b-r border-left m-t-n-xxs" data-toggle="collapse" data-target="\\#profileHeader">
-                <button class="btn btn-link btn-sm bg-empty padder-h l-h-1x" data-toggle="button" aria-pressed="false">
-                    <i class="fa fa-angle-down text-active"></i>
-                    <i class="fa fa-angle-up text"></i>
+        <div class="text-center" style="margin-top: -1px;">
+            <div class="" data-toggle="collapse" data-target="\\#profileHeader">
+                <button class="btn btn-secondary bg-white rounded-0 border-top-0 border-light py-1" data-toggle="button" aria-pressed="false">
+                    <i class="fa fa-angle-up text-active"></i>
+                    <i class="fa fa-angle-down text"></i>
                 </button>
-            </span>
+            </div>
         </div>
     </header>
     <section class="">
         <section class="vbox">
-            <section class="scrollable p-a-2 bg-light">
-                
+            <section class="scrollable p-4 bg-light">
                 <div class="row row-sm">
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-block">
+                                <div class="card-title no-border ">
+                                    <div class="h6 text-dark mt-1 text-uppercase text-ellipsis">Sales this month
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="h2">$706.2K</div>
+                                    <small class="text-muted text-ellipsis">Booked to date vs. 750K Goal</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-md-4">
-                        <div class="card card-default card-block">
-                            <div class="card-title no-border ">
-                                <div class="h6 text-dark mt-1 text-uppercase text-ellipsis">Sales this month
+                        <div class="card mb-3">
+                            <div class="card-block">
+                                <div class="card-title no-border ">
+                                    <div class="h6 text-dark mt-1 text-uppercase text-ellipsis">Total Forcast this month
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="h2">$706.2K</div>
-                                <small class="text-muted text-ellipsis">Booked to date vs. 750K Goal</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 ">
-                        <div class="card card-default card-block">
-                            <div class="card-title no-border ">
-                                <div class="h6 text-dark mt-1 text-uppercase text-ellipsis">Total Forcast this month
+                                <div class="card-body">
+                                    <div class="h2">$760K</div>
+                                    <small class="text-muted text-ellipsis">September based on Pipeline</small>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="h2">$760K</div>
-                                <small class="text-muted text-ellipsis">September based on Pipeline</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card card-default card-block">
-                            <div class="card-title no-border ">
-                                <div class="h6 text-dark mt-1 text-uppercase text-ellipsis">Sales as % of Goal
+                        <div class="card mb-3">
+                            <div class="card-block">
+                                <div class="card-title no-border ">
+                                    <div class="h6 text-dark mt-1 text-uppercase text-ellipsis">Sales as % of Goal
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="h2 text-primary">92%</div>
-                                <small class="text-muted text-ellipsis">Percentage of Goal Value</small>
+                                <div class="card-body">
+                                    <div class="h2 text-primary">92%</div>
+                                    <small class="text-muted text-ellipsis">Percentage of Goal Value</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                     <div class="col-md-12">
-                        <section class="card p-a-2">
-                            <div class="card-title no-border ">
+                        <section class="card p-4">
+                            <div class="card-title">
                                 <div class="h6 text-dark mt-1 text-uppercase text-ellipsis">Sales to date &amp; Forcast vs. Goal
                                 </div>
                             </div>
@@ -384,9 +394,6 @@
                     </div>
 
                 </div>
-
-
-
             </section>
         </section>
     </section>
