@@ -91,7 +91,7 @@
                     #{$prop}-right: -$length-x !important;
                     #{$prop}-left:  -$length-x !important;
                 }
-                .#{$abbrev}y#{$infix}-#{$size} {
+                .#{$abbrev}y#{$infix}-neg-#{$size} {
                     #{$prop}-top:    -$length-y !important;
                     #{$prop}-bottom: -$length-y !important;
                 }
