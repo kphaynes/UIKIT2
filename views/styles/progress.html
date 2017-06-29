@@ -1,0 +1,116 @@
+<div class="">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="p-4">
+            <h1 class="display-5">Progress</h1>
+            <p class="lead">Use progress component for displaying simple or complex progress bars.</p>
+        </div>
+    </div>
+    <div class="hbox stretch">
+        <section class="p-4">
+            <div id="basic" class="h4 mb-1 mt-1">Basic</div>
+            <p class="mb-1">Progress components are built with two classes <code>.progress</code> and <code>.progress-bar</code> to provide baseline styles for the progress bar.</p>
+            <div class="p-1" ng-include src="'views/styles/progress/basic.html'" ></div>
+            <p class="h6 font-bold mt-1 mb-1">Example markup</p>
+            <pre id="overviewExample" class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/progress/basic.html'" maketext></pre>
+
+            <div id="label" class="h4 mb-1 mt-1">Labels</div>
+            <p class="mb-1">Add labels to your progress bars by placing text within the <code>.progress-bar</code>. </p>
+            <div class="p-1" ng-include src="'views/styles/progress/label.html'" ></div>
+            <p class="h6 font-bold mt-1 mb-1">Example markup</p>
+            <pre id="overviewExample" class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/progress/label.html'" maketext></pre>
+
+            <div id="height" class="h4 mb-1 mt-1">Height</div>
+            <p class="mb-1">Set a height value on the <code>.progress-bar</code>, the progress bar will automatically resize accordingly. </p>
+            <div class="p-1" ng-include src="'views/styles/progress/height.html'" ></div>
+            <p class="h6 font-bold mt-1 mb-1">Example markup</p>
+            <pre id="overviewExample" class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/progress/height.html'" maketext></pre>
+
+            <div id="color" class="h4 mb-1 mt-1">Color</div>
+            <p class="mb-1">Use background utility classes <code>bg-*</code> to <code>.progress-bar</code> to change the appearance of individual progress bars. </p>
+            <div class="p-1" ng-include src="'views/styles/progress/color.html'" ></div>
+            <p class="h6 font-bold mt-1 mb-1">Example markup</p>
+            <pre id="overviewExample" class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/progress/color.html'" maketext></pre>
+
+            <div id="multibar" class="h4 mb-1 mt-1">Multiple Bars</div>
+            <p class="mb-1">Include multiple progress bars in a progress component if you need.</p>
+            <div class="p-1" ng-include src="'views/styles/progress/multibar.html'" ></div>
+            <p class="h6 font-bold mt-1 mb-1">Example markup</p>
+            <pre id="overviewExample" class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/progress/multibar.html'" maketext></pre>
+
+            <div id="striped" class="h4 mb-1 mt-1">Striped</div>
+            <p class="mb-1">Add <code>.progress-bar-striped</code> to any <code>.progress-bar</code> to apply a stripe via CSS gradient over the progress bar’s background color.</p>
+            <div class="p-1" ng-include src="'views/styles/progress/striped.html'" ></div>
+            <p class="h6 font-bold mt-1 mb-1">Example markup</p>
+            <pre id="overviewExample" class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/progress/striped.html'" maketext></pre>
+
+            <div id="animated" class="h4 mb-1 mt-1">Striped</div>
+            <p class="mb-1">The striped gradient can also be animated.</p>
+            <div class="p-1" ng-include src="'views/styles/progress/animated.html'" ></div>
+            <p class="h6 font-bold mt-1 mb-1">Example markup</p>
+            <pre id="overviewExample" class="code pre-scrollable bg-light p-3 border" ng-include src="'views/styles/progress/animated.html'" maketext></pre>
+
+            <p id="classes" class="h4 mb-1 mt-3">Classes</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>.progress</code></td>
+                        <td>Defines the progress</td>
+                    </tr>
+                    <tr>
+                        <td><code>.progress-bar</code></td>
+                        <td>Indicate the progress so far. It requires an inline style, utility class, or custom CSS to set their width. Use <code>role</code> and <code>aria</code> attributes to make it accessible.</td>
+                    </tr>
+                     <tr>
+                        <td><code>.bg-*</code></td>
+                        <td>Use background utility classes <code>bg-*</code> to change the appearance of individual progress bars. </td>
+                    </tr>
+                    <tr>
+                        <td><code>.progress-bar-striped</code></td>
+                        <td>Apply a stripe via CSS gradient over the progress bar’s background color</td>
+                    </tr>
+                    <tr>
+                        <td><code>.progress-bar-animated</code></td>
+                        <td>Add to <code>.progress-bar</code> to animate the stripes right to left via CSS3 animations.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <aside class="aside-md border-left hidden-md-down nav-sidebar bg-white">
+            <nav class="nav-scroll sticky-top w-100 " role="navigation" jumpmenu>
+                <div class="text-muted text-uppercase hidden-nav padder mt-1 mb-1">On This Page:</div>
+                <ul class="nav nav-main flex-column" data-ride="collapse">
+                    <li class="nav-item active">
+                        <a href="javascript:void(0)" data-target="#basic" class="nav-link active">Basic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#label" class="nav-link">Labels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#height" class="nav-link ">Height</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#color" class="nav-link ">Color</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#multibar" class="nav-link ">Multiple Bars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#striped" class="nav-link ">Striped</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#animated" class="nav-link ">Animated Stripes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" data-target="#classes" class="nav-link ">Classes</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+</div>
