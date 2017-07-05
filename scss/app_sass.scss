@@ -5,16 +5,18 @@
 @import "bootstrap/mixins";
 @import "mixins";
 
+@import "utilities";
+@import "avatar";
+@import "rating";
+@import "steps";
+
 @import "reset";
 @import "layout";
-
 
 @import "color";
 @import "nav";
 
-@import "utilities";
-@import "avatar";
-@import "rating";
+
 
 
 

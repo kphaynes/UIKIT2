@@ -1,3 +1,661 @@
+.avatar {
+  position: relative;
+  width: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.avatar i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 30%;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 100%;
+}
+
+.avatar i.md {
+  width: 40%;
+  height: 40%;
+}
+
+.avatar i.right {
+  left: auto;
+  right: 0;
+}
+
+.avatar i.left {
+  left: 0;
+  right: auto;
+}
+
+.avatar i.top {
+  top: 0;
+  bottom: auto;
+}
+
+.avatar i.bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.avatar i.on {
+  background-color: #5cb85c;
+}
+
+.avatar i.off {
+  background-color: #828E96;
+}
+
+.avatar i.busy {
+  background-color: #d9534f;
+}
+
+.avatar i.away {
+  background-color: #f0ad4e;
+}
+
+.avatar-text {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  line-height: 50px;
+}
+
+.avatar-lg .avatar-text {
+  height: 128px;
+  line-height: 128px;
+  font-size: 3rem;
+}
+
+.avatar-md .avatar-text {
+  height: 64px;
+  line-height: 64px;
+  font-size: 1.8rem;
+}
+
+.avatar-sm .avatar-text {
+  height: 34px;
+  line-height: 34px;
+  font-size: .9rem;
+}
+
+.avatar-xs .avatar-text {
+  height: 24px;
+  line-height: 24px;
+  font-size: .7rem;
+}
+
+.avatar-lg {
+  width: 128px;
+}
+
+.avatar-md {
+  width: 64px;
+}
+
+.avatar-sm {
+  width: 34px;
+}
+
+.avatar-xs {
+  width: 24px;
+}
+
+.rating {
+  float: left;
+}
+
+.rating:not(:checked) > input {
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  width: 1em;
+  padding: 0 .1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: FontAwesome;
+  color: #e3e3ec;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  content: "\f005";
+  color: #f0ad4e;
+}
+
+.rating:not(:checked) > label:before {
+  content: "\f005";
+}
+
+.rating > input:checked ~ label {
+  content: "\f005";
+  color: #f0ad4e;
+}
+
+.rating > label:active {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  content: "\f005";
+  color: #f0ad4e;
+}
+
+.steps {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  margin: 0 0 1rem 0;
+  background: '';
+  box-shadow: none;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+}
+
+.steps:first-child {
+  margin-top: 0;
+}
+
+.steps:last-child {
+  margin-bottom: 0;
+}
+
+.steps .step {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  vertical-align: middle;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  padding: .8rem 1.5rem .8rem 2.5rem;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  -webkit-transition: background-color 0.1s ease, opacity 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
+  transition: background-color 0.1s ease, opacity 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
+}
+
+.steps .step:after {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  content: '';
+  top: 50%;
+  right: 0%;
+  border: medium none;
+  background-color: #FFFFFF;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-style: solid;
+  border-color: rgba(2, 4, 6, 0.1);
+  border-width: 0px 1px 1px 0px;
+  font-size: 1rem;
+  -webkit-transition: background-color 0.1s ease, opacity 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
+  transition: background-color 0.1s ease, opacity 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
+  -webkit-transform: scale3d(1, 3, 1) translateY(-15%) translateX(50%) rotate(-45deg);
+  -ms-transform: scale3d(1, 3, 1) translateY(-15%) translateX(50%) rotate(-45deg);
+  transform: scale3d(1, 3, 1) translateY(-15%) translateX(50%) rotate(-45deg);
+}
+
+/* First Step */
+.steps .step:first-child {
+  padding-left: 2rem;
+}
+
+/* Last Step */
+.steps .step:last-child {
+  border-right: none;
+  margin-right: 0;
+}
+
+/* Only Step */
+/* Title */
+.steps .step .step-body {
+  z-index: 2;
+}
+
+.steps .step .step-title {
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+.steps .step > .step-title {
+  width: 100%;
+}
+
+/* Description */
+.steps .step .step-description {
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+.steps .step > .step-description {
+  width: 100%;
+}
+
+/* Icon */
+.steps .step > .step-icon {
+  line-height: 1;
+  margin: 0 .8rem 0 0;
+}
+
+.steps .step > .step-icon,
+.steps .step > .step-icon ~ .step-body {
+  display: block;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: middle;
+  -ms-flex-item-align: middle;
+  align-self: middle;
+}
+
+.steps .step > .step-icon ~ .step-body {
+  -webkit-box-flex: 1 0 auto;
+  -webkit-flex-grow: 1 0 auto;
+  -ms-flex-positive: 1 0 auto;
+  flex-grow: 1 0 auto;
+}
+
+/* Horizontal Icon */
+.steps:not(.steps-vertical) .step > .step-icon {
+  width: auto;
+}
+
+/* Link */
+.steps .link.step,
+.steps a.step {
+  cursor: pointer;
+}
+
+.steps-numbered.steps {
+  counter-reset: ordered;
+}
+
+.steps-numbered.steps .step:before {
+  display: block;
+  position: static;
+  text-align: center;
+  content: counters(ordered, ".");
+  -webkit-align-self: middle;
+  -ms-flex-item-align: middle;
+  align-self: middle;
+  margin-right: .8rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  counter-increment: ordered;
+  font-family: inherit;
+  font-weight: normal;
+}
+
+.steps-numbered.steps .step > * {
+  display: block;
+  -webkit-align-self: middle;
+  -ms-flex-item-align: middle;
+  align-self: middle;
+}
+
+.steps-vertical.steps {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.steps-vertical.steps .step {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  border-radius: 0;
+  padding: .8rem 1.5rem .8rem 2.5rem;
+  border-right: none;
+  border-bottom: 1px solid rgba(228, 232, 237, 0.15);
+}
+
+.steps-vertical.steps .step:first-child {
+  padding: .8rem 1.5rem .8rem 2.5rem;
+}
+
+.steps-vertical.steps .step:last-child {
+  border-bottom: none;
+}
+
+/* Arrow */
+.steps-vertical.steps .step:after {
+  display: none;
+}
+
+.steps-vertical.steps .step:after {
+  top: 50%;
+  right: 0%;
+  border-width: 0px 1px 1px 0px;
+}
+
+.steps-vertical.steps .step:after {
+  display: none;
+}
+
+.steps-vertical.steps .active.step:after {
+  display: block;
+}
+
+.steps-vertical.steps .step:last-child:after {
+  display: none;
+}
+
+.steps-vertical.steps .active.step:last-child:after {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .steps {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    overflow: visible;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .steps .step {
+    width: 100% !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-radius: 0;
+    padding: 0.8rem 1.5rem !important;
+  }
+  .steps .step:first-child {
+    padding: 0.8rem 1.5rem !important;
+  }
+  /* Arrow */
+  .steps .step:after {
+    display: none !important;
+  }
+  /* Content */
+  .steps .step .step-body {
+    text-align: center;
+  }
+  /* Icon */
+  .steps .step > .step-icon,
+  .steps-numbered.steps .step:before {
+    margin: 0 0 .8rem 0;
+  }
+}
+
+/* Link Hover */
+.steps .link.step:hover::after,
+.steps .link.step:hover,
+.steps a.step:hover::after,
+.steps a.step:hover {
+  background: #f7f7f9;
+}
+
+/* Link Down */
+.steps .link.step:active::after,
+.steps .link.step:active,
+.steps a.step:active::after,
+.steps a.step:active {
+  background: #f2f2f6;
+}
+
+/* Active */
+.steps .step.active {
+  cursor: auto;
+  background: #f2f2f6;
+}
+
+.steps .step.active:after {
+  background: #f2f2f6;
+}
+
+/* Active Arrow */
+.steps .step:after {
+  display: block;
+}
+
+.steps .active.step:after {
+  display: block;
+}
+
+.steps .step:last-child:after {
+  display: none;
+}
+
+.steps .active.step:last-child:after {
+  display: none;
+}
+
+/* Active Hover */
+.steps .link.active.step:hover::after,
+.steps .link.active.step:hover,
+.steps a.active.step:hover::after,
+.steps a.active.step:hover {
+  cursor: pointer;
+  background: #dbdbe7;
+}
+
+/* Completed */
+.steps .step.complete > .step-icon:before,
+.steps-numbered.steps .step.complete:before {
+  font-family: 'fontawesome';
+  content: '\f00c';
+}
+
+.steps:not([class*="bg-"]) .step.complete > .step-icon:before,
+.steps-numbered.steps:not([class*="bg-"]) .step.complete:before {
+  color: #5cb85c;
+}
+
+/* Disabled */
+.steps .disabled.step {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.steps .disabled.step:after {
+  background: #FFFFFF;
+}
+
+/* Stackable - Tablet Or Below */
+@media (max-width: 991px) {
+  .steps[class*="tablet stackable"] {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    overflow: visible;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  /* Steps */
+  .steps[class*="tablet stackable"] .step {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-radius: 0;
+    padding: .8rem 1.5rem;
+  }
+  .steps[class*="tablet stackable"] .step:first-child {
+    padding: .8rem 1.5rem;
+  }
+  /* Arrow */
+  .steps[class*="tablet stackable"] .step:after {
+    display: none !important;
+  }
+  /* Content */
+  .steps[class*="tablet stackable"] .step .step-body {
+    text-align: center;
+  }
+  /* Icon */
+  .steps[class*="tablet stackable"] .step > .step-icon,
+  .steps[class*="tablet stackable"].steps-numbered .step:before {
+    margin: 0 0 1rem 0;
+  }
+}
+
+/* Fluid */
+.steps-fluid.steps {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+/* Attached - Top */
+.steps-top.steps {
+  margin: -1px 0;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+/* Attached - Bottom */
+.steps-bottom.steps {
+  margin: -1px 0;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+/* Sizes */
+.steps-sm.step,
+.steps-sm.steps .step {
+  padding: .5rem 1rem .5rem 2rem;
+}
+
+.steps-sm.step .step-title,
+.steps-sm.steps .step .step-title {
+  font-size: 0.875rem;
+}
+
+.steps-sm.step .step-description,
+.steps-sm.steps .step .step-description {
+  font-size: 0.75rem;
+}
+
+.steps-sm.step:before,
+.steps-sm.step .step-icon,
+.steps-sm.steps .step:before,
+.steps-sm.steps .step .step-icon {
+  font-size: 2rem;
+}
+
+.step,
+.steps .step {
+  font-size: 1rem;
+}
+
+.steps-lg.step,
+.steps-lg.steps .step {
+  padding: 1rem 2rem 1rem 3rem;
+  font-size: 110%;
+}
+
+.steps-lg.step .step-title,
+.steps-lg.steps .step .step-title {
+  font-size: 1.25rem;
+}
+
+.steps-lg.step .step-description,
+.steps-lg.steps .step .step-description {
+  font-size: 1rem;
+}
+
+.steps-lg.step:before,
+.steps-lg.step .step-icon,
+.steps-lg.steps .step:before,
+.steps-lg.steps .step .step-icon {
+  font-size: 3rem;
+}
+
+/* Helpers */
+.steps-noflex .step {
+  flex: 0 auto;
+}
+
+/* Wizard */
+.steps-container .steps-content .step-pane {
+  display: none;
+}
+
+.steps-container .steps-content .step-pane.active {
+  display: block;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -1995,7 +2653,7 @@ button.list-group-item-danger.active {
 }
 
 .form-control {
-  border-color: rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
   border-width: 1px;
 }
@@ -2524,7 +3182,7 @@ button.list-group-item-danger.active {
   vertical-align: middle;
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
   background-size: 8px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -2592,7 +3250,7 @@ button.list-group-item-danger.active {
   pointer-events: none;
   user-select: none;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
   box-shadow: inset 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
 }
@@ -2613,7 +3271,7 @@ button.list-group-item-danger.active {
   line-height: 1.5;
   color: #4E5255;
   background-color: #eceeef;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0 0.25rem 0.25rem 0;
 }
 
@@ -2686,23 +3344,23 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 .border {
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .border-top {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .border-bottom {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .border-left {
-  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .border-right {
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .rounded-0 {
@@ -4630,8 +5288,8 @@ body.container {
 @media (min-width: 992px) {
   body.container {
     box-shadow: 0 3px 60px rgba(0, 0, 0, 0.3);
-    border-left: 1px solid rgba(0, 0, 0, 0.05);
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-left: 1px solid rgba(0, 0, 0, 0.125);
+    border-right: 1px solid rgba(0, 0, 0, 0.125);
   }
   .app,
   .app body {
@@ -4841,6 +5499,44 @@ html, body {
   color: #d1ffb2;
 }
 
+.bg-primary.steps,
+.bg-primary .steps {
+  border: 1px solid #48b200;
+}
+
+.bg-primary.steps .step:after,
+.bg-primary .steps .step:after {
+  border-color: #48b200;
+}
+
+.bg-primary.steps .step:after, .bg-primary.steps .step.disabled:after,
+.bg-primary .steps .step:after,
+.bg-primary .steps .step.disabled:after {
+  background-color: #5CE500;
+}
+
+.bg-primary.steps .step:hover, .bg-primary.steps .step:hover:after,
+.bg-primary .steps .step:hover,
+.bg-primary .steps .step:hover:after {
+  background-color: #52cc00;
+}
+
+.bg-primary.steps .step.active,
+.bg-primary .steps .step.active {
+  background-color: #48b200;
+}
+
+.bg-primary.steps .step.active:after,
+.bg-primary .steps .step.active:after {
+  background-color: #48b200;
+}
+
+.bg-primary.steps .step.active:hover, .bg-primary.steps .step.active:hover:after,
+.bg-primary .steps .step.active:hover,
+.bg-primary .steps .step.active:hover:after {
+  background-color: #52cc00;
+}
+
 .bg-primary .list-group-item {
   border-color: #62f400 !important;
   background-color: transparent;
@@ -4880,6 +5576,64 @@ html, body {
 .bg-primary.lt,
 .bg-primary .lt {
   background-color: #66ff00 !important;
+}
+
+.bg-primary.lt.steps,
+.bg-primary.lt .steps,
+.bg-primary .lt.steps,
+.bg-primary .lt .steps {
+  border: 1px solid #52cc00;
+}
+
+.bg-primary.lt.steps .step:after,
+.bg-primary.lt .steps .step:after,
+.bg-primary .lt.steps .step:after,
+.bg-primary .lt .steps .step:after {
+  border-color: #52cc00;
+}
+
+.bg-primary.lt.steps .step:after, .bg-primary.lt.steps .step.disabled:after,
+.bg-primary.lt .steps .step:after,
+.bg-primary.lt .steps .step.disabled:after,
+.bg-primary .lt.steps .step:after,
+.bg-primary .lt.steps .step.disabled:after,
+.bg-primary .lt .steps .step:after,
+.bg-primary .lt .steps .step.disabled:after {
+  background-color: #66ff00;
+}
+
+.bg-primary.lt.steps .step:hover, .bg-primary.lt.steps .step:hover:after,
+.bg-primary.lt .steps .step:hover,
+.bg-primary.lt .steps .step:hover:after,
+.bg-primary .lt.steps .step:hover,
+.bg-primary .lt.steps .step:hover:after,
+.bg-primary .lt .steps .step:hover,
+.bg-primary .lt .steps .step:hover:after {
+  background-color: #5ce500;
+}
+
+.bg-primary.lt.steps .step.active,
+.bg-primary.lt .steps .step.active,
+.bg-primary .lt.steps .step.active,
+.bg-primary .lt .steps .step.active {
+  background-color: #52cc00;
+}
+
+.bg-primary.lt.steps .step.active:after,
+.bg-primary.lt .steps .step.active:after,
+.bg-primary .lt.steps .step.active:after,
+.bg-primary .lt .steps .step.active:after {
+  background-color: #52cc00;
+}
+
+.bg-primary.lt.steps .step.active:hover, .bg-primary.lt.steps .step.active:hover:after,
+.bg-primary.lt .steps .step.active:hover,
+.bg-primary.lt .steps .step.active:hover:after,
+.bg-primary .lt.steps .step.active:hover,
+.bg-primary .lt.steps .step.active:hover:after,
+.bg-primary .lt .steps .step.active:hover,
+.bg-primary .lt .steps .step.active:hover:after {
+  background-color: #5ce500;
 }
 
 .bg-primary.lt .list-group-item,
@@ -4936,6 +5690,64 @@ html, body {
   background-color: #75ff19 !important;
 }
 
+.bg-primary.lter.steps,
+.bg-primary.lter .steps,
+.bg-primary .lter.steps,
+.bg-primary .lter .steps {
+  border: 1px solid #5ce500;
+}
+
+.bg-primary.lter.steps .step:after,
+.bg-primary.lter .steps .step:after,
+.bg-primary .lter.steps .step:after,
+.bg-primary .lter .steps .step:after {
+  border-color: #5ce500;
+}
+
+.bg-primary.lter.steps .step:after, .bg-primary.lter.steps .step.disabled:after,
+.bg-primary.lter .steps .step:after,
+.bg-primary.lter .steps .step.disabled:after,
+.bg-primary .lter.steps .step:after,
+.bg-primary .lter.steps .step.disabled:after,
+.bg-primary .lter .steps .step:after,
+.bg-primary .lter .steps .step.disabled:after {
+  background-color: #75ff19;
+}
+
+.bg-primary.lter.steps .step:hover, .bg-primary.lter.steps .step:hover:after,
+.bg-primary.lter .steps .step:hover,
+.bg-primary.lter .steps .step:hover:after,
+.bg-primary .lter.steps .step:hover,
+.bg-primary .lter.steps .step:hover:after,
+.bg-primary .lter .steps .step:hover,
+.bg-primary .lter .steps .step:hover:after {
+  background-color: #66ff00;
+}
+
+.bg-primary.lter.steps .step.active,
+.bg-primary.lter .steps .step.active,
+.bg-primary .lter.steps .step.active,
+.bg-primary .lter .steps .step.active {
+  background-color: #5ce500;
+}
+
+.bg-primary.lter.steps .step.active:after,
+.bg-primary.lter .steps .step.active:after,
+.bg-primary .lter.steps .step.active:after,
+.bg-primary .lter .steps .step.active:after {
+  background-color: #5ce500;
+}
+
+.bg-primary.lter.steps .step.active:hover, .bg-primary.lter.steps .step.active:hover:after,
+.bg-primary.lter .steps .step.active:hover,
+.bg-primary.lter .steps .step.active:hover:after,
+.bg-primary .lter.steps .step.active:hover,
+.bg-primary .lter.steps .step.active:hover:after,
+.bg-primary .lter .steps .step.active:hover,
+.bg-primary .lter .steps .step.active:hover:after {
+  background-color: #66ff00;
+}
+
 .bg-primary.lter .list-group-item,
 .bg-primary .lter .list-group-item {
   border-color: #7fff28 !important;
@@ -4988,6 +5800,64 @@ html, body {
 .bg-primary.ltest,
 .bg-primary .ltest {
   background-color: #e0ffcc !important;
+}
+
+.bg-primary.ltest.steps,
+.bg-primary.ltest .steps,
+.bg-primary .ltest.steps,
+.bg-primary .ltest .steps {
+  border: 1px solid #c2ff99;
+}
+
+.bg-primary.ltest.steps .step:after,
+.bg-primary.ltest .steps .step:after,
+.bg-primary .ltest.steps .step:after,
+.bg-primary .ltest .steps .step:after {
+  border-color: #c2ff99;
+}
+
+.bg-primary.ltest.steps .step:after, .bg-primary.ltest.steps .step.disabled:after,
+.bg-primary.ltest .steps .step:after,
+.bg-primary.ltest .steps .step.disabled:after,
+.bg-primary .ltest.steps .step:after,
+.bg-primary .ltest.steps .step.disabled:after,
+.bg-primary .ltest .steps .step:after,
+.bg-primary .ltest .steps .step.disabled:after {
+  background-color: #e0ffcc;
+}
+
+.bg-primary.ltest.steps .step:hover, .bg-primary.ltest.steps .step:hover:after,
+.bg-primary.ltest .steps .step:hover,
+.bg-primary.ltest .steps .step:hover:after,
+.bg-primary .ltest.steps .step:hover,
+.bg-primary .ltest.steps .step:hover:after,
+.bg-primary .ltest .steps .step:hover,
+.bg-primary .ltest .steps .step:hover:after {
+  background-color: #d1ffb2;
+}
+
+.bg-primary.ltest.steps .step.active,
+.bg-primary.ltest .steps .step.active,
+.bg-primary .ltest.steps .step.active,
+.bg-primary .ltest .steps .step.active {
+  background-color: #c2ff99;
+}
+
+.bg-primary.ltest.steps .step.active:after,
+.bg-primary.ltest .steps .step.active:after,
+.bg-primary .ltest.steps .step.active:after,
+.bg-primary .ltest .steps .step.active:after {
+  background-color: #c2ff99;
+}
+
+.bg-primary.ltest.steps .step.active:hover, .bg-primary.ltest.steps .step.active:hover:after,
+.bg-primary.ltest .steps .step.active:hover,
+.bg-primary.ltest .steps .step.active:hover:after,
+.bg-primary .ltest.steps .step.active:hover,
+.bg-primary .ltest.steps .step.active:hover:after,
+.bg-primary .ltest .steps .step.active:hover,
+.bg-primary .ltest .steps .step.active:hover:after {
+  background-color: #d1ffb2;
 }
 
 .bg-primary.ltest .list-group-item,
@@ -5044,6 +5914,64 @@ html, body {
   background-color: #52cc00 !important;
 }
 
+.bg-primary.dk.steps,
+.bg-primary.dk .steps,
+.bg-primary .dk.steps,
+.bg-primary .dk .steps {
+  border: 1px solid #3d9900;
+}
+
+.bg-primary.dk.steps .step:after,
+.bg-primary.dk .steps .step:after,
+.bg-primary .dk.steps .step:after,
+.bg-primary .dk .steps .step:after {
+  border-color: #3d9900;
+}
+
+.bg-primary.dk.steps .step:after, .bg-primary.dk.steps .step.disabled:after,
+.bg-primary.dk .steps .step:after,
+.bg-primary.dk .steps .step.disabled:after,
+.bg-primary .dk.steps .step:after,
+.bg-primary .dk.steps .step.disabled:after,
+.bg-primary .dk .steps .step:after,
+.bg-primary .dk .steps .step.disabled:after {
+  background-color: #52cc00;
+}
+
+.bg-primary.dk.steps .step:hover, .bg-primary.dk.steps .step:hover:after,
+.bg-primary.dk .steps .step:hover,
+.bg-primary.dk .steps .step:hover:after,
+.bg-primary .dk.steps .step:hover,
+.bg-primary .dk.steps .step:hover:after,
+.bg-primary .dk .steps .step:hover,
+.bg-primary .dk .steps .step:hover:after {
+  background-color: #48b200;
+}
+
+.bg-primary.dk.steps .step.active,
+.bg-primary.dk .steps .step.active,
+.bg-primary .dk.steps .step.active,
+.bg-primary .dk .steps .step.active {
+  background-color: #3d9900;
+}
+
+.bg-primary.dk.steps .step.active:after,
+.bg-primary.dk .steps .step.active:after,
+.bg-primary .dk.steps .step.active:after,
+.bg-primary .dk .steps .step.active:after {
+  background-color: #3d9900;
+}
+
+.bg-primary.dk.steps .step.active:hover, .bg-primary.dk.steps .step.active:hover:after,
+.bg-primary.dk .steps .step.active:hover,
+.bg-primary.dk .steps .step.active:hover:after,
+.bg-primary .dk.steps .step.active:hover,
+.bg-primary .dk.steps .step.active:hover:after,
+.bg-primary .dk .steps .step.active:hover,
+.bg-primary .dk .steps .step.active:hover:after {
+  background-color: #48b200;
+}
+
 .bg-primary.dk .list-group-item,
 .bg-primary .dk .list-group-item {
   border-color: #58db00 !important;
@@ -5098,6 +6026,64 @@ html, body {
   background-color: #48b200 !important;
 }
 
+.bg-primary.dker.steps,
+.bg-primary.dker .steps,
+.bg-primary .dker.steps,
+.bg-primary .dker .steps {
+  border: 1px solid #337f00;
+}
+
+.bg-primary.dker.steps .step:after,
+.bg-primary.dker .steps .step:after,
+.bg-primary .dker.steps .step:after,
+.bg-primary .dker .steps .step:after {
+  border-color: #337f00;
+}
+
+.bg-primary.dker.steps .step:after, .bg-primary.dker.steps .step.disabled:after,
+.bg-primary.dker .steps .step:after,
+.bg-primary.dker .steps .step.disabled:after,
+.bg-primary .dker.steps .step:after,
+.bg-primary .dker.steps .step.disabled:after,
+.bg-primary .dker .steps .step:after,
+.bg-primary .dker .steps .step.disabled:after {
+  background-color: #48b200;
+}
+
+.bg-primary.dker.steps .step:hover, .bg-primary.dker.steps .step:hover:after,
+.bg-primary.dker .steps .step:hover,
+.bg-primary.dker .steps .step:hover:after,
+.bg-primary .dker.steps .step:hover,
+.bg-primary .dker.steps .step:hover:after,
+.bg-primary .dker .steps .step:hover,
+.bg-primary .dker .steps .step:hover:after {
+  background-color: #3d9900;
+}
+
+.bg-primary.dker.steps .step.active,
+.bg-primary.dker .steps .step.active,
+.bg-primary .dker.steps .step.active,
+.bg-primary .dker .steps .step.active {
+  background-color: #337f00;
+}
+
+.bg-primary.dker.steps .step.active:after,
+.bg-primary.dker .steps .step.active:after,
+.bg-primary .dker.steps .step.active:after,
+.bg-primary .dker .steps .step.active:after {
+  background-color: #337f00;
+}
+
+.bg-primary.dker.steps .step.active:hover, .bg-primary.dker.steps .step.active:hover:after,
+.bg-primary.dker .steps .step.active:hover,
+.bg-primary.dker .steps .step.active:hover:after,
+.bg-primary .dker.steps .step.active:hover,
+.bg-primary .dker.steps .step.active:hover:after,
+.bg-primary .dker .steps .step.active:hover,
+.bg-primary .dker .steps .step.active:hover:after {
+  background-color: #3d9900;
+}
+
 .bg-primary.dker .list-group-item,
 .bg-primary .dker .list-group-item {
   border-color: #4ec100 !important;
@@ -5150,6 +6136,64 @@ html, body {
 .bg-primary.bg,
 .bg-primary .bg {
   background-color: #5CE500;
+}
+
+.bg-primary.bg.steps,
+.bg-primary.bg .steps,
+.bg-primary .bg.steps,
+.bg-primary .bg .steps {
+  border: 1px solid #48b200;
+}
+
+.bg-primary.bg.steps .step:after,
+.bg-primary.bg .steps .step:after,
+.bg-primary .bg.steps .step:after,
+.bg-primary .bg .steps .step:after {
+  border-color: #48b200;
+}
+
+.bg-primary.bg.steps .step:after, .bg-primary.bg.steps .step.disabled:after,
+.bg-primary.bg .steps .step:after,
+.bg-primary.bg .steps .step.disabled:after,
+.bg-primary .bg.steps .step:after,
+.bg-primary .bg.steps .step.disabled:after,
+.bg-primary .bg .steps .step:after,
+.bg-primary .bg .steps .step.disabled:after {
+  background-color: #5CE500;
+}
+
+.bg-primary.bg.steps .step:hover, .bg-primary.bg.steps .step:hover:after,
+.bg-primary.bg .steps .step:hover,
+.bg-primary.bg .steps .step:hover:after,
+.bg-primary .bg.steps .step:hover,
+.bg-primary .bg.steps .step:hover:after,
+.bg-primary .bg .steps .step:hover,
+.bg-primary .bg .steps .step:hover:after {
+  background-color: #52cc00;
+}
+
+.bg-primary.bg.steps .step.active,
+.bg-primary.bg .steps .step.active,
+.bg-primary .bg.steps .step.active,
+.bg-primary .bg .steps .step.active {
+  background-color: #48b200;
+}
+
+.bg-primary.bg.steps .step.active:after,
+.bg-primary.bg .steps .step.active:after,
+.bg-primary .bg.steps .step.active:after,
+.bg-primary .bg .steps .step.active:after {
+  background-color: #48b200;
+}
+
+.bg-primary.bg.steps .step.active:hover, .bg-primary.bg.steps .step.active:hover:after,
+.bg-primary.bg .steps .step.active:hover,
+.bg-primary.bg .steps .step.active:hover:after,
+.bg-primary .bg.steps .step.active:hover,
+.bg-primary .bg.steps .step.active:hover:after,
+.bg-primary .bg .steps .step.active:hover,
+.bg-primary .bg .steps .step.active:hover:after {
+  background-color: #52cc00;
 }
 
 .bg-primary.bg .list-group-item,
@@ -5297,6 +6341,44 @@ html, body {
   color: #eaf6ea;
 }
 
+.bg-success.steps,
+.bg-success .steps {
+  border: 1px solid #449d44;
+}
+
+.bg-success.steps .step:after,
+.bg-success .steps .step:after {
+  border-color: #449d44;
+}
+
+.bg-success.steps .step:after, .bg-success.steps .step.disabled:after,
+.bg-success .steps .step:after,
+.bg-success .steps .step.disabled:after {
+  background-color: #5cb85c;
+}
+
+.bg-success.steps .step:hover, .bg-success.steps .step:hover:after,
+.bg-success .steps .step:hover,
+.bg-success .steps .step:hover:after {
+  background-color: #4cae4c;
+}
+
+.bg-success.steps .step.active,
+.bg-success .steps .step.active {
+  background-color: #449d44;
+}
+
+.bg-success.steps .step.active:after,
+.bg-success .steps .step.active:after {
+  background-color: #449d44;
+}
+
+.bg-success.steps .step.active:hover, .bg-success.steps .step.active:hover:after,
+.bg-success .steps .step.active:hover,
+.bg-success .steps .step.active:hover:after {
+  background-color: #4cae4c;
+}
+
 .bg-success .list-group-item {
   border-color: #67bd67 !important;
   background-color: transparent;
@@ -5336,6 +6418,64 @@ html, body {
 .bg-success.lt,
 .bg-success .lt {
   background-color: #6bc26b !important;
+}
+
+.bg-success.lt.steps,
+.bg-success.lt .steps,
+.bg-success .lt.steps,
+.bg-success .lt .steps {
+  border: 1px solid #49b249;
+}
+
+.bg-success.lt.steps .step:after,
+.bg-success.lt .steps .step:after,
+.bg-success .lt.steps .step:after,
+.bg-success .lt .steps .step:after {
+  border-color: #49b249;
+}
+
+.bg-success.lt.steps .step:after, .bg-success.lt.steps .step.disabled:after,
+.bg-success.lt .steps .step:after,
+.bg-success.lt .steps .step.disabled:after,
+.bg-success .lt.steps .step:after,
+.bg-success .lt.steps .step.disabled:after,
+.bg-success .lt .steps .step:after,
+.bg-success .lt .steps .step.disabled:after {
+  background-color: #6bc26b;
+}
+
+.bg-success.lt.steps .step:hover, .bg-success.lt.steps .step:hover:after,
+.bg-success.lt .steps .step:hover,
+.bg-success.lt .steps .step:hover:after,
+.bg-success .lt.steps .step:hover,
+.bg-success .lt.steps .step:hover:after,
+.bg-success .lt .steps .step:hover,
+.bg-success .lt .steps .step:hover:after {
+  background-color: #59bb59;
+}
+
+.bg-success.lt.steps .step.active,
+.bg-success.lt .steps .step.active,
+.bg-success .lt.steps .step.active,
+.bg-success .lt .steps .step.active {
+  background-color: #49b249;
+}
+
+.bg-success.lt.steps .step.active:after,
+.bg-success.lt .steps .step.active:after,
+.bg-success .lt.steps .step.active:after,
+.bg-success .lt .steps .step.active:after {
+  background-color: #49b249;
+}
+
+.bg-success.lt.steps .step.active:hover, .bg-success.lt.steps .step.active:hover:after,
+.bg-success.lt .steps .step.active:hover,
+.bg-success.lt .steps .step.active:hover:after,
+.bg-success .lt.steps .step.active:hover,
+.bg-success .lt.steps .step.active:hover:after,
+.bg-success .lt .steps .step.active:hover,
+.bg-success .lt .steps .step.active:hover:after {
+  background-color: #59bb59;
 }
 
 .bg-success.lt .list-group-item,
@@ -5392,6 +6532,64 @@ html, body {
   background-color: #7bcc7b !important;
 }
 
+.bg-success.lter.steps,
+.bg-success.lter .steps,
+.bg-success .lter.steps,
+.bg-success .lter .steps {
+  border: 1px solid #56be56;
+}
+
+.bg-success.lter.steps .step:after,
+.bg-success.lter .steps .step:after,
+.bg-success .lter.steps .step:after,
+.bg-success .lter .steps .step:after {
+  border-color: #56be56;
+}
+
+.bg-success.lter.steps .step:after, .bg-success.lter.steps .step.disabled:after,
+.bg-success.lter .steps .step:after,
+.bg-success.lter .steps .step.disabled:after,
+.bg-success .lter.steps .step:after,
+.bg-success .lter.steps .step.disabled:after,
+.bg-success .lter .steps .step:after,
+.bg-success .lter .steps .step.disabled:after {
+  background-color: #7bcc7b;
+}
+
+.bg-success.lter.steps .step:hover, .bg-success.lter.steps .step:hover:after,
+.bg-success.lter .steps .step:hover,
+.bg-success.lter .steps .step:hover:after,
+.bg-success .lter.steps .step:hover,
+.bg-success .lter.steps .step:hover:after,
+.bg-success .lter .steps .step:hover,
+.bg-success .lter .steps .step:hover:after {
+  background-color: #69c569;
+}
+
+.bg-success.lter.steps .step.active,
+.bg-success.lter .steps .step.active,
+.bg-success .lter.steps .step.active,
+.bg-success .lter .steps .step.active {
+  background-color: #56be56;
+}
+
+.bg-success.lter.steps .step.active:after,
+.bg-success.lter .steps .step.active:after,
+.bg-success .lter.steps .step.active:after,
+.bg-success .lter .steps .step.active:after {
+  background-color: #56be56;
+}
+
+.bg-success.lter.steps .step.active:hover, .bg-success.lter.steps .step.active:hover:after,
+.bg-success.lter .steps .step.active:hover,
+.bg-success.lter .steps .step.active:hover:after,
+.bg-success .lter.steps .step.active:hover,
+.bg-success .lter.steps .step.active:hover:after,
+.bg-success .lter .steps .step.active:hover,
+.bg-success .lter .steps .step.active:hover:after {
+  background-color: #69c569;
+}
+
 .bg-success.lter .list-group-item,
 .bg-success .lter .list-group-item {
   border-color: #86d086 !important;
@@ -5444,6 +6642,64 @@ html, body {
 .bg-success.ltest,
 .bg-success .ltest {
   background-color: #f0faf0 !important;
+}
+
+.bg-success.ltest.steps,
+.bg-success.ltest .steps,
+.bg-success .ltest.steps,
+.bg-success .ltest .steps {
+  border: 1px solid #caedca;
+}
+
+.bg-success.ltest.steps .step:after,
+.bg-success.ltest .steps .step:after,
+.bg-success .ltest.steps .step:after,
+.bg-success .ltest .steps .step:after {
+  border-color: #caedca;
+}
+
+.bg-success.ltest.steps .step:after, .bg-success.ltest.steps .step.disabled:after,
+.bg-success.ltest .steps .step:after,
+.bg-success.ltest .steps .step.disabled:after,
+.bg-success .ltest.steps .step:after,
+.bg-success .ltest.steps .step.disabled:after,
+.bg-success .ltest .steps .step:after,
+.bg-success .ltest .steps .step.disabled:after {
+  background-color: #f0faf0;
+}
+
+.bg-success.ltest.steps .step:hover, .bg-success.ltest.steps .step:hover:after,
+.bg-success.ltest .steps .step:hover,
+.bg-success.ltest .steps .step:hover:after,
+.bg-success .ltest.steps .step:hover,
+.bg-success .ltest.steps .step:hover:after,
+.bg-success .ltest .steps .step:hover,
+.bg-success .ltest .steps .step:hover:after {
+  background-color: #ddf4dd;
+}
+
+.bg-success.ltest.steps .step.active,
+.bg-success.ltest .steps .step.active,
+.bg-success .ltest.steps .step.active,
+.bg-success .ltest .steps .step.active {
+  background-color: #caedca;
+}
+
+.bg-success.ltest.steps .step.active:after,
+.bg-success.ltest .steps .step.active:after,
+.bg-success .ltest.steps .step.active:after,
+.bg-success .ltest .steps .step.active:after {
+  background-color: #caedca;
+}
+
+.bg-success.ltest.steps .step.active:hover, .bg-success.ltest.steps .step.active:hover:after,
+.bg-success.ltest .steps .step.active:hover,
+.bg-success.ltest .steps .step.active:hover:after,
+.bg-success .ltest.steps .step.active:hover,
+.bg-success .ltest.steps .step.active:hover:after,
+.bg-success .ltest .steps .step.active:hover,
+.bg-success .ltest .steps .step.active:hover:after {
+  background-color: #ddf4dd;
 }
 
 .bg-success.ltest .list-group-item,
@@ -5500,6 +6756,64 @@ html, body {
   background-color: #49b249 !important;
 }
 
+.bg-success.dk.steps,
+.bg-success.dk .steps,
+.bg-success .dk.steps,
+.bg-success .dk .steps {
+  border: 1px solid #3a8d3a;
+}
+
+.bg-success.dk.steps .step:after,
+.bg-success.dk .steps .step:after,
+.bg-success .dk.steps .step:after,
+.bg-success .dk .steps .step:after {
+  border-color: #3a8d3a;
+}
+
+.bg-success.dk.steps .step:after, .bg-success.dk.steps .step.disabled:after,
+.bg-success.dk .steps .step:after,
+.bg-success.dk .steps .step.disabled:after,
+.bg-success .dk.steps .step:after,
+.bg-success .dk.steps .step.disabled:after,
+.bg-success .dk .steps .step:after,
+.bg-success .dk .steps .step.disabled:after {
+  background-color: #49b249;
+}
+
+.bg-success.dk.steps .step:hover, .bg-success.dk.steps .step:hover:after,
+.bg-success.dk .steps .step:hover,
+.bg-success.dk .steps .step:hover:after,
+.bg-success .dk.steps .step:hover,
+.bg-success .dk.steps .step:hover:after,
+.bg-success .dk .steps .step:hover,
+.bg-success .dk .steps .step:hover:after {
+  background-color: #41a041;
+}
+
+.bg-success.dk.steps .step.active,
+.bg-success.dk .steps .step.active,
+.bg-success .dk.steps .step.active,
+.bg-success .dk .steps .step.active {
+  background-color: #3a8d3a;
+}
+
+.bg-success.dk.steps .step.active:after,
+.bg-success.dk .steps .step.active:after,
+.bg-success .dk.steps .step.active:after,
+.bg-success .dk .steps .step.active:after {
+  background-color: #3a8d3a;
+}
+
+.bg-success.dk.steps .step.active:hover, .bg-success.dk.steps .step.active:hover:after,
+.bg-success.dk .steps .step.active:hover,
+.bg-success.dk .steps .step.active:hover:after,
+.bg-success .dk.steps .step.active:hover,
+.bg-success .dk.steps .step.active:hover:after,
+.bg-success .dk .steps .step.active:hover,
+.bg-success .dk .steps .step.active:hover:after {
+  background-color: #41a041;
+}
+
 .bg-success.dk .list-group-item,
 .bg-success .dk .list-group-item {
   border-color: #52b852 !important;
@@ -5554,6 +6868,64 @@ html, body {
   background-color: #3fa23f !important;
 }
 
+.bg-success.dker.steps,
+.bg-success.dker .steps,
+.bg-success .dker.steps,
+.bg-success .dker .steps {
+  border: 1px solid #307e30;
+}
+
+.bg-success.dker.steps .step:after,
+.bg-success.dker .steps .step:after,
+.bg-success .dker.steps .step:after,
+.bg-success .dker .steps .step:after {
+  border-color: #307e30;
+}
+
+.bg-success.dker.steps .step:after, .bg-success.dker.steps .step.disabled:after,
+.bg-success.dker .steps .step:after,
+.bg-success.dker .steps .step.disabled:after,
+.bg-success .dker.steps .step:after,
+.bg-success .dker.steps .step.disabled:after,
+.bg-success .dker .steps .step:after,
+.bg-success .dker .steps .step.disabled:after {
+  background-color: #3fa23f;
+}
+
+.bg-success.dker.steps .step:hover, .bg-success.dker.steps .step:hover:after,
+.bg-success.dker .steps .step:hover,
+.bg-success.dker .steps .step:hover:after,
+.bg-success .dker.steps .step:hover,
+.bg-success .dker.steps .step:hover:after,
+.bg-success .dker .steps .step:hover,
+.bg-success .dker .steps .step:hover:after {
+  background-color: #389038;
+}
+
+.bg-success.dker.steps .step.active,
+.bg-success.dker .steps .step.active,
+.bg-success .dker.steps .step.active,
+.bg-success .dker .steps .step.active {
+  background-color: #307e30;
+}
+
+.bg-success.dker.steps .step.active:after,
+.bg-success.dker .steps .step.active:after,
+.bg-success .dker.steps .step.active:after,
+.bg-success .dker .steps .step.active:after {
+  background-color: #307e30;
+}
+
+.bg-success.dker.steps .step.active:hover, .bg-success.dker.steps .step.active:hover:after,
+.bg-success.dker .steps .step.active:hover,
+.bg-success.dker .steps .step.active:hover:after,
+.bg-success .dker.steps .step.active:hover,
+.bg-success .dker.steps .step.active:hover:after,
+.bg-success .dker .steps .step.active:hover,
+.bg-success .dker .steps .step.active:hover:after {
+  background-color: #389038;
+}
+
 .bg-success.dker .list-group-item,
 .bg-success .dker .list-group-item {
   border-color: #43ad43 !important;
@@ -5606,6 +6978,64 @@ html, body {
 .bg-success.bg,
 .bg-success .bg {
   background-color: #5cb85c;
+}
+
+.bg-success.bg.steps,
+.bg-success.bg .steps,
+.bg-success .bg.steps,
+.bg-success .bg .steps {
+  border: 1px solid #449d44;
+}
+
+.bg-success.bg.steps .step:after,
+.bg-success.bg .steps .step:after,
+.bg-success .bg.steps .step:after,
+.bg-success .bg .steps .step:after {
+  border-color: #449d44;
+}
+
+.bg-success.bg.steps .step:after, .bg-success.bg.steps .step.disabled:after,
+.bg-success.bg .steps .step:after,
+.bg-success.bg .steps .step.disabled:after,
+.bg-success .bg.steps .step:after,
+.bg-success .bg.steps .step.disabled:after,
+.bg-success .bg .steps .step:after,
+.bg-success .bg .steps .step.disabled:after {
+  background-color: #5cb85c;
+}
+
+.bg-success.bg.steps .step:hover, .bg-success.bg.steps .step:hover:after,
+.bg-success.bg .steps .step:hover,
+.bg-success.bg .steps .step:hover:after,
+.bg-success .bg.steps .step:hover,
+.bg-success .bg.steps .step:hover:after,
+.bg-success .bg .steps .step:hover,
+.bg-success .bg .steps .step:hover:after {
+  background-color: #4cae4c;
+}
+
+.bg-success.bg.steps .step.active,
+.bg-success.bg .steps .step.active,
+.bg-success .bg.steps .step.active,
+.bg-success .bg .steps .step.active {
+  background-color: #449d44;
+}
+
+.bg-success.bg.steps .step.active:after,
+.bg-success.bg .steps .step.active:after,
+.bg-success .bg.steps .step.active:after,
+.bg-success .bg .steps .step.active:after {
+  background-color: #449d44;
+}
+
+.bg-success.bg.steps .step.active:hover, .bg-success.bg.steps .step.active:hover:after,
+.bg-success.bg .steps .step.active:hover,
+.bg-success.bg .steps .step.active:hover:after,
+.bg-success .bg.steps .step.active:hover,
+.bg-success .bg.steps .step.active:hover:after,
+.bg-success .bg .steps .step.active:hover,
+.bg-success .bg .steps .step.active:hover:after {
+  background-color: #4cae4c;
 }
 
 .bg-success.bg .list-group-item,
@@ -5753,6 +7183,44 @@ html, body {
   color: #a8d6fe;
 }
 
+.bg-info.steps,
+.bg-info .steps {
+  border: 1px solid #025aa5;
+}
+
+.bg-info.steps .step:after,
+.bg-info .steps .step:after {
+  border-color: #025aa5;
+}
+
+.bg-info.steps .step:after, .bg-info.steps .step.disabled:after,
+.bg-info .steps .step:after,
+.bg-info .steps .step.disabled:after {
+  background-color: #0275d8;
+}
+
+.bg-info.steps .step:hover, .bg-info.steps .step:hover:after,
+.bg-info .steps .step:hover,
+.bg-info .steps .step:hover:after {
+  background-color: #0267bf;
+}
+
+.bg-info.steps .step.active,
+.bg-info .steps .step.active {
+  background-color: #025aa5;
+}
+
+.bg-info.steps .step.active:after,
+.bg-info .steps .step.active:after {
+  background-color: #025aa5;
+}
+
+.bg-info.steps .step.active:hover, .bg-info.steps .step.active:hover:after,
+.bg-info .steps .step.active:hover,
+.bg-info .steps .step.active:hover:after {
+  background-color: #0267bf;
+}
+
 .bg-info .list-group-item {
   border-color: #027de7 !important;
   background-color: transparent;
@@ -5792,6 +7260,64 @@ html, body {
 .bg-info.lt,
 .bg-info .lt {
   background-color: #0083f4 !important;
+}
+
+.bg-info.lt.steps,
+.bg-info.lt .steps,
+.bg-info .lt.steps,
+.bg-info .lt .steps {
+  border: 1px solid #0067c1;
+}
+
+.bg-info.lt.steps .step:after,
+.bg-info.lt .steps .step:after,
+.bg-info .lt.steps .step:after,
+.bg-info .lt .steps .step:after {
+  border-color: #0067c1;
+}
+
+.bg-info.lt.steps .step:after, .bg-info.lt.steps .step.disabled:after,
+.bg-info.lt .steps .step:after,
+.bg-info.lt .steps .step.disabled:after,
+.bg-info .lt.steps .step:after,
+.bg-info .lt.steps .step.disabled:after,
+.bg-info .lt .steps .step:after,
+.bg-info .lt .steps .step.disabled:after {
+  background-color: #0083f4;
+}
+
+.bg-info.lt.steps .step:hover, .bg-info.lt.steps .step:hover:after,
+.bg-info.lt .steps .step:hover,
+.bg-info.lt .steps .step:hover:after,
+.bg-info .lt.steps .step:hover,
+.bg-info .lt.steps .step:hover:after,
+.bg-info .lt .steps .step:hover,
+.bg-info .lt .steps .step:hover:after {
+  background-color: #0075da;
+}
+
+.bg-info.lt.steps .step.active,
+.bg-info.lt .steps .step.active,
+.bg-info .lt.steps .step.active,
+.bg-info .lt .steps .step.active {
+  background-color: #0067c1;
+}
+
+.bg-info.lt.steps .step.active:after,
+.bg-info.lt .steps .step.active:after,
+.bg-info .lt.steps .step.active:after,
+.bg-info .lt .steps .step.active:after {
+  background-color: #0067c1;
+}
+
+.bg-info.lt.steps .step.active:hover, .bg-info.lt.steps .step.active:hover:after,
+.bg-info.lt .steps .step.active:hover,
+.bg-info.lt .steps .step.active:hover:after,
+.bg-info .lt.steps .step.active:hover,
+.bg-info .lt.steps .step.active:hover:after,
+.bg-info .lt .steps .step.active:hover,
+.bg-info .lt .steps .step.active:hover:after {
+  background-color: #0075da;
 }
 
 .bg-info.lt .list-group-item,
@@ -5848,6 +7374,64 @@ html, body {
   background-color: #0e90ff !important;
 }
 
+.bg-info.lter.steps,
+.bg-info.lter .steps,
+.bg-info .lter.steps,
+.bg-info .lter .steps {
+  border: 1px solid #0075da;
+}
+
+.bg-info.lter.steps .step:after,
+.bg-info.lter .steps .step:after,
+.bg-info .lter.steps .step:after,
+.bg-info .lter .steps .step:after {
+  border-color: #0075da;
+}
+
+.bg-info.lter.steps .step:after, .bg-info.lter.steps .step.disabled:after,
+.bg-info.lter .steps .step:after,
+.bg-info.lter .steps .step.disabled:after,
+.bg-info .lter.steps .step:after,
+.bg-info .lter.steps .step.disabled:after,
+.bg-info .lter .steps .step:after,
+.bg-info .lter .steps .step.disabled:after {
+  background-color: #0e90ff;
+}
+
+.bg-info.lter.steps .step:hover, .bg-info.lter.steps .step:hover:after,
+.bg-info.lter .steps .step:hover,
+.bg-info.lter .steps .step:hover:after,
+.bg-info .lter.steps .step:hover,
+.bg-info .lter.steps .step:hover:after,
+.bg-info .lter .steps .step:hover,
+.bg-info .lter .steps .step:hover:after {
+  background-color: #0083f4;
+}
+
+.bg-info.lter.steps .step.active,
+.bg-info.lter .steps .step.active,
+.bg-info .lter.steps .step.active,
+.bg-info .lter .steps .step.active {
+  background-color: #0075da;
+}
+
+.bg-info.lter.steps .step.active:after,
+.bg-info.lter .steps .step.active:after,
+.bg-info .lter.steps .step.active:after,
+.bg-info .lter .steps .step.active:after {
+  background-color: #0075da;
+}
+
+.bg-info.lter.steps .step.active:hover, .bg-info.lter.steps .step.active:hover:after,
+.bg-info.lter .steps .step.active:hover,
+.bg-info.lter .steps .step.active:hover:after,
+.bg-info .lter.steps .step.active:hover,
+.bg-info .lter.steps .step.active:hover:after,
+.bg-info .lter .steps .step.active:hover,
+.bg-info .lter .steps .step.active:hover:after {
+  background-color: #0083f4;
+}
+
 .bg-info.lter .list-group-item,
 .bg-info .lter .list-group-item {
   border-color: #1d97ff !important;
@@ -5900,6 +7484,64 @@ html, body {
 .bg-info.ltest,
 .bg-info .ltest {
   background-color: #8ecaff !important;
+}
+
+.bg-info.ltest.steps,
+.bg-info.ltest .steps,
+.bg-info .ltest.steps,
+.bg-info .ltest .steps {
+  border: 1px solid #5bb3ff;
+}
+
+.bg-info.ltest.steps .step:after,
+.bg-info.ltest .steps .step:after,
+.bg-info .ltest.steps .step:after,
+.bg-info .ltest .steps .step:after {
+  border-color: #5bb3ff;
+}
+
+.bg-info.ltest.steps .step:after, .bg-info.ltest.steps .step.disabled:after,
+.bg-info.ltest .steps .step:after,
+.bg-info.ltest .steps .step.disabled:after,
+.bg-info .ltest.steps .step:after,
+.bg-info .ltest.steps .step.disabled:after,
+.bg-info .ltest .steps .step:after,
+.bg-info .ltest .steps .step.disabled:after {
+  background-color: #8ecaff;
+}
+
+.bg-info.ltest.steps .step:hover, .bg-info.ltest.steps .step:hover:after,
+.bg-info.ltest .steps .step:hover,
+.bg-info.ltest .steps .step:hover:after,
+.bg-info .ltest.steps .step:hover,
+.bg-info .ltest.steps .step:hover:after,
+.bg-info .ltest .steps .step:hover,
+.bg-info .ltest .steps .step:hover:after {
+  background-color: #74bfff;
+}
+
+.bg-info.ltest.steps .step.active,
+.bg-info.ltest .steps .step.active,
+.bg-info .ltest.steps .step.active,
+.bg-info .ltest .steps .step.active {
+  background-color: #5bb3ff;
+}
+
+.bg-info.ltest.steps .step.active:after,
+.bg-info.ltest .steps .step.active:after,
+.bg-info .ltest.steps .step.active:after,
+.bg-info .ltest .steps .step.active:after {
+  background-color: #5bb3ff;
+}
+
+.bg-info.ltest.steps .step.active:hover, .bg-info.ltest.steps .step.active:hover:after,
+.bg-info.ltest .steps .step.active:hover,
+.bg-info.ltest .steps .step.active:hover:after,
+.bg-info .ltest.steps .step.active:hover,
+.bg-info .ltest.steps .step.active:hover:after,
+.bg-info .ltest .steps .step.active:hover,
+.bg-info .ltest .steps .step.active:hover:after {
+  background-color: #74bfff;
 }
 
 .bg-info.ltest .list-group-item,
@@ -5956,6 +7598,64 @@ html, body {
   background-color: #0067c1 !important;
 }
 
+.bg-info.dk.steps,
+.bg-info.dk .steps,
+.bg-info .dk.steps,
+.bg-info .dk .steps {
+  border: 1px solid #004c8e;
+}
+
+.bg-info.dk.steps .step:after,
+.bg-info.dk .steps .step:after,
+.bg-info .dk.steps .step:after,
+.bg-info .dk .steps .step:after {
+  border-color: #004c8e;
+}
+
+.bg-info.dk.steps .step:after, .bg-info.dk.steps .step.disabled:after,
+.bg-info.dk .steps .step:after,
+.bg-info.dk .steps .step.disabled:after,
+.bg-info .dk.steps .step:after,
+.bg-info .dk.steps .step.disabled:after,
+.bg-info .dk .steps .step:after,
+.bg-info .dk .steps .step.disabled:after {
+  background-color: #0067c1;
+}
+
+.bg-info.dk.steps .step:hover, .bg-info.dk.steps .step:hover:after,
+.bg-info.dk .steps .step:hover,
+.bg-info.dk .steps .step:hover:after,
+.bg-info .dk.steps .step:hover,
+.bg-info .dk.steps .step:hover:after,
+.bg-info .dk .steps .step:hover,
+.bg-info .dk .steps .step:hover:after {
+  background-color: #005aa7;
+}
+
+.bg-info.dk.steps .step.active,
+.bg-info.dk .steps .step.active,
+.bg-info .dk.steps .step.active,
+.bg-info .dk .steps .step.active {
+  background-color: #004c8e;
+}
+
+.bg-info.dk.steps .step.active:after,
+.bg-info.dk .steps .step.active:after,
+.bg-info .dk.steps .step.active:after,
+.bg-info .dk .steps .step.active:after {
+  background-color: #004c8e;
+}
+
+.bg-info.dk.steps .step.active:hover, .bg-info.dk.steps .step.active:hover:after,
+.bg-info.dk .steps .step.active:hover,
+.bg-info.dk .steps .step.active:hover:after,
+.bg-info .dk.steps .step.active:hover,
+.bg-info .dk.steps .step.active:hover:after,
+.bg-info .dk .steps .step.active:hover,
+.bg-info .dk .steps .step.active:hover:after {
+  background-color: #005aa7;
+}
+
 .bg-info.dk .list-group-item,
 .bg-info .dk .list-group-item {
   border-color: #0070d0 !important;
@@ -6010,6 +7710,64 @@ html, body {
   background-color: #005aa7 !important;
 }
 
+.bg-info.dker.steps,
+.bg-info.dker .steps,
+.bg-info .dker.steps,
+.bg-info .dker .steps {
+  border: 1px solid #003e74;
+}
+
+.bg-info.dker.steps .step:after,
+.bg-info.dker .steps .step:after,
+.bg-info .dker.steps .step:after,
+.bg-info .dker .steps .step:after {
+  border-color: #003e74;
+}
+
+.bg-info.dker.steps .step:after, .bg-info.dker.steps .step.disabled:after,
+.bg-info.dker .steps .step:after,
+.bg-info.dker .steps .step.disabled:after,
+.bg-info .dker.steps .step:after,
+.bg-info .dker.steps .step.disabled:after,
+.bg-info .dker .steps .step:after,
+.bg-info .dker .steps .step.disabled:after {
+  background-color: #005aa7;
+}
+
+.bg-info.dker.steps .step:hover, .bg-info.dker.steps .step:hover:after,
+.bg-info.dker .steps .step:hover,
+.bg-info.dker .steps .step:hover:after,
+.bg-info .dker.steps .step:hover,
+.bg-info .dker.steps .step:hover:after,
+.bg-info .dker .steps .step:hover,
+.bg-info .dker .steps .step:hover:after {
+  background-color: #004c8e;
+}
+
+.bg-info.dker.steps .step.active,
+.bg-info.dker .steps .step.active,
+.bg-info .dker.steps .step.active,
+.bg-info .dker .steps .step.active {
+  background-color: #003e74;
+}
+
+.bg-info.dker.steps .step.active:after,
+.bg-info.dker .steps .step.active:after,
+.bg-info .dker.steps .step.active:after,
+.bg-info .dker .steps .step.active:after {
+  background-color: #003e74;
+}
+
+.bg-info.dker.steps .step.active:hover, .bg-info.dker.steps .step.active:hover:after,
+.bg-info.dker .steps .step.active:hover,
+.bg-info.dker .steps .step.active:hover:after,
+.bg-info .dker.steps .step.active:hover,
+.bg-info .dker.steps .step.active:hover:after,
+.bg-info .dker .steps .step.active:hover,
+.bg-info .dker .steps .step.active:hover:after {
+  background-color: #004c8e;
+}
+
 .bg-info.dker .list-group-item,
 .bg-info .dker .list-group-item {
   border-color: #0062b6 !important;
@@ -6062,6 +7820,64 @@ html, body {
 .bg-info.bg,
 .bg-info .bg {
   background-color: #0275d8;
+}
+
+.bg-info.bg.steps,
+.bg-info.bg .steps,
+.bg-info .bg.steps,
+.bg-info .bg .steps {
+  border: 1px solid #025aa5;
+}
+
+.bg-info.bg.steps .step:after,
+.bg-info.bg .steps .step:after,
+.bg-info .bg.steps .step:after,
+.bg-info .bg .steps .step:after {
+  border-color: #025aa5;
+}
+
+.bg-info.bg.steps .step:after, .bg-info.bg.steps .step.disabled:after,
+.bg-info.bg .steps .step:after,
+.bg-info.bg .steps .step.disabled:after,
+.bg-info .bg.steps .step:after,
+.bg-info .bg.steps .step.disabled:after,
+.bg-info .bg .steps .step:after,
+.bg-info .bg .steps .step.disabled:after {
+  background-color: #0275d8;
+}
+
+.bg-info.bg.steps .step:hover, .bg-info.bg.steps .step:hover:after,
+.bg-info.bg .steps .step:hover,
+.bg-info.bg .steps .step:hover:after,
+.bg-info .bg.steps .step:hover,
+.bg-info .bg.steps .step:hover:after,
+.bg-info .bg .steps .step:hover,
+.bg-info .bg .steps .step:hover:after {
+  background-color: #0267bf;
+}
+
+.bg-info.bg.steps .step.active,
+.bg-info.bg .steps .step.active,
+.bg-info .bg.steps .step.active,
+.bg-info .bg .steps .step.active {
+  background-color: #025aa5;
+}
+
+.bg-info.bg.steps .step.active:after,
+.bg-info.bg .steps .step.active:after,
+.bg-info .bg.steps .step.active:after,
+.bg-info .bg .steps .step.active:after {
+  background-color: #025aa5;
+}
+
+.bg-info.bg.steps .step.active:hover, .bg-info.bg.steps .step.active:hover:after,
+.bg-info.bg .steps .step.active:hover,
+.bg-info.bg .steps .step.active:hover:after,
+.bg-info .bg.steps .step.active:hover,
+.bg-info .bg.steps .step.active:hover:after,
+.bg-info .bg .steps .step.active:hover,
+.bg-info .bg .steps .step.active:hover:after {
+  background-color: #0267bf;
 }
 
 .bg-info.bg .list-group-item,
@@ -6209,6 +8025,44 @@ html, body {
   color: white;
 }
 
+.bg-warning.steps,
+.bg-warning .steps {
+  border: 1px solid #ec971f;
+}
+
+.bg-warning.steps .step:after,
+.bg-warning .steps .step:after {
+  border-color: #ec971f;
+}
+
+.bg-warning.steps .step:after, .bg-warning.steps .step.disabled:after,
+.bg-warning .steps .step:after,
+.bg-warning .steps .step.disabled:after {
+  background-color: #f0ad4e;
+}
+
+.bg-warning.steps .step:hover, .bg-warning.steps .step:hover:after,
+.bg-warning .steps .step:hover,
+.bg-warning .steps .step:hover:after {
+  background-color: #eea236;
+}
+
+.bg-warning.steps .step.active,
+.bg-warning .steps .step.active {
+  background-color: #ec971f;
+}
+
+.bg-warning.steps .step.active:after,
+.bg-warning .steps .step.active:after {
+  background-color: #ec971f;
+}
+
+.bg-warning.steps .step.active:hover, .bg-warning.steps .step.active:hover:after,
+.bg-warning .steps .step.active:hover,
+.bg-warning .steps .step.active:hover:after {
+  background-color: #eea236;
+}
+
 .bg-warning .list-group-item {
   border-color: #f1b45c !important;
   background-color: transparent;
@@ -6248,6 +8102,64 @@ html, body {
 .bg-warning.lt,
 .bg-warning .lt {
   background-color: #f4b863 !important;
+}
+
+.bg-warning.lt.steps,
+.bg-warning.lt .steps,
+.bg-warning .lt.steps,
+.bg-warning .lt .steps {
+  border: 1px solid #f1a334;
+}
+
+.bg-warning.lt.steps .step:after,
+.bg-warning.lt .steps .step:after,
+.bg-warning .lt.steps .step:after,
+.bg-warning .lt .steps .step:after {
+  border-color: #f1a334;
+}
+
+.bg-warning.lt.steps .step:after, .bg-warning.lt.steps .step.disabled:after,
+.bg-warning.lt .steps .step:after,
+.bg-warning.lt .steps .step.disabled:after,
+.bg-warning .lt.steps .step:after,
+.bg-warning .lt.steps .step.disabled:after,
+.bg-warning .lt .steps .step:after,
+.bg-warning .lt .steps .step.disabled:after {
+  background-color: #f4b863;
+}
+
+.bg-warning.lt.steps .step:hover, .bg-warning.lt.steps .step:hover:after,
+.bg-warning.lt .steps .step:hover,
+.bg-warning.lt .steps .step:hover:after,
+.bg-warning .lt.steps .step:hover,
+.bg-warning .lt.steps .step:hover:after,
+.bg-warning .lt .steps .step:hover,
+.bg-warning .lt .steps .step:hover:after {
+  background-color: #f2ad4c;
+}
+
+.bg-warning.lt.steps .step.active,
+.bg-warning.lt .steps .step.active,
+.bg-warning .lt.steps .step.active,
+.bg-warning .lt .steps .step.active {
+  background-color: #f1a334;
+}
+
+.bg-warning.lt.steps .step.active:after,
+.bg-warning.lt .steps .step.active:after,
+.bg-warning .lt.steps .step.active:after,
+.bg-warning .lt .steps .step.active:after {
+  background-color: #f1a334;
+}
+
+.bg-warning.lt.steps .step.active:hover, .bg-warning.lt.steps .step.active:hover:after,
+.bg-warning.lt .steps .step.active:hover,
+.bg-warning.lt .steps .step.active:hover:after,
+.bg-warning .lt.steps .step.active:hover,
+.bg-warning .lt.steps .step.active:hover:after,
+.bg-warning .lt .steps .step.active:hover,
+.bg-warning .lt .steps .step.active:hover:after {
+  background-color: #f2ad4c;
 }
 
 .bg-warning.lt .list-group-item,
@@ -6304,6 +8216,64 @@ html, body {
   background-color: #f8c379 !important;
 }
 
+.bg-warning.lter.steps,
+.bg-warning.lter .steps,
+.bg-warning .lter.steps,
+.bg-warning .lter .steps {
+  border: 1px solid #f5ae49;
+}
+
+.bg-warning.lter.steps .step:after,
+.bg-warning.lter .steps .step:after,
+.bg-warning .lter.steps .step:after,
+.bg-warning .lter .steps .step:after {
+  border-color: #f5ae49;
+}
+
+.bg-warning.lter.steps .step:after, .bg-warning.lter.steps .step.disabled:after,
+.bg-warning.lter .steps .step:after,
+.bg-warning.lter .steps .step.disabled:after,
+.bg-warning .lter.steps .step:after,
+.bg-warning .lter.steps .step.disabled:after,
+.bg-warning .lter .steps .step:after,
+.bg-warning .lter .steps .step.disabled:after {
+  background-color: #f8c379;
+}
+
+.bg-warning.lter.steps .step:hover, .bg-warning.lter.steps .step:hover:after,
+.bg-warning.lter .steps .step:hover,
+.bg-warning.lter .steps .step:hover:after,
+.bg-warning .lter.steps .step:hover,
+.bg-warning .lter.steps .step:hover:after,
+.bg-warning .lter .steps .step:hover,
+.bg-warning .lter .steps .step:hover:after {
+  background-color: #f6b961;
+}
+
+.bg-warning.lter.steps .step.active,
+.bg-warning.lter .steps .step.active,
+.bg-warning .lter.steps .step.active,
+.bg-warning .lter .steps .step.active {
+  background-color: #f5ae49;
+}
+
+.bg-warning.lter.steps .step.active:after,
+.bg-warning.lter .steps .step.active:after,
+.bg-warning .lter.steps .step.active:after,
+.bg-warning .lter .steps .step.active:after {
+  background-color: #f5ae49;
+}
+
+.bg-warning.lter.steps .step.active:hover, .bg-warning.lter.steps .step.active:hover:after,
+.bg-warning.lter .steps .step.active:hover,
+.bg-warning.lter .steps .step.active:hover:after,
+.bg-warning .lter.steps .step.active:hover,
+.bg-warning .lter.steps .step.active:hover:after,
+.bg-warning .lter .steps .step.active:hover,
+.bg-warning .lter .steps .step.active:hover:after {
+  background-color: #f6b961;
+}
+
 .bg-warning.lter .list-group-item,
 .bg-warning .lter .list-group-item {
   border-color: #f8ca88 !important;
@@ -6356,6 +8326,64 @@ html, body {
 .bg-warning.ltest,
 .bg-warning .ltest {
   background-color: #fff9f2 !important;
+}
+
+.bg-warning.ltest.steps,
+.bg-warning.ltest .steps,
+.bg-warning .ltest.steps,
+.bg-warning .ltest .steps {
+  border: 1px solid #fde4c0;
+}
+
+.bg-warning.ltest.steps .step:after,
+.bg-warning.ltest .steps .step:after,
+.bg-warning .ltest.steps .step:after,
+.bg-warning .ltest .steps .step:after {
+  border-color: #fde4c0;
+}
+
+.bg-warning.ltest.steps .step:after, .bg-warning.ltest.steps .step.disabled:after,
+.bg-warning.ltest .steps .step:after,
+.bg-warning.ltest .steps .step.disabled:after,
+.bg-warning .ltest.steps .step:after,
+.bg-warning .ltest.steps .step.disabled:after,
+.bg-warning .ltest .steps .step:after,
+.bg-warning .ltest .steps .step.disabled:after {
+  background-color: #fff9f2;
+}
+
+.bg-warning.ltest.steps .step:hover, .bg-warning.ltest.steps .step:hover:after,
+.bg-warning.ltest .steps .step:hover,
+.bg-warning.ltest .steps .step:hover:after,
+.bg-warning .ltest.steps .step:hover,
+.bg-warning .ltest.steps .step:hover:after,
+.bg-warning .ltest .steps .step:hover,
+.bg-warning .ltest .steps .step:hover:after {
+  background-color: #feefd9;
+}
+
+.bg-warning.ltest.steps .step.active,
+.bg-warning.ltest .steps .step.active,
+.bg-warning .ltest.steps .step.active,
+.bg-warning .ltest .steps .step.active {
+  background-color: #fde4c0;
+}
+
+.bg-warning.ltest.steps .step.active:after,
+.bg-warning.ltest .steps .step.active:after,
+.bg-warning .ltest.steps .step.active:after,
+.bg-warning .ltest .steps .step.active:after {
+  background-color: #fde4c0;
+}
+
+.bg-warning.ltest.steps .step.active:hover, .bg-warning.ltest.steps .step.active:hover:after,
+.bg-warning.ltest .steps .step.active:hover,
+.bg-warning.ltest .steps .step.active:hover:after,
+.bg-warning .ltest.steps .step.active:hover,
+.bg-warning .ltest.steps .step.active:hover:after,
+.bg-warning .ltest .steps .step.active:hover,
+.bg-warning .ltest .steps .step.active:hover:after {
+  background-color: #feefd9;
 }
 
 .bg-warning.ltest .list-group-item,
@@ -6412,6 +8440,64 @@ html, body {
   background-color: #f1a334 !important;
 }
 
+.bg-warning.dk.steps,
+.bg-warning.dk .steps,
+.bg-warning .dk.steps,
+.bg-warning .dk .steps {
+  border: 1px solid #e28b10;
+}
+
+.bg-warning.dk.steps .step:after,
+.bg-warning.dk .steps .step:after,
+.bg-warning .dk.steps .step:after,
+.bg-warning .dk .steps .step:after {
+  border-color: #e28b10;
+}
+
+.bg-warning.dk.steps .step:after, .bg-warning.dk.steps .step.disabled:after,
+.bg-warning.dk .steps .step:after,
+.bg-warning.dk .steps .step.disabled:after,
+.bg-warning .dk.steps .step:after,
+.bg-warning .dk.steps .step.disabled:after,
+.bg-warning .dk .steps .step:after,
+.bg-warning .dk .steps .step.disabled:after {
+  background-color: #f1a334;
+}
+
+.bg-warning.dk.steps .step:hover, .bg-warning.dk.steps .step:hover:after,
+.bg-warning.dk .steps .step:hover,
+.bg-warning.dk .steps .step:hover:after,
+.bg-warning .dk.steps .step:hover,
+.bg-warning .dk.steps .step:hover:after,
+.bg-warning .dk .steps .step:hover,
+.bg-warning .dk .steps .step:hover:after {
+  background-color: #ef981c;
+}
+
+.bg-warning.dk.steps .step.active,
+.bg-warning.dk .steps .step.active,
+.bg-warning .dk.steps .step.active,
+.bg-warning .dk .steps .step.active {
+  background-color: #e28b10;
+}
+
+.bg-warning.dk.steps .step.active:after,
+.bg-warning.dk .steps .step.active:after,
+.bg-warning .dk.steps .step.active:after,
+.bg-warning .dk .steps .step.active:after {
+  background-color: #e28b10;
+}
+
+.bg-warning.dk.steps .step.active:hover, .bg-warning.dk.steps .step.active:hover:after,
+.bg-warning.dk .steps .step.active:hover,
+.bg-warning.dk .steps .step.active:hover:after,
+.bg-warning .dk.steps .step.active:hover,
+.bg-warning .dk.steps .step.active:hover:after,
+.bg-warning .dk .steps .step.active:hover,
+.bg-warning .dk .steps .step.active:hover:after {
+  background-color: #ef981c;
+}
+
 .bg-warning.dk .list-group-item,
 .bg-warning .dk .list-group-item {
   border-color: #f2a942 !important;
@@ -6466,6 +8552,64 @@ html, body {
   background-color: #f29819 !important;
 }
 
+.bg-warning.dker.steps,
+.bg-warning.dker .steps,
+.bg-warning .dker.steps,
+.bg-warning .dker .steps {
+  border: 1px solid #cd7d0b;
+}
+
+.bg-warning.dker.steps .step:after,
+.bg-warning.dker .steps .step:after,
+.bg-warning .dker.steps .step:after,
+.bg-warning .dker .steps .step:after {
+  border-color: #cd7d0b;
+}
+
+.bg-warning.dker.steps .step:after, .bg-warning.dker.steps .step.disabled:after,
+.bg-warning.dker .steps .step:after,
+.bg-warning.dker .steps .step.disabled:after,
+.bg-warning .dker.steps .step:after,
+.bg-warning .dker.steps .step.disabled:after,
+.bg-warning .dker .steps .step:after,
+.bg-warning .dker .steps .step.disabled:after {
+  background-color: #f29819;
+}
+
+.bg-warning.dker.steps .step:hover, .bg-warning.dker.steps .step:hover:after,
+.bg-warning.dker .steps .step:hover,
+.bg-warning.dker .steps .step:hover:after,
+.bg-warning .dker.steps .step:hover,
+.bg-warning .dker.steps .step:hover:after,
+.bg-warning .dker .steps .step:hover,
+.bg-warning .dker .steps .step:hover:after {
+  background-color: #e58b0d;
+}
+
+.bg-warning.dker.steps .step.active,
+.bg-warning.dker .steps .step.active,
+.bg-warning .dker.steps .step.active,
+.bg-warning .dker .steps .step.active {
+  background-color: #cd7d0b;
+}
+
+.bg-warning.dker.steps .step.active:after,
+.bg-warning.dker .steps .step.active:after,
+.bg-warning .dker.steps .step.active:after,
+.bg-warning .dker .steps .step.active:after {
+  background-color: #cd7d0b;
+}
+
+.bg-warning.dker.steps .step.active:hover, .bg-warning.dker.steps .step.active:hover:after,
+.bg-warning.dker .steps .step.active:hover,
+.bg-warning.dker .steps .step.active:hover:after,
+.bg-warning .dker.steps .step.active:hover,
+.bg-warning .dker.steps .step.active:hover:after,
+.bg-warning .dker .steps .step.active:hover,
+.bg-warning .dker .steps .step.active:hover:after {
+  background-color: #e58b0d;
+}
+
 .bg-warning.dker .list-group-item,
 .bg-warning .dker .list-group-item {
   border-color: #f39f27 !important;
@@ -6518,6 +8662,64 @@ html, body {
 .bg-warning.bg,
 .bg-warning .bg {
   background-color: #f0ad4e;
+}
+
+.bg-warning.bg.steps,
+.bg-warning.bg .steps,
+.bg-warning .bg.steps,
+.bg-warning .bg .steps {
+  border: 1px solid #ec971f;
+}
+
+.bg-warning.bg.steps .step:after,
+.bg-warning.bg .steps .step:after,
+.bg-warning .bg.steps .step:after,
+.bg-warning .bg .steps .step:after {
+  border-color: #ec971f;
+}
+
+.bg-warning.bg.steps .step:after, .bg-warning.bg.steps .step.disabled:after,
+.bg-warning.bg .steps .step:after,
+.bg-warning.bg .steps .step.disabled:after,
+.bg-warning .bg.steps .step:after,
+.bg-warning .bg.steps .step.disabled:after,
+.bg-warning .bg .steps .step:after,
+.bg-warning .bg .steps .step.disabled:after {
+  background-color: #f0ad4e;
+}
+
+.bg-warning.bg.steps .step:hover, .bg-warning.bg.steps .step:hover:after,
+.bg-warning.bg .steps .step:hover,
+.bg-warning.bg .steps .step:hover:after,
+.bg-warning .bg.steps .step:hover,
+.bg-warning .bg.steps .step:hover:after,
+.bg-warning .bg .steps .step:hover,
+.bg-warning .bg .steps .step:hover:after {
+  background-color: #eea236;
+}
+
+.bg-warning.bg.steps .step.active,
+.bg-warning.bg .steps .step.active,
+.bg-warning .bg.steps .step.active,
+.bg-warning .bg .steps .step.active {
+  background-color: #ec971f;
+}
+
+.bg-warning.bg.steps .step.active:after,
+.bg-warning.bg .steps .step.active:after,
+.bg-warning .bg.steps .step.active:after,
+.bg-warning .bg .steps .step.active:after {
+  background-color: #ec971f;
+}
+
+.bg-warning.bg.steps .step.active:hover, .bg-warning.bg.steps .step.active:hover:after,
+.bg-warning.bg .steps .step.active:hover,
+.bg-warning.bg .steps .step.active:hover:after,
+.bg-warning .bg.steps .step.active:hover,
+.bg-warning .bg.steps .step.active:hover:after,
+.bg-warning .bg .steps .step.active:hover,
+.bg-warning .bg .steps .step.active:hover:after {
+  background-color: #eea236;
 }
 
 .bg-warning.bg .list-group-item,
@@ -6665,6 +8867,44 @@ html, body {
   color: #fdf7f7;
 }
 
+.bg-danger.steps,
+.bg-danger .steps {
+  border: 1px solid #c9302c;
+}
+
+.bg-danger.steps .step:after,
+.bg-danger .steps .step:after {
+  border-color: #c9302c;
+}
+
+.bg-danger.steps .step:after, .bg-danger.steps .step.disabled:after,
+.bg-danger .steps .step:after,
+.bg-danger .steps .step.disabled:after {
+  background-color: #d9534f;
+}
+
+.bg-danger.steps .step:hover, .bg-danger.steps .step:hover:after,
+.bg-danger .steps .step:hover,
+.bg-danger .steps .step:hover:after {
+  background-color: #d43f3a;
+}
+
+.bg-danger.steps .step.active,
+.bg-danger .steps .step.active {
+  background-color: #c9302c;
+}
+
+.bg-danger.steps .step.active:after,
+.bg-danger .steps .step.active:after {
+  background-color: #c9302c;
+}
+
+.bg-danger.steps .step.active:hover, .bg-danger.steps .step.active:hover:after,
+.bg-danger .steps .step.active:hover,
+.bg-danger .steps .step.active:hover:after {
+  background-color: #d43f3a;
+}
+
 .bg-danger .list-group-item {
   border-color: #dc5f5c !important;
   background-color: transparent;
@@ -6704,6 +8944,64 @@ html, body {
 .bg-danger.lt,
 .bg-danger .lt {
   background-color: #e06562 !important;
+}
+
+.bg-danger.lt.steps,
+.bg-danger.lt .steps,
+.bg-danger .lt.steps,
+.bg-danger .lt .steps {
+  border: 1px solid #d73c37;
+}
+
+.bg-danger.lt.steps .step:after,
+.bg-danger.lt .steps .step:after,
+.bg-danger .lt.steps .step:after,
+.bg-danger .lt .steps .step:after {
+  border-color: #d73c37;
+}
+
+.bg-danger.lt.steps .step:after, .bg-danger.lt.steps .step.disabled:after,
+.bg-danger.lt .steps .step:after,
+.bg-danger.lt .steps .step.disabled:after,
+.bg-danger .lt.steps .step:after,
+.bg-danger .lt.steps .step.disabled:after,
+.bg-danger .lt .steps .step:after,
+.bg-danger .lt .steps .step.disabled:after {
+  background-color: #e06562;
+}
+
+.bg-danger.lt.steps .step:hover, .bg-danger.lt.steps .step:hover:after,
+.bg-danger.lt .steps .step:hover,
+.bg-danger.lt .steps .step:hover:after,
+.bg-danger .lt.steps .step:hover,
+.bg-danger .lt.steps .step:hover:after,
+.bg-danger .lt .steps .step:hover,
+.bg-danger .lt .steps .step:hover:after {
+  background-color: #dc504c;
+}
+
+.bg-danger.lt.steps .step.active,
+.bg-danger.lt .steps .step.active,
+.bg-danger .lt.steps .step.active,
+.bg-danger .lt .steps .step.active {
+  background-color: #d73c37;
+}
+
+.bg-danger.lt.steps .step.active:after,
+.bg-danger.lt .steps .step.active:after,
+.bg-danger .lt.steps .step.active:after,
+.bg-danger .lt .steps .step.active:after {
+  background-color: #d73c37;
+}
+
+.bg-danger.lt.steps .step.active:hover, .bg-danger.lt.steps .step.active:hover:after,
+.bg-danger.lt .steps .step.active:hover,
+.bg-danger.lt .steps .step.active:hover:after,
+.bg-danger .lt.steps .step.active:hover,
+.bg-danger .lt.steps .step.active:hover:after,
+.bg-danger .lt .steps .step.active:hover,
+.bg-danger .lt .steps .step.active:hover:after {
+  background-color: #dc504c;
 }
 
 .bg-danger.lt .list-group-item,
@@ -6760,6 +9058,64 @@ html, body {
   background-color: #e67875 !important;
 }
 
+.bg-danger.lter.steps,
+.bg-danger.lter .steps,
+.bg-danger .lter.steps,
+.bg-danger .lter .steps {
+  border: 1px solid #de4e4a;
+}
+
+.bg-danger.lter.steps .step:after,
+.bg-danger.lter .steps .step:after,
+.bg-danger .lter.steps .step:after,
+.bg-danger .lter .steps .step:after {
+  border-color: #de4e4a;
+}
+
+.bg-danger.lter.steps .step:after, .bg-danger.lter.steps .step.disabled:after,
+.bg-danger.lter .steps .step:after,
+.bg-danger.lter .steps .step.disabled:after,
+.bg-danger .lter.steps .step:after,
+.bg-danger .lter.steps .step.disabled:after,
+.bg-danger .lter .steps .step:after,
+.bg-danger .lter .steps .step.disabled:after {
+  background-color: #e67875;
+}
+
+.bg-danger.lter.steps .step:hover, .bg-danger.lter.steps .step:hover:after,
+.bg-danger.lter .steps .step:hover,
+.bg-danger.lter .steps .step:hover:after,
+.bg-danger .lter.steps .step:hover,
+.bg-danger .lter.steps .step:hover:after,
+.bg-danger .lter .steps .step:hover,
+.bg-danger .lter .steps .step:hover:after {
+  background-color: #e2635f;
+}
+
+.bg-danger.lter.steps .step.active,
+.bg-danger.lter .steps .step.active,
+.bg-danger .lter.steps .step.active,
+.bg-danger .lter .steps .step.active {
+  background-color: #de4e4a;
+}
+
+.bg-danger.lter.steps .step.active:after,
+.bg-danger.lter .steps .step.active:after,
+.bg-danger .lter.steps .step.active:after,
+.bg-danger .lter .steps .step.active:after {
+  background-color: #de4e4a;
+}
+
+.bg-danger.lter.steps .step.active:hover, .bg-danger.lter.steps .step.active:hover:after,
+.bg-danger.lter .steps .step.active:hover,
+.bg-danger.lter .steps .step.active:hover:after,
+.bg-danger .lter.steps .step.active:hover,
+.bg-danger .lter.steps .step.active:hover:after,
+.bg-danger .lter .steps .step.active:hover,
+.bg-danger .lter .steps .step.active:hover:after {
+  background-color: #e2635f;
+}
+
 .bg-danger.lter .list-group-item,
 .bg-danger .lter .list-group-item {
   border-color: #e88582 !important;
@@ -6812,6 +9168,64 @@ html, body {
 .bg-danger.ltest,
 .bg-danger .ltest {
   background-color: #fef6f6 !important;
+}
+
+.bg-danger.ltest.steps,
+.bg-danger.ltest .steps,
+.bg-danger .ltest.steps,
+.bg-danger .ltest .steps {
+  border: 1px solid #f7cbca;
+}
+
+.bg-danger.ltest.steps .step:after,
+.bg-danger.ltest .steps .step:after,
+.bg-danger .ltest.steps .step:after,
+.bg-danger .ltest .steps .step:after {
+  border-color: #f7cbca;
+}
+
+.bg-danger.ltest.steps .step:after, .bg-danger.ltest.steps .step.disabled:after,
+.bg-danger.ltest .steps .step:after,
+.bg-danger.ltest .steps .step.disabled:after,
+.bg-danger .ltest.steps .step:after,
+.bg-danger .ltest.steps .step.disabled:after,
+.bg-danger .ltest .steps .step:after,
+.bg-danger .ltest .steps .step.disabled:after {
+  background-color: #fef6f6;
+}
+
+.bg-danger.ltest.steps .step:hover, .bg-danger.ltest.steps .step:hover:after,
+.bg-danger.ltest .steps .step:hover,
+.bg-danger.ltest .steps .step:hover:after,
+.bg-danger .ltest.steps .step:hover,
+.bg-danger .ltest.steps .step:hover:after,
+.bg-danger .ltest .steps .step:hover,
+.bg-danger .ltest .steps .step:hover:after {
+  background-color: #fae1e0;
+}
+
+.bg-danger.ltest.steps .step.active,
+.bg-danger.ltest .steps .step.active,
+.bg-danger .ltest.steps .step.active,
+.bg-danger .ltest .steps .step.active {
+  background-color: #f7cbca;
+}
+
+.bg-danger.ltest.steps .step.active:after,
+.bg-danger.ltest .steps .step.active:after,
+.bg-danger .ltest.steps .step.active:after,
+.bg-danger .ltest .steps .step.active:after {
+  background-color: #f7cbca;
+}
+
+.bg-danger.ltest.steps .step.active:hover, .bg-danger.ltest.steps .step.active:hover:after,
+.bg-danger.ltest .steps .step.active:hover,
+.bg-danger.ltest .steps .step.active:hover:after,
+.bg-danger .ltest.steps .step.active:hover,
+.bg-danger .ltest.steps .step.active:hover:after,
+.bg-danger .ltest .steps .step.active:hover,
+.bg-danger .ltest .steps .step.active:hover:after {
+  background-color: #fae1e0;
 }
 
 .bg-danger.ltest .list-group-item,
@@ -6868,6 +9282,64 @@ html, body {
   background-color: #d73c37 !important;
 }
 
+.bg-danger.dk.steps,
+.bg-danger.dk .steps,
+.bg-danger .dk.steps,
+.bg-danger .dk .steps {
+  border: 1px solid #b72824;
+}
+
+.bg-danger.dk.steps .step:after,
+.bg-danger.dk .steps .step:after,
+.bg-danger .dk.steps .step:after,
+.bg-danger .dk .steps .step:after {
+  border-color: #b72824;
+}
+
+.bg-danger.dk.steps .step:after, .bg-danger.dk.steps .step.disabled:after,
+.bg-danger.dk .steps .step:after,
+.bg-danger.dk .steps .step.disabled:after,
+.bg-danger .dk.steps .step:after,
+.bg-danger .dk.steps .step.disabled:after,
+.bg-danger .dk .steps .step:after,
+.bg-danger .dk .steps .step.disabled:after {
+  background-color: #d73c37;
+}
+
+.bg-danger.dk.steps .step:hover, .bg-danger.dk.steps .step:hover:after,
+.bg-danger.dk .steps .step:hover,
+.bg-danger.dk .steps .step:hover:after,
+.bg-danger .dk.steps .step:hover,
+.bg-danger .dk.steps .step:hover:after,
+.bg-danger .dk .steps .step:hover,
+.bg-danger .dk .steps .step:hover:after {
+  background-color: #cd2d28;
+}
+
+.bg-danger.dk.steps .step.active,
+.bg-danger.dk .steps .step.active,
+.bg-danger .dk.steps .step.active,
+.bg-danger .dk .steps .step.active {
+  background-color: #b72824;
+}
+
+.bg-danger.dk.steps .step.active:after,
+.bg-danger.dk .steps .step.active:after,
+.bg-danger .dk.steps .step.active:after,
+.bg-danger .dk .steps .step.active:after {
+  background-color: #b72824;
+}
+
+.bg-danger.dk.steps .step.active:hover, .bg-danger.dk.steps .step.active:hover:after,
+.bg-danger.dk .steps .step.active:hover,
+.bg-danger.dk .steps .step.active:hover:after,
+.bg-danger .dk.steps .step.active:hover,
+.bg-danger .dk.steps .step.active:hover:after,
+.bg-danger .dk .steps .step.active:hover,
+.bg-danger .dk .steps .step.active:hover:after {
+  background-color: #cd2d28;
+}
+
 .bg-danger.dk .list-group-item,
 .bg-danger .dk .list-group-item {
   border-color: #da4844 !important;
@@ -6922,6 +9394,64 @@ html, body {
   background-color: #d02a25 !important;
 }
 
+.bg-danger.dker.steps,
+.bg-danger.dker .steps,
+.bg-danger .dker.steps,
+.bg-danger .dker .steps {
+  border: 1px solid #a4221e;
+}
+
+.bg-danger.dker.steps .step:after,
+.bg-danger.dker .steps .step:after,
+.bg-danger .dker.steps .step:after,
+.bg-danger .dker .steps .step:after {
+  border-color: #a4221e;
+}
+
+.bg-danger.dker.steps .step:after, .bg-danger.dker.steps .step.disabled:after,
+.bg-danger.dker .steps .step:after,
+.bg-danger.dker .steps .step.disabled:after,
+.bg-danger .dker.steps .step:after,
+.bg-danger .dker.steps .step.disabled:after,
+.bg-danger .dker .steps .step:after,
+.bg-danger .dker .steps .step.disabled:after {
+  background-color: #d02a25;
+}
+
+.bg-danger.dker.steps .step:hover, .bg-danger.dker.steps .step:hover:after,
+.bg-danger.dker .steps .step:hover,
+.bg-danger.dker .steps .step:hover:after,
+.bg-danger .dker.steps .step:hover,
+.bg-danger .dker.steps .step:hover:after,
+.bg-danger .dker .steps .step:hover,
+.bg-danger .dker .steps .step:hover:after {
+  background-color: #ba2621;
+}
+
+.bg-danger.dker.steps .step.active,
+.bg-danger.dker .steps .step.active,
+.bg-danger .dker.steps .step.active,
+.bg-danger .dker .steps .step.active {
+  background-color: #a4221e;
+}
+
+.bg-danger.dker.steps .step.active:after,
+.bg-danger.dker .steps .step.active:after,
+.bg-danger .dker.steps .step.active:after,
+.bg-danger .dker .steps .step.active:after {
+  background-color: #a4221e;
+}
+
+.bg-danger.dker.steps .step.active:hover, .bg-danger.dker.steps .step.active:hover:after,
+.bg-danger.dker .steps .step.active:hover,
+.bg-danger.dker .steps .step.active:hover:after,
+.bg-danger .dker.steps .step.active:hover,
+.bg-danger .dker.steps .step.active:hover:after,
+.bg-danger .dker .steps .step.active:hover,
+.bg-danger .dker .steps .step.active:hover:after {
+  background-color: #ba2621;
+}
+
 .bg-danger.dker .list-group-item,
 .bg-danger .dker .list-group-item {
   border-color: #d9302b !important;
@@ -6974,6 +9504,64 @@ html, body {
 .bg-danger.bg,
 .bg-danger .bg {
   background-color: #d9534f;
+}
+
+.bg-danger.bg.steps,
+.bg-danger.bg .steps,
+.bg-danger .bg.steps,
+.bg-danger .bg .steps {
+  border: 1px solid #c9302c;
+}
+
+.bg-danger.bg.steps .step:after,
+.bg-danger.bg .steps .step:after,
+.bg-danger .bg.steps .step:after,
+.bg-danger .bg .steps .step:after {
+  border-color: #c9302c;
+}
+
+.bg-danger.bg.steps .step:after, .bg-danger.bg.steps .step.disabled:after,
+.bg-danger.bg .steps .step:after,
+.bg-danger.bg .steps .step.disabled:after,
+.bg-danger .bg.steps .step:after,
+.bg-danger .bg.steps .step.disabled:after,
+.bg-danger .bg .steps .step:after,
+.bg-danger .bg .steps .step.disabled:after {
+  background-color: #d9534f;
+}
+
+.bg-danger.bg.steps .step:hover, .bg-danger.bg.steps .step:hover:after,
+.bg-danger.bg .steps .step:hover,
+.bg-danger.bg .steps .step:hover:after,
+.bg-danger .bg.steps .step:hover,
+.bg-danger .bg.steps .step:hover:after,
+.bg-danger .bg .steps .step:hover,
+.bg-danger .bg .steps .step:hover:after {
+  background-color: #d43f3a;
+}
+
+.bg-danger.bg.steps .step.active,
+.bg-danger.bg .steps .step.active,
+.bg-danger .bg.steps .step.active,
+.bg-danger .bg .steps .step.active {
+  background-color: #c9302c;
+}
+
+.bg-danger.bg.steps .step.active:after,
+.bg-danger.bg .steps .step.active:after,
+.bg-danger .bg.steps .step.active:after,
+.bg-danger .bg .steps .step.active:after {
+  background-color: #c9302c;
+}
+
+.bg-danger.bg.steps .step.active:hover, .bg-danger.bg.steps .step.active:hover:after,
+.bg-danger.bg .steps .step.active:hover,
+.bg-danger.bg .steps .step.active:hover:after,
+.bg-danger .bg.steps .step.active:hover,
+.bg-danger .bg.steps .step.active:hover:after,
+.bg-danger .bg .steps .step.active:hover,
+.bg-danger .bg .steps .step.active:hover:after {
+  background-color: #d43f3a;
 }
 
 .bg-danger.bg .list-group-item,
@@ -7121,6 +9709,44 @@ html, body {
   color: #383C3D;
 }
 
+.bg-default.steps,
+.bg-default .steps {
+  border: 1px solid #3c3c3c;
+}
+
+.bg-default.steps .step:after,
+.bg-default .steps .step:after {
+  border-color: #3c3c3c;
+}
+
+.bg-default.steps .step:after, .bg-default.steps .step.disabled:after,
+.bg-default .steps .step:after,
+.bg-default .steps .step.disabled:after {
+  background-color: #555;
+}
+
+.bg-default.steps .step:hover, .bg-default.steps .step:hover:after,
+.bg-default .steps .step:hover,
+.bg-default .steps .step:hover:after {
+  background-color: #484848;
+}
+
+.bg-default.steps .step.active,
+.bg-default .steps .step.active {
+  background-color: #3c3c3c;
+}
+
+.bg-default.steps .step.active:after,
+.bg-default .steps .step.active:after {
+  background-color: #3c3c3c;
+}
+
+.bg-default.steps .step.active:hover, .bg-default.steps .step.active:hover:after,
+.bg-default .steps .step.active:hover,
+.bg-default .steps .step.active:hover:after {
+  background-color: #484848;
+}
+
 .bg-default .list-group-item {
   border-color: #5d5d5d !important;
   background-color: transparent;
@@ -7160,6 +9786,64 @@ html, body {
 .bg-default.lt,
 .bg-default .lt {
   background-color: #716c6c !important;
+}
+
+.bg-default.lt.steps,
+.bg-default.lt .steps,
+.bg-default .lt.steps,
+.bg-default .lt .steps {
+  border: 1px solid #575353;
+}
+
+.bg-default.lt.steps .step:after,
+.bg-default.lt .steps .step:after,
+.bg-default .lt.steps .step:after,
+.bg-default .lt .steps .step:after {
+  border-color: #575353;
+}
+
+.bg-default.lt.steps .step:after, .bg-default.lt.steps .step.disabled:after,
+.bg-default.lt .steps .step:after,
+.bg-default.lt .steps .step.disabled:after,
+.bg-default .lt.steps .step:after,
+.bg-default .lt.steps .step.disabled:after,
+.bg-default .lt .steps .step:after,
+.bg-default .lt .steps .step.disabled:after {
+  background-color: #716c6c;
+}
+
+.bg-default.lt.steps .step:hover, .bg-default.lt.steps .step:hover:after,
+.bg-default.lt .steps .step:hover,
+.bg-default.lt .steps .step:hover:after,
+.bg-default .lt.steps .step:hover,
+.bg-default .lt.steps .step:hover:after,
+.bg-default .lt .steps .step:hover,
+.bg-default .lt .steps .step:hover:after {
+  background-color: #645f5f;
+}
+
+.bg-default.lt.steps .step.active,
+.bg-default.lt .steps .step.active,
+.bg-default .lt.steps .step.active,
+.bg-default .lt .steps .step.active {
+  background-color: #575353;
+}
+
+.bg-default.lt.steps .step.active:after,
+.bg-default.lt .steps .step.active:after,
+.bg-default .lt.steps .step.active:after,
+.bg-default .lt .steps .step.active:after {
+  background-color: #575353;
+}
+
+.bg-default.lt.steps .step.active:hover, .bg-default.lt.steps .step.active:hover:after,
+.bg-default.lt .steps .step.active:hover,
+.bg-default.lt .steps .step.active:hover:after,
+.bg-default .lt.steps .step.active:hover,
+.bg-default .lt.steps .step.active:hover:after,
+.bg-default .lt .steps .step.active:hover,
+.bg-default .lt .steps .step.active:hover:after {
+  background-color: #645f5f;
 }
 
 .bg-default.lt .list-group-item,
@@ -7216,6 +9900,64 @@ html, body {
   background-color: #817575 !important;
 }
 
+.bg-default.lter.steps,
+.bg-default.lter .steps,
+.bg-default .lter.steps,
+.bg-default .lter .steps {
+  border: 1px solid #675d5d;
+}
+
+.bg-default.lter.steps .step:after,
+.bg-default.lter .steps .step:after,
+.bg-default .lter.steps .step:after,
+.bg-default .lter .steps .step:after {
+  border-color: #675d5d;
+}
+
+.bg-default.lter.steps .step:after, .bg-default.lter.steps .step.disabled:after,
+.bg-default.lter .steps .step:after,
+.bg-default.lter .steps .step.disabled:after,
+.bg-default .lter.steps .step:after,
+.bg-default .lter.steps .step.disabled:after,
+.bg-default .lter .steps .step:after,
+.bg-default .lter .steps .step.disabled:after {
+  background-color: #817575;
+}
+
+.bg-default.lter.steps .step:hover, .bg-default.lter.steps .step:hover:after,
+.bg-default.lter .steps .step:hover,
+.bg-default.lter .steps .step:hover:after,
+.bg-default .lter.steps .step:hover,
+.bg-default .lter.steps .step:hover:after,
+.bg-default .lter .steps .step:hover,
+.bg-default .lter .steps .step:hover:after {
+  background-color: #746969;
+}
+
+.bg-default.lter.steps .step.active,
+.bg-default.lter .steps .step.active,
+.bg-default .lter.steps .step.active,
+.bg-default .lter .steps .step.active {
+  background-color: #675d5d;
+}
+
+.bg-default.lter.steps .step.active:after,
+.bg-default.lter .steps .step.active:after,
+.bg-default .lter.steps .step.active:after,
+.bg-default .lter .steps .step.active:after {
+  background-color: #675d5d;
+}
+
+.bg-default.lter.steps .step.active:hover, .bg-default.lter.steps .step.active:hover:after,
+.bg-default.lter .steps .step.active:hover,
+.bg-default.lter .steps .step.active:hover:after,
+.bg-default .lter.steps .step.active:hover,
+.bg-default .lter.steps .step.active:hover:after,
+.bg-default .lter .steps .step.active:hover,
+.bg-default .lter .steps .step.active:hover:after {
+  background-color: #746969;
+}
+
 .bg-default.lter .list-group-item,
 .bg-default .lter .list-group-item {
   border-color: #897d7d !important;
@@ -7268,6 +10010,64 @@ html, body {
 .bg-default.ltest,
 .bg-default .ltest {
   background-color: #c2b4b4 !important;
+}
+
+.bg-default.ltest.steps,
+.bg-default.ltest .steps,
+.bg-default .ltest.steps,
+.bg-default .ltest .steps {
+  border: 1px solid #ab9898;
+}
+
+.bg-default.ltest.steps .step:after,
+.bg-default.ltest .steps .step:after,
+.bg-default .ltest.steps .step:after,
+.bg-default .ltest .steps .step:after {
+  border-color: #ab9898;
+}
+
+.bg-default.ltest.steps .step:after, .bg-default.ltest.steps .step.disabled:after,
+.bg-default.ltest .steps .step:after,
+.bg-default.ltest .steps .step.disabled:after,
+.bg-default .ltest.steps .step:after,
+.bg-default .ltest.steps .step.disabled:after,
+.bg-default .ltest .steps .step:after,
+.bg-default .ltest .steps .step.disabled:after {
+  background-color: #c2b4b4;
+}
+
+.bg-default.ltest.steps .step:hover, .bg-default.ltest.steps .step:hover:after,
+.bg-default.ltest .steps .step:hover,
+.bg-default.ltest .steps .step:hover:after,
+.bg-default .ltest.steps .step:hover,
+.bg-default .ltest.steps .step:hover:after,
+.bg-default .ltest .steps .step:hover,
+.bg-default .ltest .steps .step:hover:after {
+  background-color: #b6a6a6;
+}
+
+.bg-default.ltest.steps .step.active,
+.bg-default.ltest .steps .step.active,
+.bg-default .ltest.steps .step.active,
+.bg-default .ltest .steps .step.active {
+  background-color: #ab9898;
+}
+
+.bg-default.ltest.steps .step.active:after,
+.bg-default.ltest .steps .step.active:after,
+.bg-default .ltest.steps .step.active:after,
+.bg-default .ltest .steps .step.active:after {
+  background-color: #ab9898;
+}
+
+.bg-default.ltest.steps .step.active:hover, .bg-default.ltest.steps .step.active:hover:after,
+.bg-default.ltest .steps .step.active:hover,
+.bg-default.ltest .steps .step.active:hover:after,
+.bg-default .ltest.steps .step.active:hover,
+.bg-default .ltest.steps .step.active:hover:after,
+.bg-default .ltest .steps .step.active:hover,
+.bg-default .ltest .steps .step.active:hover:after {
+  background-color: #b6a6a6;
 }
 
 .bg-default.ltest .list-group-item,
@@ -7324,6 +10124,64 @@ html, body {
   background-color: #3d3a3a !important;
 }
 
+.bg-default.dk.steps,
+.bg-default.dk .steps,
+.bg-default .dk.steps,
+.bg-default .dk .steps {
+  border: 1px solid #232121;
+}
+
+.bg-default.dk.steps .step:after,
+.bg-default.dk .steps .step:after,
+.bg-default .dk.steps .step:after,
+.bg-default .dk .steps .step:after {
+  border-color: #232121;
+}
+
+.bg-default.dk.steps .step:after, .bg-default.dk.steps .step.disabled:after,
+.bg-default.dk .steps .step:after,
+.bg-default.dk .steps .step.disabled:after,
+.bg-default .dk.steps .step:after,
+.bg-default .dk.steps .step.disabled:after,
+.bg-default .dk .steps .step:after,
+.bg-default .dk .steps .step.disabled:after {
+  background-color: #3d3a3a;
+}
+
+.bg-default.dk.steps .step:hover, .bg-default.dk.steps .step:hover:after,
+.bg-default.dk .steps .step:hover,
+.bg-default.dk .steps .step:hover:after,
+.bg-default .dk.steps .step:hover,
+.bg-default .dk.steps .step:hover:after,
+.bg-default .dk .steps .step:hover,
+.bg-default .dk .steps .step:hover:after {
+  background-color: #302e2e;
+}
+
+.bg-default.dk.steps .step.active,
+.bg-default.dk .steps .step.active,
+.bg-default .dk.steps .step.active,
+.bg-default .dk .steps .step.active {
+  background-color: #232121;
+}
+
+.bg-default.dk.steps .step.active:after,
+.bg-default.dk .steps .step.active:after,
+.bg-default .dk.steps .step.active:after,
+.bg-default .dk .steps .step.active:after {
+  background-color: #232121;
+}
+
+.bg-default.dk.steps .step.active:hover, .bg-default.dk.steps .step.active:hover:after,
+.bg-default.dk .steps .step.active:hover,
+.bg-default.dk .steps .step.active:hover:after,
+.bg-default .dk.steps .step.active:hover,
+.bg-default .dk.steps .step.active:hover:after,
+.bg-default .dk .steps .step.active:hover,
+.bg-default .dk .steps .step.active:hover:after {
+  background-color: #302e2e;
+}
+
 .bg-default.dk .list-group-item,
 .bg-default .dk .list-group-item {
   border-color: #454141 !important;
@@ -7378,6 +10236,64 @@ html, body {
   background-color: #312c2c !important;
 }
 
+.bg-default.dker.steps,
+.bg-default.dker .steps,
+.bg-default .dker.steps,
+.bg-default .dker .steps {
+  border: 1px solid #161414;
+}
+
+.bg-default.dker.steps .step:after,
+.bg-default.dker .steps .step:after,
+.bg-default .dker.steps .step:after,
+.bg-default .dker .steps .step:after {
+  border-color: #161414;
+}
+
+.bg-default.dker.steps .step:after, .bg-default.dker.steps .step.disabled:after,
+.bg-default.dker .steps .step:after,
+.bg-default.dker .steps .step.disabled:after,
+.bg-default .dker.steps .step:after,
+.bg-default .dker.steps .step.disabled:after,
+.bg-default .dker .steps .step:after,
+.bg-default .dker .steps .step.disabled:after {
+  background-color: #312c2c;
+}
+
+.bg-default.dker.steps .step:hover, .bg-default.dker.steps .step:hover:after,
+.bg-default.dker .steps .step:hover,
+.bg-default.dker .steps .step:hover:after,
+.bg-default .dker.steps .step:hover,
+.bg-default .dker.steps .step:hover:after,
+.bg-default .dker .steps .step:hover,
+.bg-default .dker .steps .step:hover:after {
+  background-color: #242020;
+}
+
+.bg-default.dker.steps .step.active,
+.bg-default.dker .steps .step.active,
+.bg-default .dker.steps .step.active,
+.bg-default .dker .steps .step.active {
+  background-color: #161414;
+}
+
+.bg-default.dker.steps .step.active:after,
+.bg-default.dker .steps .step.active:after,
+.bg-default .dker.steps .step.active:after,
+.bg-default .dker .steps .step.active:after {
+  background-color: #161414;
+}
+
+.bg-default.dker.steps .step.active:hover, .bg-default.dker.steps .step.active:hover:after,
+.bg-default.dker .steps .step.active:hover,
+.bg-default.dker .steps .step.active:hover:after,
+.bg-default .dker.steps .step.active:hover,
+.bg-default .dker.steps .step.active:hover:after,
+.bg-default .dker .steps .step.active:hover,
+.bg-default .dker .steps .step.active:hover:after {
+  background-color: #242020;
+}
+
 .bg-default.dker .list-group-item,
 .bg-default .dker .list-group-item {
   border-color: #393434 !important;
@@ -7430,6 +10346,64 @@ html, body {
 .bg-default.bg,
 .bg-default .bg {
   background-color: #555;
+}
+
+.bg-default.bg.steps,
+.bg-default.bg .steps,
+.bg-default .bg.steps,
+.bg-default .bg .steps {
+  border: 1px solid #3c3c3c;
+}
+
+.bg-default.bg.steps .step:after,
+.bg-default.bg .steps .step:after,
+.bg-default .bg.steps .step:after,
+.bg-default .bg .steps .step:after {
+  border-color: #3c3c3c;
+}
+
+.bg-default.bg.steps .step:after, .bg-default.bg.steps .step.disabled:after,
+.bg-default.bg .steps .step:after,
+.bg-default.bg .steps .step.disabled:after,
+.bg-default .bg.steps .step:after,
+.bg-default .bg.steps .step.disabled:after,
+.bg-default .bg .steps .step:after,
+.bg-default .bg .steps .step.disabled:after {
+  background-color: #555;
+}
+
+.bg-default.bg.steps .step:hover, .bg-default.bg.steps .step:hover:after,
+.bg-default.bg .steps .step:hover,
+.bg-default.bg .steps .step:hover:after,
+.bg-default .bg.steps .step:hover,
+.bg-default .bg.steps .step:hover:after,
+.bg-default .bg .steps .step:hover,
+.bg-default .bg .steps .step:hover:after {
+  background-color: #484848;
+}
+
+.bg-default.bg.steps .step.active,
+.bg-default.bg .steps .step.active,
+.bg-default .bg.steps .step.active,
+.bg-default .bg .steps .step.active {
+  background-color: #3c3c3c;
+}
+
+.bg-default.bg.steps .step.active:after,
+.bg-default.bg .steps .step.active:after,
+.bg-default .bg.steps .step.active:after,
+.bg-default .bg .steps .step.active:after {
+  background-color: #3c3c3c;
+}
+
+.bg-default.bg.steps .step.active:hover, .bg-default.bg.steps .step.active:hover:after,
+.bg-default.bg .steps .step.active:hover,
+.bg-default.bg .steps .step.active:hover:after,
+.bg-default .bg.steps .step.active:hover,
+.bg-default .bg.steps .step.active:hover:after,
+.bg-default .bg .steps .step.active:hover,
+.bg-default .bg .steps .step.active:hover:after {
+  background-color: #484848;
 }
 
 .bg-default.bg .list-group-item,
@@ -7490,6 +10464,44 @@ html, body {
   color: #383C3D;
 }
 
+.bg-white.steps,
+.bg-white .steps {
+  border: 1px solid #e6e6e6;
+}
+
+.bg-white.steps .step:after,
+.bg-white .steps .step:after {
+  border-color: #e6e6e6;
+}
+
+.bg-white.steps .step:after, .bg-white.steps .step.disabled:after,
+.bg-white .steps .step:after,
+.bg-white .steps .step.disabled:after {
+  background-color: #fff;
+}
+
+.bg-white.steps .step:hover, .bg-white.steps .step:hover:after,
+.bg-white .steps .step:hover,
+.bg-white .steps .step:hover:after {
+  background-color: #f2f2f2;
+}
+
+.bg-white.steps .step.active,
+.bg-white .steps .step.active {
+  background-color: #e6e6e6;
+}
+
+.bg-white.steps .step.active:after,
+.bg-white .steps .step.active:after {
+  background-color: #e6e6e6;
+}
+
+.bg-white.steps .step.active:hover, .bg-white.steps .step.active:hover:after,
+.bg-white .steps .step.active:hover,
+.bg-white .steps .step.active:hover:after {
+  background-color: #f2f2f2;
+}
+
 .bg-white .list-group-item {
   border-color: white !important;
   background-color: transparent;
@@ -7529,6 +10541,64 @@ html, body {
 .bg-white.lt,
 .bg-white .lt {
   background-color: white !important;
+}
+
+.bg-white.lt.steps,
+.bg-white.lt .steps,
+.bg-white .lt.steps,
+.bg-white .lt .steps {
+  border: 1px solid #ccffff;
+}
+
+.bg-white.lt.steps .step:after,
+.bg-white.lt .steps .step:after,
+.bg-white .lt.steps .step:after,
+.bg-white .lt .steps .step:after {
+  border-color: #ccffff;
+}
+
+.bg-white.lt.steps .step:after, .bg-white.lt.steps .step.disabled:after,
+.bg-white.lt .steps .step:after,
+.bg-white.lt .steps .step.disabled:after,
+.bg-white .lt.steps .step:after,
+.bg-white .lt.steps .step.disabled:after,
+.bg-white .lt .steps .step:after,
+.bg-white .lt .steps .step.disabled:after {
+  background-color: white;
+}
+
+.bg-white.lt.steps .step:hover, .bg-white.lt.steps .step:hover:after,
+.bg-white.lt .steps .step:hover,
+.bg-white.lt .steps .step:hover:after,
+.bg-white .lt.steps .step:hover,
+.bg-white .lt.steps .step:hover:after,
+.bg-white .lt .steps .step:hover,
+.bg-white .lt .steps .step:hover:after {
+  background-color: #e6ffff;
+}
+
+.bg-white.lt.steps .step.active,
+.bg-white.lt .steps .step.active,
+.bg-white .lt.steps .step.active,
+.bg-white .lt .steps .step.active {
+  background-color: #ccffff;
+}
+
+.bg-white.lt.steps .step.active:after,
+.bg-white.lt .steps .step.active:after,
+.bg-white .lt.steps .step.active:after,
+.bg-white .lt .steps .step.active:after {
+  background-color: #ccffff;
+}
+
+.bg-white.lt.steps .step.active:hover, .bg-white.lt.steps .step.active:hover:after,
+.bg-white.lt .steps .step.active:hover,
+.bg-white.lt .steps .step.active:hover:after,
+.bg-white .lt.steps .step.active:hover,
+.bg-white .lt.steps .step.active:hover:after,
+.bg-white .lt .steps .step.active:hover,
+.bg-white .lt .steps .step.active:hover:after {
+  background-color: #e6ffff;
 }
 
 .bg-white.lt .list-group-item,
@@ -7585,6 +10655,64 @@ html, body {
   background-color: white !important;
 }
 
+.bg-white.lter.steps,
+.bg-white.lter .steps,
+.bg-white .lter.steps,
+.bg-white .lter .steps {
+  border: 1px solid #e6e6e6;
+}
+
+.bg-white.lter.steps .step:after,
+.bg-white.lter .steps .step:after,
+.bg-white .lter.steps .step:after,
+.bg-white .lter .steps .step:after {
+  border-color: #e6e6e6;
+}
+
+.bg-white.lter.steps .step:after, .bg-white.lter.steps .step.disabled:after,
+.bg-white.lter .steps .step:after,
+.bg-white.lter .steps .step.disabled:after,
+.bg-white .lter.steps .step:after,
+.bg-white .lter.steps .step.disabled:after,
+.bg-white .lter .steps .step:after,
+.bg-white .lter .steps .step.disabled:after {
+  background-color: white;
+}
+
+.bg-white.lter.steps .step:hover, .bg-white.lter.steps .step:hover:after,
+.bg-white.lter .steps .step:hover,
+.bg-white.lter .steps .step:hover:after,
+.bg-white .lter.steps .step:hover,
+.bg-white .lter.steps .step:hover:after,
+.bg-white .lter .steps .step:hover,
+.bg-white .lter .steps .step:hover:after {
+  background-color: #f2f2f2;
+}
+
+.bg-white.lter.steps .step.active,
+.bg-white.lter .steps .step.active,
+.bg-white .lter.steps .step.active,
+.bg-white .lter .steps .step.active {
+  background-color: #e6e6e6;
+}
+
+.bg-white.lter.steps .step.active:after,
+.bg-white.lter .steps .step.active:after,
+.bg-white .lter.steps .step.active:after,
+.bg-white .lter .steps .step.active:after {
+  background-color: #e6e6e6;
+}
+
+.bg-white.lter.steps .step.active:hover, .bg-white.lter.steps .step.active:hover:after,
+.bg-white.lter .steps .step.active:hover,
+.bg-white.lter .steps .step.active:hover:after,
+.bg-white .lter.steps .step.active:hover,
+.bg-white .lter.steps .step.active:hover:after,
+.bg-white .lter .steps .step.active:hover,
+.bg-white .lter .steps .step.active:hover:after {
+  background-color: #f2f2f2;
+}
+
 .bg-white.lter .list-group-item,
 .bg-white .lter .list-group-item {
   border-color: white !important;
@@ -7637,6 +10765,64 @@ html, body {
 .bg-white.ltest,
 .bg-white .ltest {
   background-color: white !important;
+}
+
+.bg-white.ltest.steps,
+.bg-white.ltest .steps,
+.bg-white .ltest.steps,
+.bg-white .ltest .steps {
+  border: 1px solid #e6e6e6;
+}
+
+.bg-white.ltest.steps .step:after,
+.bg-white.ltest .steps .step:after,
+.bg-white .ltest.steps .step:after,
+.bg-white .ltest .steps .step:after {
+  border-color: #e6e6e6;
+}
+
+.bg-white.ltest.steps .step:after, .bg-white.ltest.steps .step.disabled:after,
+.bg-white.ltest .steps .step:after,
+.bg-white.ltest .steps .step.disabled:after,
+.bg-white .ltest.steps .step:after,
+.bg-white .ltest.steps .step.disabled:after,
+.bg-white .ltest .steps .step:after,
+.bg-white .ltest .steps .step.disabled:after {
+  background-color: white;
+}
+
+.bg-white.ltest.steps .step:hover, .bg-white.ltest.steps .step:hover:after,
+.bg-white.ltest .steps .step:hover,
+.bg-white.ltest .steps .step:hover:after,
+.bg-white .ltest.steps .step:hover,
+.bg-white .ltest.steps .step:hover:after,
+.bg-white .ltest .steps .step:hover,
+.bg-white .ltest .steps .step:hover:after {
+  background-color: #f2f2f2;
+}
+
+.bg-white.ltest.steps .step.active,
+.bg-white.ltest .steps .step.active,
+.bg-white .ltest.steps .step.active,
+.bg-white .ltest .steps .step.active {
+  background-color: #e6e6e6;
+}
+
+.bg-white.ltest.steps .step.active:after,
+.bg-white.ltest .steps .step.active:after,
+.bg-white .ltest.steps .step.active:after,
+.bg-white .ltest .steps .step.active:after {
+  background-color: #e6e6e6;
+}
+
+.bg-white.ltest.steps .step.active:hover, .bg-white.ltest.steps .step.active:hover:after,
+.bg-white.ltest .steps .step.active:hover,
+.bg-white.ltest .steps .step.active:hover:after,
+.bg-white .ltest.steps .step.active:hover,
+.bg-white .ltest.steps .step.active:hover:after,
+.bg-white .ltest .steps .step.active:hover,
+.bg-white .ltest .steps .step.active:hover:after {
+  background-color: #f2f2f2;
 }
 
 .bg-white.ltest .list-group-item,
@@ -7693,6 +10879,64 @@ html, body {
   background-color: #f3f2f2 !important;
 }
 
+.bg-white.dk.steps,
+.bg-white.dk .steps,
+.bg-white .dk.steps,
+.bg-white .dk .steps {
+  border: 1px solid #dad8d8;
+}
+
+.bg-white.dk.steps .step:after,
+.bg-white.dk .steps .step:after,
+.bg-white .dk.steps .step:after,
+.bg-white .dk .steps .step:after {
+  border-color: #dad8d8;
+}
+
+.bg-white.dk.steps .step:after, .bg-white.dk.steps .step.disabled:after,
+.bg-white.dk .steps .step:after,
+.bg-white.dk .steps .step.disabled:after,
+.bg-white .dk.steps .step:after,
+.bg-white .dk.steps .step.disabled:after,
+.bg-white .dk .steps .step:after,
+.bg-white .dk .steps .step.disabled:after {
+  background-color: #f3f2f2;
+}
+
+.bg-white.dk.steps .step:hover, .bg-white.dk.steps .step:hover:after,
+.bg-white.dk .steps .step:hover,
+.bg-white.dk .steps .step:hover:after,
+.bg-white .dk.steps .step:hover,
+.bg-white .dk.steps .step:hover:after,
+.bg-white .dk .steps .step:hover,
+.bg-white .dk .steps .step:hover:after {
+  background-color: #e6e5e5;
+}
+
+.bg-white.dk.steps .step.active,
+.bg-white.dk .steps .step.active,
+.bg-white .dk.steps .step.active,
+.bg-white .dk .steps .step.active {
+  background-color: #dad8d8;
+}
+
+.bg-white.dk.steps .step.active:after,
+.bg-white.dk .steps .step.active:after,
+.bg-white .dk.steps .step.active:after,
+.bg-white .dk .steps .step.active:after {
+  background-color: #dad8d8;
+}
+
+.bg-white.dk.steps .step.active:hover, .bg-white.dk.steps .step.active:hover:after,
+.bg-white.dk .steps .step.active:hover,
+.bg-white.dk .steps .step.active:hover:after,
+.bg-white .dk.steps .step.active:hover,
+.bg-white .dk.steps .step.active:hover:after,
+.bg-white .dk .steps .step.active:hover,
+.bg-white .dk .steps .step.active:hover:after {
+  background-color: #e6e5e5;
+}
+
 .bg-white.dk .list-group-item,
 .bg-white .dk .list-group-item {
   border-color: #fafafa !important;
@@ -7747,6 +10991,64 @@ html, body {
   background-color: #dbd7d7 !important;
 }
 
+.bg-white.dker.steps,
+.bg-white.dker .steps,
+.bg-white .dker.steps,
+.bg-white .dker .steps {
+  border: 1px solid #c2bcbc;
+}
+
+.bg-white.dker.steps .step:after,
+.bg-white.dker .steps .step:after,
+.bg-white .dker.steps .step:after,
+.bg-white .dker .steps .step:after {
+  border-color: #c2bcbc;
+}
+
+.bg-white.dker.steps .step:after, .bg-white.dker.steps .step.disabled:after,
+.bg-white.dker .steps .step:after,
+.bg-white.dker .steps .step.disabled:after,
+.bg-white .dker.steps .step:after,
+.bg-white .dker.steps .step.disabled:after,
+.bg-white .dker .steps .step:after,
+.bg-white .dker .steps .step.disabled:after {
+  background-color: #dbd7d7;
+}
+
+.bg-white.dker.steps .step:hover, .bg-white.dker.steps .step:hover:after,
+.bg-white.dker .steps .step:hover,
+.bg-white.dker .steps .step:hover:after,
+.bg-white .dker.steps .step:hover,
+.bg-white .dker.steps .step:hover:after,
+.bg-white .dker .steps .step:hover,
+.bg-white .dker .steps .step:hover:after {
+  background-color: #cfc9c9;
+}
+
+.bg-white.dker.steps .step.active,
+.bg-white.dker .steps .step.active,
+.bg-white .dker.steps .step.active,
+.bg-white .dker .steps .step.active {
+  background-color: #c2bcbc;
+}
+
+.bg-white.dker.steps .step.active:after,
+.bg-white.dker .steps .step.active:after,
+.bg-white .dker.steps .step.active:after,
+.bg-white .dker .steps .step.active:after {
+  background-color: #c2bcbc;
+}
+
+.bg-white.dker.steps .step.active:hover, .bg-white.dker.steps .step.active:hover:after,
+.bg-white.dker .steps .step.active:hover,
+.bg-white.dker .steps .step.active:hover:after,
+.bg-white .dker.steps .step.active:hover,
+.bg-white .dker.steps .step.active:hover:after,
+.bg-white .dker .steps .step.active:hover,
+.bg-white .dker .steps .step.active:hover:after {
+  background-color: #cfc9c9;
+}
+
 .bg-white.dker .list-group-item,
 .bg-white .dker .list-group-item {
   border-color: #e2dfdf !important;
@@ -7799,6 +11101,64 @@ html, body {
 .bg-white.bg,
 .bg-white .bg {
   background-color: #fff;
+}
+
+.bg-white.bg.steps,
+.bg-white.bg .steps,
+.bg-white .bg.steps,
+.bg-white .bg .steps {
+  border: 1px solid #e6e6e6;
+}
+
+.bg-white.bg.steps .step:after,
+.bg-white.bg .steps .step:after,
+.bg-white .bg.steps .step:after,
+.bg-white .bg .steps .step:after {
+  border-color: #e6e6e6;
+}
+
+.bg-white.bg.steps .step:after, .bg-white.bg.steps .step.disabled:after,
+.bg-white.bg .steps .step:after,
+.bg-white.bg .steps .step.disabled:after,
+.bg-white .bg.steps .step:after,
+.bg-white .bg.steps .step.disabled:after,
+.bg-white .bg .steps .step:after,
+.bg-white .bg .steps .step.disabled:after {
+  background-color: #fff;
+}
+
+.bg-white.bg.steps .step:hover, .bg-white.bg.steps .step:hover:after,
+.bg-white.bg .steps .step:hover,
+.bg-white.bg .steps .step:hover:after,
+.bg-white .bg.steps .step:hover,
+.bg-white .bg.steps .step:hover:after,
+.bg-white .bg .steps .step:hover,
+.bg-white .bg .steps .step:hover:after {
+  background-color: #f2f2f2;
+}
+
+.bg-white.bg.steps .step.active,
+.bg-white.bg .steps .step.active,
+.bg-white .bg.steps .step.active,
+.bg-white .bg .steps .step.active {
+  background-color: #e6e6e6;
+}
+
+.bg-white.bg.steps .step.active:after,
+.bg-white.bg .steps .step.active:after,
+.bg-white .bg.steps .step.active:after,
+.bg-white .bg .steps .step.active:after {
+  background-color: #e6e6e6;
+}
+
+.bg-white.bg.steps .step.active:hover, .bg-white.bg.steps .step.active:hover:after,
+.bg-white.bg .steps .step.active:hover,
+.bg-white.bg .steps .step.active:hover:after,
+.bg-white .bg.steps .step.active:hover,
+.bg-white .bg.steps .step.active:hover:after,
+.bg-white .bg .steps .step.active:hover,
+.bg-white .bg .steps .step.active:hover:after {
+  background-color: #f2f2f2;
 }
 
 .bg-white.bg .list-group-item,
@@ -7962,6 +11322,44 @@ html, body {
   color: #383C3D;
 }
 
+.bg-light.steps,
+.bg-light .steps {
+  border: 1px solid #d4d4e1;
+}
+
+.bg-light.steps .step:after,
+.bg-light .steps .step:after {
+  border-color: #d4d4e1;
+}
+
+.bg-light.steps .step:after, .bg-light.steps .step.disabled:after,
+.bg-light .steps .step:after,
+.bg-light .steps .step.disabled:after {
+  background-color: #f2f2f6;
+}
+
+.bg-light.steps .step:hover, .bg-light.steps .step:hover:after,
+.bg-light .steps .step:hover,
+.bg-light .steps .step:hover:after {
+  background-color: #e3e3ec;
+}
+
+.bg-light.steps .step.active,
+.bg-light .steps .step.active {
+  background-color: #d4d4e1;
+}
+
+.bg-light.steps .step.active:after,
+.bg-light .steps .step.active:after {
+  background-color: #d4d4e1;
+}
+
+.bg-light.steps .step.active:hover, .bg-light.steps .step.active:hover:after,
+.bg-light .steps .step.active:hover,
+.bg-light .steps .step.active:hover:after {
+  background-color: #e3e3ec;
+}
+
 .bg-light .list-group-item {
   border-color: #fbfbfc !important;
   background-color: transparent;
@@ -8001,6 +11399,64 @@ html, body {
 .bg-light.lt,
 .bg-light .lt {
   background-color: #f6f6f9 !important;
+}
+
+.bg-light.lt.steps,
+.bg-light.lt .steps,
+.bg-light .lt.steps,
+.bg-light .lt .steps {
+  border: 1px solid #d8d8e5;
+}
+
+.bg-light.lt.steps .step:after,
+.bg-light.lt .steps .step:after,
+.bg-light .lt.steps .step:after,
+.bg-light .lt .steps .step:after {
+  border-color: #d8d8e5;
+}
+
+.bg-light.lt.steps .step:after, .bg-light.lt.steps .step.disabled:after,
+.bg-light.lt .steps .step:after,
+.bg-light.lt .steps .step.disabled:after,
+.bg-light .lt.steps .step:after,
+.bg-light .lt.steps .step.disabled:after,
+.bg-light .lt .steps .step:after,
+.bg-light .lt .steps .step.disabled:after {
+  background-color: #f6f6f9;
+}
+
+.bg-light.lt.steps .step:hover, .bg-light.lt.steps .step:hover:after,
+.bg-light.lt .steps .step:hover,
+.bg-light.lt .steps .step:hover:after,
+.bg-light .lt.steps .step:hover,
+.bg-light .lt.steps .step:hover:after,
+.bg-light .lt .steps .step:hover,
+.bg-light .lt .steps .step:hover:after {
+  background-color: #e7e7ef;
+}
+
+.bg-light.lt.steps .step.active,
+.bg-light.lt .steps .step.active,
+.bg-light .lt.steps .step.active,
+.bg-light .lt .steps .step.active {
+  background-color: #d8d8e5;
+}
+
+.bg-light.lt.steps .step.active:after,
+.bg-light.lt .steps .step.active:after,
+.bg-light .lt.steps .step.active:after,
+.bg-light .lt .steps .step.active:after {
+  background-color: #d8d8e5;
+}
+
+.bg-light.lt.steps .step.active:hover, .bg-light.lt.steps .step.active:hover:after,
+.bg-light.lt .steps .step.active:hover,
+.bg-light.lt .steps .step.active:hover:after,
+.bg-light .lt.steps .step.active:hover,
+.bg-light .lt.steps .step.active:hover:after,
+.bg-light .lt .steps .step.active:hover,
+.bg-light .lt .steps .step.active:hover:after {
+  background-color: #e7e7ef;
 }
 
 .bg-light.lt .list-group-item,
@@ -8057,6 +11513,64 @@ html, body {
   background-color: #fbfbfc !important;
 }
 
+.bg-light.lter.steps,
+.bg-light.lter .steps,
+.bg-light .lter.steps,
+.bg-light .lter .steps {
+  border: 1px solid #dbdbe9;
+}
+
+.bg-light.lter.steps .step:after,
+.bg-light.lter .steps .step:after,
+.bg-light .lter.steps .step:after,
+.bg-light .lter .steps .step:after {
+  border-color: #dbdbe9;
+}
+
+.bg-light.lter.steps .step:after, .bg-light.lter.steps .step.disabled:after,
+.bg-light.lter .steps .step:after,
+.bg-light.lter .steps .step.disabled:after,
+.bg-light .lter.steps .step:after,
+.bg-light .lter.steps .step.disabled:after,
+.bg-light .lter .steps .step:after,
+.bg-light .lter .steps .step.disabled:after {
+  background-color: #fbfbfc;
+}
+
+.bg-light.lter.steps .step:hover, .bg-light.lter.steps .step:hover:after,
+.bg-light.lter .steps .step:hover,
+.bg-light.lter .steps .step:hover:after,
+.bg-light .lter.steps .step:hover,
+.bg-light .lter.steps .step:hover:after,
+.bg-light .lter .steps .step:hover,
+.bg-light .lter .steps .step:hover:after {
+  background-color: #ebebf3;
+}
+
+.bg-light.lter.steps .step.active,
+.bg-light.lter .steps .step.active,
+.bg-light .lter.steps .step.active,
+.bg-light .lter .steps .step.active {
+  background-color: #dbdbe9;
+}
+
+.bg-light.lter.steps .step.active:after,
+.bg-light.lter .steps .step.active:after,
+.bg-light .lter.steps .step.active:after,
+.bg-light .lter .steps .step.active:after {
+  background-color: #dbdbe9;
+}
+
+.bg-light.lter.steps .step.active:hover, .bg-light.lter.steps .step.active:hover:after,
+.bg-light.lter .steps .step.active:hover,
+.bg-light.lter .steps .step.active:hover:after,
+.bg-light .lter.steps .step.active:hover,
+.bg-light .lter.steps .step.active:hover:after,
+.bg-light .lter .steps .step.active:hover,
+.bg-light .lter .steps .step.active:hover:after {
+  background-color: #ebebf3;
+}
+
 .bg-light.lter .list-group-item,
 .bg-light .lter .list-group-item {
   border-color: white !important;
@@ -8109,6 +11623,64 @@ html, body {
 .bg-light.ltest,
 .bg-light .ltest {
   background-color: #fcfcfe !important;
+}
+
+.bg-light.ltest.steps,
+.bg-light.ltest .steps,
+.bg-light .ltest.steps,
+.bg-light .ltest .steps {
+  border: 1px solid #dcdceb;
+}
+
+.bg-light.ltest.steps .step:after,
+.bg-light.ltest .steps .step:after,
+.bg-light .ltest.steps .step:after,
+.bg-light .ltest .steps .step:after {
+  border-color: #dcdceb;
+}
+
+.bg-light.ltest.steps .step:after, .bg-light.ltest.steps .step.disabled:after,
+.bg-light.ltest .steps .step:after,
+.bg-light.ltest .steps .step.disabled:after,
+.bg-light .ltest.steps .step:after,
+.bg-light .ltest.steps .step.disabled:after,
+.bg-light .ltest .steps .step:after,
+.bg-light .ltest .steps .step.disabled:after {
+  background-color: #fcfcfe;
+}
+
+.bg-light.ltest.steps .step:hover, .bg-light.ltest.steps .step:hover:after,
+.bg-light.ltest .steps .step:hover,
+.bg-light.ltest .steps .step:hover:after,
+.bg-light .ltest.steps .step:hover,
+.bg-light .ltest.steps .step:hover:after,
+.bg-light .ltest .steps .step:hover,
+.bg-light .ltest .steps .step:hover:after {
+  background-color: #ececf4;
+}
+
+.bg-light.ltest.steps .step.active,
+.bg-light.ltest .steps .step.active,
+.bg-light .ltest.steps .step.active,
+.bg-light .ltest .steps .step.active {
+  background-color: #dcdceb;
+}
+
+.bg-light.ltest.steps .step.active:after,
+.bg-light.ltest .steps .step.active:after,
+.bg-light .ltest.steps .step.active:after,
+.bg-light .ltest .steps .step.active:after {
+  background-color: #dcdceb;
+}
+
+.bg-light.ltest.steps .step.active:hover, .bg-light.ltest.steps .step.active:hover:after,
+.bg-light.ltest .steps .step.active:hover,
+.bg-light.ltest .steps .step.active:hover:after,
+.bg-light .ltest.steps .step.active:hover,
+.bg-light .ltest.steps .step.active:hover:after,
+.bg-light .ltest .steps .step.active:hover,
+.bg-light .ltest .steps .step.active:hover:after {
+  background-color: #ececf4;
 }
 
 .bg-light.ltest .list-group-item,
@@ -8165,6 +11737,64 @@ html, body {
   background-color: #e2e2ec !important;
 }
 
+.bg-light.dk.steps,
+.bg-light.dk .steps,
+.bg-light .dk.steps,
+.bg-light .dk .steps {
+  border: 1px solid #c4c4d8;
+}
+
+.bg-light.dk.steps .step:after,
+.bg-light.dk .steps .step:after,
+.bg-light .dk.steps .step:after,
+.bg-light .dk .steps .step:after {
+  border-color: #c4c4d8;
+}
+
+.bg-light.dk.steps .step:after, .bg-light.dk.steps .step.disabled:after,
+.bg-light.dk .steps .step:after,
+.bg-light.dk .steps .step.disabled:after,
+.bg-light .dk.steps .step:after,
+.bg-light .dk.steps .step.disabled:after,
+.bg-light .dk .steps .step:after,
+.bg-light .dk .steps .step.disabled:after {
+  background-color: #e2e2ec;
+}
+
+.bg-light.dk.steps .step:hover, .bg-light.dk.steps .step:hover:after,
+.bg-light.dk .steps .step:hover,
+.bg-light.dk .steps .step:hover:after,
+.bg-light .dk.steps .step:hover,
+.bg-light .dk.steps .step:hover:after,
+.bg-light .dk .steps .step:hover,
+.bg-light .dk .steps .step:hover:after {
+  background-color: #d3d3e2;
+}
+
+.bg-light.dk.steps .step.active,
+.bg-light.dk .steps .step.active,
+.bg-light .dk.steps .step.active,
+.bg-light .dk .steps .step.active {
+  background-color: #c4c4d8;
+}
+
+.bg-light.dk.steps .step.active:after,
+.bg-light.dk .steps .step.active:after,
+.bg-light .dk.steps .step.active:after,
+.bg-light .dk .steps .step.active:after {
+  background-color: #c4c4d8;
+}
+
+.bg-light.dk.steps .step.active:hover, .bg-light.dk.steps .step.active:hover:after,
+.bg-light.dk .steps .step.active:hover,
+.bg-light.dk .steps .step.active:hover:after,
+.bg-light .dk.steps .step.active:hover,
+.bg-light .dk.steps .step.active:hover:after,
+.bg-light .dk .steps .step.active:hover,
+.bg-light .dk .steps .step.active:hover:after {
+  background-color: #d3d3e2;
+}
+
 .bg-light.dk .list-group-item,
 .bg-light .dk .list-group-item {
   border-color: #ececf2 !important;
@@ -8219,6 +11849,64 @@ html, body {
   background-color: #c2c2d9 !important;
 }
 
+.bg-light.dker.steps,
+.bg-light.dker .steps,
+.bg-light .dker.steps,
+.bg-light .dker .steps {
+  border: 1px solid #a3a3c6;
+}
+
+.bg-light.dker.steps .step:after,
+.bg-light.dker .steps .step:after,
+.bg-light .dker.steps .step:after,
+.bg-light .dker .steps .step:after {
+  border-color: #a3a3c6;
+}
+
+.bg-light.dker.steps .step:after, .bg-light.dker.steps .step.disabled:after,
+.bg-light.dker .steps .step:after,
+.bg-light.dker .steps .step.disabled:after,
+.bg-light .dker.steps .step:after,
+.bg-light .dker.steps .step.disabled:after,
+.bg-light .dker .steps .step:after,
+.bg-light .dker .steps .step.disabled:after {
+  background-color: #c2c2d9;
+}
+
+.bg-light.dker.steps .step:hover, .bg-light.dker.steps .step:hover:after,
+.bg-light.dker .steps .step:hover,
+.bg-light.dker .steps .step:hover:after,
+.bg-light .dker.steps .step:hover,
+.bg-light .dker.steps .step:hover:after,
+.bg-light .dker .steps .step:hover,
+.bg-light .dker .steps .step:hover:after {
+  background-color: #b3b3cf;
+}
+
+.bg-light.dker.steps .step.active,
+.bg-light.dker .steps .step.active,
+.bg-light .dker.steps .step.active,
+.bg-light .dker .steps .step.active {
+  background-color: #a3a3c6;
+}
+
+.bg-light.dker.steps .step.active:after,
+.bg-light.dker .steps .step.active:after,
+.bg-light .dker.steps .step.active:after,
+.bg-light .dker .steps .step.active:after {
+  background-color: #a3a3c6;
+}
+
+.bg-light.dker.steps .step.active:hover, .bg-light.dker.steps .step.active:hover:after,
+.bg-light.dker .steps .step.active:hover,
+.bg-light.dker .steps .step.active:hover:after,
+.bg-light .dker.steps .step.active:hover,
+.bg-light .dker.steps .step.active:hover:after,
+.bg-light .dker .steps .step.active:hover,
+.bg-light .dker .steps .step.active:hover:after {
+  background-color: #b3b3cf;
+}
+
 .bg-light.dker .list-group-item,
 .bg-light .dker .list-group-item {
   border-color: #ccccdf !important;
@@ -8271,6 +11959,64 @@ html, body {
 .bg-light.bg,
 .bg-light .bg {
   background-color: #f2f2f6;
+}
+
+.bg-light.bg.steps,
+.bg-light.bg .steps,
+.bg-light .bg.steps,
+.bg-light .bg .steps {
+  border: 1px solid #d4d4e1;
+}
+
+.bg-light.bg.steps .step:after,
+.bg-light.bg .steps .step:after,
+.bg-light .bg.steps .step:after,
+.bg-light .bg .steps .step:after {
+  border-color: #d4d4e1;
+}
+
+.bg-light.bg.steps .step:after, .bg-light.bg.steps .step.disabled:after,
+.bg-light.bg .steps .step:after,
+.bg-light.bg .steps .step.disabled:after,
+.bg-light .bg.steps .step:after,
+.bg-light .bg.steps .step.disabled:after,
+.bg-light .bg .steps .step:after,
+.bg-light .bg .steps .step.disabled:after {
+  background-color: #f2f2f6;
+}
+
+.bg-light.bg.steps .step:hover, .bg-light.bg.steps .step:hover:after,
+.bg-light.bg .steps .step:hover,
+.bg-light.bg .steps .step:hover:after,
+.bg-light .bg.steps .step:hover,
+.bg-light .bg.steps .step:hover:after,
+.bg-light .bg .steps .step:hover,
+.bg-light .bg .steps .step:hover:after {
+  background-color: #e3e3ec;
+}
+
+.bg-light.bg.steps .step.active,
+.bg-light.bg .steps .step.active,
+.bg-light .bg.steps .step.active,
+.bg-light .bg .steps .step.active {
+  background-color: #d4d4e1;
+}
+
+.bg-light.bg.steps .step.active:after,
+.bg-light.bg .steps .step.active:after,
+.bg-light .bg.steps .step.active:after,
+.bg-light .bg .steps .step.active:after {
+  background-color: #d4d4e1;
+}
+
+.bg-light.bg.steps .step.active:hover, .bg-light.bg.steps .step.active:hover:after,
+.bg-light.bg .steps .step.active:hover,
+.bg-light.bg .steps .step.active:hover:after,
+.bg-light .bg.steps .step.active:hover,
+.bg-light .bg.steps .step.active:hover:after,
+.bg-light .bg .steps .step.active:hover,
+.bg-light .bg .steps .step.active:hover:after {
+  background-color: #e3e3ec;
 }
 
 .bg-light.bg .list-group-item,
@@ -8418,6 +12164,44 @@ html, body {
   color: #383C3D;
 }
 
+.bg-faded.steps,
+.bg-faded .steps {
+  border: 1px solid #d4d4e1;
+}
+
+.bg-faded.steps .step:after,
+.bg-faded .steps .step:after {
+  border-color: #d4d4e1;
+}
+
+.bg-faded.steps .step:after, .bg-faded.steps .step.disabled:after,
+.bg-faded .steps .step:after,
+.bg-faded .steps .step.disabled:after {
+  background-color: #f2f2f6;
+}
+
+.bg-faded.steps .step:hover, .bg-faded.steps .step:hover:after,
+.bg-faded .steps .step:hover,
+.bg-faded .steps .step:hover:after {
+  background-color: #e3e3ec;
+}
+
+.bg-faded.steps .step.active,
+.bg-faded .steps .step.active {
+  background-color: #d4d4e1;
+}
+
+.bg-faded.steps .step.active:after,
+.bg-faded .steps .step.active:after {
+  background-color: #d4d4e1;
+}
+
+.bg-faded.steps .step.active:hover, .bg-faded.steps .step.active:hover:after,
+.bg-faded .steps .step.active:hover,
+.bg-faded .steps .step.active:hover:after {
+  background-color: #e3e3ec;
+}
+
 .bg-faded .list-group-item {
   border-color: #fbfbfc !important;
   background-color: transparent;
@@ -8457,6 +12241,64 @@ html, body {
 .bg-faded.lt,
 .bg-faded .lt {
   background-color: #f6f6f9 !important;
+}
+
+.bg-faded.lt.steps,
+.bg-faded.lt .steps,
+.bg-faded .lt.steps,
+.bg-faded .lt .steps {
+  border: 1px solid #d8d8e5;
+}
+
+.bg-faded.lt.steps .step:after,
+.bg-faded.lt .steps .step:after,
+.bg-faded .lt.steps .step:after,
+.bg-faded .lt .steps .step:after {
+  border-color: #d8d8e5;
+}
+
+.bg-faded.lt.steps .step:after, .bg-faded.lt.steps .step.disabled:after,
+.bg-faded.lt .steps .step:after,
+.bg-faded.lt .steps .step.disabled:after,
+.bg-faded .lt.steps .step:after,
+.bg-faded .lt.steps .step.disabled:after,
+.bg-faded .lt .steps .step:after,
+.bg-faded .lt .steps .step.disabled:after {
+  background-color: #f6f6f9;
+}
+
+.bg-faded.lt.steps .step:hover, .bg-faded.lt.steps .step:hover:after,
+.bg-faded.lt .steps .step:hover,
+.bg-faded.lt .steps .step:hover:after,
+.bg-faded .lt.steps .step:hover,
+.bg-faded .lt.steps .step:hover:after,
+.bg-faded .lt .steps .step:hover,
+.bg-faded .lt .steps .step:hover:after {
+  background-color: #e7e7ef;
+}
+
+.bg-faded.lt.steps .step.active,
+.bg-faded.lt .steps .step.active,
+.bg-faded .lt.steps .step.active,
+.bg-faded .lt .steps .step.active {
+  background-color: #d8d8e5;
+}
+
+.bg-faded.lt.steps .step.active:after,
+.bg-faded.lt .steps .step.active:after,
+.bg-faded .lt.steps .step.active:after,
+.bg-faded .lt .steps .step.active:after {
+  background-color: #d8d8e5;
+}
+
+.bg-faded.lt.steps .step.active:hover, .bg-faded.lt.steps .step.active:hover:after,
+.bg-faded.lt .steps .step.active:hover,
+.bg-faded.lt .steps .step.active:hover:after,
+.bg-faded .lt.steps .step.active:hover,
+.bg-faded .lt.steps .step.active:hover:after,
+.bg-faded .lt .steps .step.active:hover,
+.bg-faded .lt .steps .step.active:hover:after {
+  background-color: #e7e7ef;
 }
 
 .bg-faded.lt .list-group-item,
@@ -8513,6 +12355,64 @@ html, body {
   background-color: #fbfbfc !important;
 }
 
+.bg-faded.lter.steps,
+.bg-faded.lter .steps,
+.bg-faded .lter.steps,
+.bg-faded .lter .steps {
+  border: 1px solid #dbdbe9;
+}
+
+.bg-faded.lter.steps .step:after,
+.bg-faded.lter .steps .step:after,
+.bg-faded .lter.steps .step:after,
+.bg-faded .lter .steps .step:after {
+  border-color: #dbdbe9;
+}
+
+.bg-faded.lter.steps .step:after, .bg-faded.lter.steps .step.disabled:after,
+.bg-faded.lter .steps .step:after,
+.bg-faded.lter .steps .step.disabled:after,
+.bg-faded .lter.steps .step:after,
+.bg-faded .lter.steps .step.disabled:after,
+.bg-faded .lter .steps .step:after,
+.bg-faded .lter .steps .step.disabled:after {
+  background-color: #fbfbfc;
+}
+
+.bg-faded.lter.steps .step:hover, .bg-faded.lter.steps .step:hover:after,
+.bg-faded.lter .steps .step:hover,
+.bg-faded.lter .steps .step:hover:after,
+.bg-faded .lter.steps .step:hover,
+.bg-faded .lter.steps .step:hover:after,
+.bg-faded .lter .steps .step:hover,
+.bg-faded .lter .steps .step:hover:after {
+  background-color: #ebebf3;
+}
+
+.bg-faded.lter.steps .step.active,
+.bg-faded.lter .steps .step.active,
+.bg-faded .lter.steps .step.active,
+.bg-faded .lter .steps .step.active {
+  background-color: #dbdbe9;
+}
+
+.bg-faded.lter.steps .step.active:after,
+.bg-faded.lter .steps .step.active:after,
+.bg-faded .lter.steps .step.active:after,
+.bg-faded .lter .steps .step.active:after {
+  background-color: #dbdbe9;
+}
+
+.bg-faded.lter.steps .step.active:hover, .bg-faded.lter.steps .step.active:hover:after,
+.bg-faded.lter .steps .step.active:hover,
+.bg-faded.lter .steps .step.active:hover:after,
+.bg-faded .lter.steps .step.active:hover,
+.bg-faded .lter.steps .step.active:hover:after,
+.bg-faded .lter .steps .step.active:hover,
+.bg-faded .lter .steps .step.active:hover:after {
+  background-color: #ebebf3;
+}
+
 .bg-faded.lter .list-group-item,
 .bg-faded .lter .list-group-item {
   border-color: white !important;
@@ -8565,6 +12465,64 @@ html, body {
 .bg-faded.ltest,
 .bg-faded .ltest {
   background-color: white !important;
+}
+
+.bg-faded.ltest.steps,
+.bg-faded.ltest .steps,
+.bg-faded .ltest.steps,
+.bg-faded .ltest .steps {
+  border: 1px solid #e6e6e6;
+}
+
+.bg-faded.ltest.steps .step:after,
+.bg-faded.ltest .steps .step:after,
+.bg-faded .ltest.steps .step:after,
+.bg-faded .ltest .steps .step:after {
+  border-color: #e6e6e6;
+}
+
+.bg-faded.ltest.steps .step:after, .bg-faded.ltest.steps .step.disabled:after,
+.bg-faded.ltest .steps .step:after,
+.bg-faded.ltest .steps .step.disabled:after,
+.bg-faded .ltest.steps .step:after,
+.bg-faded .ltest.steps .step.disabled:after,
+.bg-faded .ltest .steps .step:after,
+.bg-faded .ltest .steps .step.disabled:after {
+  background-color: white;
+}
+
+.bg-faded.ltest.steps .step:hover, .bg-faded.ltest.steps .step:hover:after,
+.bg-faded.ltest .steps .step:hover,
+.bg-faded.ltest .steps .step:hover:after,
+.bg-faded .ltest.steps .step:hover,
+.bg-faded .ltest.steps .step:hover:after,
+.bg-faded .ltest .steps .step:hover,
+.bg-faded .ltest .steps .step:hover:after {
+  background-color: #f2f2f2;
+}
+
+.bg-faded.ltest.steps .step.active,
+.bg-faded.ltest .steps .step.active,
+.bg-faded .ltest.steps .step.active,
+.bg-faded .ltest .steps .step.active {
+  background-color: #e6e6e6;
+}
+
+.bg-faded.ltest.steps .step.active:after,
+.bg-faded.ltest .steps .step.active:after,
+.bg-faded .ltest.steps .step.active:after,
+.bg-faded .ltest .steps .step.active:after {
+  background-color: #e6e6e6;
+}
+
+.bg-faded.ltest.steps .step.active:hover, .bg-faded.ltest.steps .step.active:hover:after,
+.bg-faded.ltest .steps .step.active:hover,
+.bg-faded.ltest .steps .step.active:hover:after,
+.bg-faded .ltest.steps .step.active:hover,
+.bg-faded .ltest.steps .step.active:hover:after,
+.bg-faded .ltest .steps .step.active:hover,
+.bg-faded .ltest .steps .step.active:hover:after {
+  background-color: #f2f2f2;
 }
 
 .bg-faded.ltest .list-group-item,
@@ -8621,6 +12579,64 @@ html, body {
   background-color: #eaeaf1 !important;
 }
 
+.bg-faded.dk.steps,
+.bg-faded.dk .steps,
+.bg-faded .dk.steps,
+.bg-faded .dk .steps {
+  border: 1px solid #cbcbdd;
+}
+
+.bg-faded.dk.steps .step:after,
+.bg-faded.dk .steps .step:after,
+.bg-faded .dk.steps .step:after,
+.bg-faded .dk .steps .step:after {
+  border-color: #cbcbdd;
+}
+
+.bg-faded.dk.steps .step:after, .bg-faded.dk.steps .step.disabled:after,
+.bg-faded.dk .steps .step:after,
+.bg-faded.dk .steps .step.disabled:after,
+.bg-faded .dk.steps .step:after,
+.bg-faded .dk.steps .step.disabled:after,
+.bg-faded .dk .steps .step:after,
+.bg-faded .dk .steps .step.disabled:after {
+  background-color: #eaeaf1;
+}
+
+.bg-faded.dk.steps .step:hover, .bg-faded.dk.steps .step:hover:after,
+.bg-faded.dk .steps .step:hover,
+.bg-faded.dk .steps .step:hover:after,
+.bg-faded .dk.steps .step:hover,
+.bg-faded .dk.steps .step:hover:after,
+.bg-faded .dk .steps .step:hover,
+.bg-faded .dk .steps .step:hover:after {
+  background-color: #dbdbe7;
+}
+
+.bg-faded.dk.steps .step.active,
+.bg-faded.dk .steps .step.active,
+.bg-faded .dk.steps .step.active,
+.bg-faded .dk .steps .step.active {
+  background-color: #cbcbdd;
+}
+
+.bg-faded.dk.steps .step.active:after,
+.bg-faded.dk .steps .step.active:after,
+.bg-faded .dk.steps .step.active:after,
+.bg-faded .dk .steps .step.active:after {
+  background-color: #cbcbdd;
+}
+
+.bg-faded.dk.steps .step.active:hover, .bg-faded.dk.steps .step.active:hover:after,
+.bg-faded.dk .steps .step.active:hover,
+.bg-faded.dk .steps .step.active:hover:after,
+.bg-faded .dk.steps .step.active:hover,
+.bg-faded .dk.steps .step.active:hover:after,
+.bg-faded .dk .steps .step.active:hover,
+.bg-faded .dk .steps .step.active:hover:after {
+  background-color: #dbdbe7;
+}
+
 .bg-faded.dk .list-group-item,
 .bg-faded .dk .list-group-item {
   border-color: #f3f3f7 !important;
@@ -8675,6 +12691,64 @@ html, body {
   background-color: #e2e2ed !important;
 }
 
+.bg-faded.dker.steps,
+.bg-faded.dker .steps,
+.bg-faded .dker.steps,
+.bg-faded .dker .steps {
+  border: 1px solid #c2c2d9;
+}
+
+.bg-faded.dker.steps .step:after,
+.bg-faded.dker .steps .step:after,
+.bg-faded .dker.steps .step:after,
+.bg-faded .dker .steps .step:after {
+  border-color: #c2c2d9;
+}
+
+.bg-faded.dker.steps .step:after, .bg-faded.dker.steps .step.disabled:after,
+.bg-faded.dker .steps .step:after,
+.bg-faded.dker .steps .step.disabled:after,
+.bg-faded .dker.steps .step:after,
+.bg-faded .dker.steps .step.disabled:after,
+.bg-faded .dker .steps .step:after,
+.bg-faded .dker .steps .step.disabled:after {
+  background-color: #e2e2ed;
+}
+
+.bg-faded.dker.steps .step:hover, .bg-faded.dker.steps .step:hover:after,
+.bg-faded.dker .steps .step:hover,
+.bg-faded.dker .steps .step:hover:after,
+.bg-faded .dker.steps .step:hover,
+.bg-faded .dker.steps .step:hover:after,
+.bg-faded .dker .steps .step:hover,
+.bg-faded .dker .steps .step:hover:after {
+  background-color: #d2d2e3;
+}
+
+.bg-faded.dker.steps .step.active,
+.bg-faded.dker .steps .step.active,
+.bg-faded .dker.steps .step.active,
+.bg-faded .dker .steps .step.active {
+  background-color: #c2c2d9;
+}
+
+.bg-faded.dker.steps .step.active:after,
+.bg-faded.dker .steps .step.active:after,
+.bg-faded .dker.steps .step.active:after,
+.bg-faded .dker .steps .step.active:after {
+  background-color: #c2c2d9;
+}
+
+.bg-faded.dker.steps .step.active:hover, .bg-faded.dker.steps .step.active:hover:after,
+.bg-faded.dker .steps .step.active:hover,
+.bg-faded.dker .steps .step.active:hover:after,
+.bg-faded .dker.steps .step.active:hover,
+.bg-faded .dker.steps .step.active:hover:after,
+.bg-faded .dker .steps .step.active:hover,
+.bg-faded .dker .steps .step.active:hover:after {
+  background-color: #d2d2e3;
+}
+
 .bg-faded.dker .list-group-item,
 .bg-faded .dker .list-group-item {
   border-color: #ebebf3 !important;
@@ -8727,6 +12801,64 @@ html, body {
 .bg-faded.bg,
 .bg-faded .bg {
   background-color: #f2f2f6;
+}
+
+.bg-faded.bg.steps,
+.bg-faded.bg .steps,
+.bg-faded .bg.steps,
+.bg-faded .bg .steps {
+  border: 1px solid #d4d4e1;
+}
+
+.bg-faded.bg.steps .step:after,
+.bg-faded.bg .steps .step:after,
+.bg-faded .bg.steps .step:after,
+.bg-faded .bg .steps .step:after {
+  border-color: #d4d4e1;
+}
+
+.bg-faded.bg.steps .step:after, .bg-faded.bg.steps .step.disabled:after,
+.bg-faded.bg .steps .step:after,
+.bg-faded.bg .steps .step.disabled:after,
+.bg-faded .bg.steps .step:after,
+.bg-faded .bg.steps .step.disabled:after,
+.bg-faded .bg .steps .step:after,
+.bg-faded .bg .steps .step.disabled:after {
+  background-color: #f2f2f6;
+}
+
+.bg-faded.bg.steps .step:hover, .bg-faded.bg.steps .step:hover:after,
+.bg-faded.bg .steps .step:hover,
+.bg-faded.bg .steps .step:hover:after,
+.bg-faded .bg.steps .step:hover,
+.bg-faded .bg.steps .step:hover:after,
+.bg-faded .bg .steps .step:hover,
+.bg-faded .bg .steps .step:hover:after {
+  background-color: #e3e3ec;
+}
+
+.bg-faded.bg.steps .step.active,
+.bg-faded.bg .steps .step.active,
+.bg-faded .bg.steps .step.active,
+.bg-faded .bg .steps .step.active {
+  background-color: #d4d4e1;
+}
+
+.bg-faded.bg.steps .step.active:after,
+.bg-faded.bg .steps .step.active:after,
+.bg-faded .bg.steps .step.active:after,
+.bg-faded .bg .steps .step.active:after {
+  background-color: #d4d4e1;
+}
+
+.bg-faded.bg.steps .step.active:hover, .bg-faded.bg.steps .step.active:hover:after,
+.bg-faded.bg .steps .step.active:hover,
+.bg-faded.bg .steps .step.active:hover:after,
+.bg-faded .bg.steps .step.active:hover,
+.bg-faded .bg.steps .step.active:hover:after,
+.bg-faded .bg .steps .step.active:hover,
+.bg-faded .bg .steps .step.active:hover:after {
+  background-color: #e3e3ec;
 }
 
 .bg-faded.bg .list-group-item,
@@ -8874,6 +13006,44 @@ html, body {
   color: #4cdae4;
 }
 
+.bg-dark.steps,
+.bg-dark .steps {
+  border: 1px solid #06282b;
+}
+
+.bg-dark.steps .step:after,
+.bg-dark .steps .step:after {
+  border-color: #06282b;
+}
+
+.bg-dark.steps .step:after, .bg-dark.steps .step.disabled:after,
+.bg-dark .steps .step:after,
+.bg-dark .steps .step.disabled:after {
+  background-color: #0D5257;
+}
+
+.bg-dark.steps .step:hover, .bg-dark.steps .step:hover:after,
+.bg-dark .steps .step:hover,
+.bg-dark .steps .step:hover:after {
+  background-color: #0a3d41;
+}
+
+.bg-dark.steps .step.active,
+.bg-dark .steps .step.active {
+  background-color: #06282b;
+}
+
+.bg-dark.steps .step.active:after,
+.bg-dark .steps .step.active:after {
+  background-color: #06282b;
+}
+
+.bg-dark.steps .step.active:hover, .bg-dark.steps .step.active:hover:after,
+.bg-dark .steps .step.active:hover,
+.bg-dark .steps .step.active:hover:after {
+  background-color: #0a3d41;
+}
+
 .bg-dark .list-group-item {
   border-color: #0f5f64 !important;
   background-color: transparent;
@@ -8913,6 +13083,64 @@ html, body {
 .bg-dark.lt,
 .bg-dark .lt {
   background-color: #0f686f !important;
+}
+
+.bg-dark.lt.steps,
+.bg-dark.lt .steps,
+.bg-dark .lt.steps,
+.bg-dark .lt .steps {
+  border: 1px solid #093e42;
+}
+
+.bg-dark.lt.steps .step:after,
+.bg-dark.lt .steps .step:after,
+.bg-dark .lt.steps .step:after,
+.bg-dark .lt .steps .step:after {
+  border-color: #093e42;
+}
+
+.bg-dark.lt.steps .step:after, .bg-dark.lt.steps .step.disabled:after,
+.bg-dark.lt .steps .step:after,
+.bg-dark.lt .steps .step.disabled:after,
+.bg-dark .lt.steps .step:after,
+.bg-dark .lt.steps .step.disabled:after,
+.bg-dark .lt .steps .step:after,
+.bg-dark .lt .steps .step.disabled:after {
+  background-color: #0f686f;
+}
+
+.bg-dark.lt.steps .step:hover, .bg-dark.lt.steps .step:hover:after,
+.bg-dark.lt .steps .step:hover,
+.bg-dark.lt .steps .step:hover:after,
+.bg-dark .lt.steps .step:hover,
+.bg-dark .lt.steps .step:hover:after,
+.bg-dark .lt .steps .step:hover,
+.bg-dark .lt .steps .step:hover:after {
+  background-color: #0c5358;
+}
+
+.bg-dark.lt.steps .step.active,
+.bg-dark.lt .steps .step.active,
+.bg-dark .lt.steps .step.active,
+.bg-dark .lt .steps .step.active {
+  background-color: #093e42;
+}
+
+.bg-dark.lt.steps .step.active:after,
+.bg-dark.lt .steps .step.active:after,
+.bg-dark .lt.steps .step.active:after,
+.bg-dark .lt .steps .step.active:after {
+  background-color: #093e42;
+}
+
+.bg-dark.lt.steps .step.active:hover, .bg-dark.lt.steps .step.active:hover:after,
+.bg-dark.lt .steps .step.active:hover,
+.bg-dark.lt .steps .step.active:hover:after,
+.bg-dark .lt.steps .step.active:hover,
+.bg-dark .lt.steps .step.active:hover:after,
+.bg-dark .lt .steps .step.active:hover,
+.bg-dark .lt .steps .step.active:hover:after {
+  background-color: #0c5358;
 }
 
 .bg-dark.lt .list-group-item,
@@ -8969,6 +13197,64 @@ html, body {
   background-color: #107f87 !important;
 }
 
+.bg-dark.lter.steps,
+.bg-dark.lter .steps,
+.bg-dark .lter.steps,
+.bg-dark .lter .steps {
+  border: 1px solid #0b545a;
+}
+
+.bg-dark.lter.steps .step:after,
+.bg-dark.lter .steps .step:after,
+.bg-dark .lter.steps .step:after,
+.bg-dark .lter .steps .step:after {
+  border-color: #0b545a;
+}
+
+.bg-dark.lter.steps .step:after, .bg-dark.lter.steps .step.disabled:after,
+.bg-dark.lter .steps .step:after,
+.bg-dark.lter .steps .step.disabled:after,
+.bg-dark .lter.steps .step:after,
+.bg-dark .lter.steps .step.disabled:after,
+.bg-dark .lter .steps .step:after,
+.bg-dark .lter .steps .step.disabled:after {
+  background-color: #107f87;
+}
+
+.bg-dark.lter.steps .step:hover, .bg-dark.lter.steps .step:hover:after,
+.bg-dark.lter .steps .step:hover,
+.bg-dark.lter .steps .step:hover:after,
+.bg-dark .lter.steps .step:hover,
+.bg-dark .lter.steps .step:hover:after,
+.bg-dark .lter .steps .step:hover,
+.bg-dark .lter .steps .step:hover:after {
+  background-color: #0d6a70;
+}
+
+.bg-dark.lter.steps .step.active,
+.bg-dark.lter .steps .step.active,
+.bg-dark .lter.steps .step.active,
+.bg-dark .lter .steps .step.active {
+  background-color: #0b545a;
+}
+
+.bg-dark.lter.steps .step.active:after,
+.bg-dark.lter .steps .step.active:after,
+.bg-dark .lter.steps .step.active:after,
+.bg-dark .lter .steps .step.active:after {
+  background-color: #0b545a;
+}
+
+.bg-dark.lter.steps .step.active:hover, .bg-dark.lter.steps .step.active:hover:after,
+.bg-dark.lter .steps .step.active:hover,
+.bg-dark.lter .steps .step.active:hover:after,
+.bg-dark .lter.steps .step.active:hover,
+.bg-dark .lter.steps .step.active:hover:after,
+.bg-dark .lter .steps .step.active:hover,
+.bg-dark .lter .steps .step.active:hover:after {
+  background-color: #0d6a70;
+}
+
 .bg-dark.lter .list-group-item,
 .bg-dark .lter .list-group-item {
   border-color: #118c95 !important;
@@ -9021,6 +13307,64 @@ html, body {
 .bg-dark.ltest,
 .bg-dark .ltest {
   background-color: #e6fbfd !important;
+}
+
+.bg-dark.ltest.steps,
+.bg-dark.ltest .steps,
+.bg-dark .ltest.steps,
+.bg-dark .ltest .steps {
+  border: 1px solid #b7f4f9;
+}
+
+.bg-dark.ltest.steps .step:after,
+.bg-dark.ltest .steps .step:after,
+.bg-dark .ltest.steps .step:after,
+.bg-dark .ltest .steps .step:after {
+  border-color: #b7f4f9;
+}
+
+.bg-dark.ltest.steps .step:after, .bg-dark.ltest.steps .step.disabled:after,
+.bg-dark.ltest .steps .step:after,
+.bg-dark.ltest .steps .step.disabled:after,
+.bg-dark .ltest.steps .step:after,
+.bg-dark .ltest.steps .step.disabled:after,
+.bg-dark .ltest .steps .step:after,
+.bg-dark .ltest .steps .step.disabled:after {
+  background-color: #e6fbfd;
+}
+
+.bg-dark.ltest.steps .step:hover, .bg-dark.ltest.steps .step:hover:after,
+.bg-dark.ltest .steps .step:hover,
+.bg-dark.ltest .steps .step:hover:after,
+.bg-dark .ltest.steps .step:hover,
+.bg-dark .ltest.steps .step:hover:after,
+.bg-dark .ltest .steps .step:hover,
+.bg-dark .ltest .steps .step:hover:after {
+  background-color: #cef8fb;
+}
+
+.bg-dark.ltest.steps .step.active,
+.bg-dark.ltest .steps .step.active,
+.bg-dark .ltest.steps .step.active,
+.bg-dark .ltest .steps .step.active {
+  background-color: #b7f4f9;
+}
+
+.bg-dark.ltest.steps .step.active:after,
+.bg-dark.ltest .steps .step.active:after,
+.bg-dark .ltest.steps .step.active:after,
+.bg-dark .ltest .steps .step.active:after {
+  background-color: #b7f4f9;
+}
+
+.bg-dark.ltest.steps .step.active:hover, .bg-dark.ltest.steps .step.active:hover:after,
+.bg-dark.ltest .steps .step.active:hover,
+.bg-dark.ltest .steps .step.active:hover:after,
+.bg-dark .ltest.steps .step.active:hover,
+.bg-dark .ltest.steps .step.active:hover:after,
+.bg-dark .ltest .steps .step.active:hover,
+.bg-dark .ltest .steps .step.active:hover:after {
+  background-color: #cef8fb;
 }
 
 .bg-dark.ltest .list-group-item,
@@ -9077,6 +13421,64 @@ html, body {
   background-color: #093e42 !important;
 }
 
+.bg-dark.dk.steps,
+.bg-dark.dk .steps,
+.bg-dark .dk.steps,
+.bg-dark .dk .steps {
+  border: 1px solid #031415;
+}
+
+.bg-dark.dk.steps .step:after,
+.bg-dark.dk .steps .step:after,
+.bg-dark .dk.steps .step:after,
+.bg-dark .dk .steps .step:after {
+  border-color: #031415;
+}
+
+.bg-dark.dk.steps .step:after, .bg-dark.dk.steps .step.disabled:after,
+.bg-dark.dk .steps .step:after,
+.bg-dark.dk .steps .step.disabled:after,
+.bg-dark .dk.steps .step:after,
+.bg-dark .dk.steps .step.disabled:after,
+.bg-dark .dk .steps .step:after,
+.bg-dark .dk .steps .step.disabled:after {
+  background-color: #093e42;
+}
+
+.bg-dark.dk.steps .step:hover, .bg-dark.dk.steps .step:hover:after,
+.bg-dark.dk .steps .step:hover,
+.bg-dark.dk .steps .step:hover:after,
+.bg-dark .dk.steps .step:hover,
+.bg-dark .dk.steps .step:hover:after,
+.bg-dark .dk .steps .step:hover,
+.bg-dark .dk .steps .step:hover:after {
+  background-color: #06292b;
+}
+
+.bg-dark.dk.steps .step.active,
+.bg-dark.dk .steps .step.active,
+.bg-dark .dk.steps .step.active,
+.bg-dark .dk .steps .step.active {
+  background-color: #031415;
+}
+
+.bg-dark.dk.steps .step.active:after,
+.bg-dark.dk .steps .step.active:after,
+.bg-dark .dk.steps .step.active:after,
+.bg-dark .dk .steps .step.active:after {
+  background-color: #031415;
+}
+
+.bg-dark.dk.steps .step.active:hover, .bg-dark.dk.steps .step.active:hover:after,
+.bg-dark.dk .steps .step.active:hover,
+.bg-dark.dk .steps .step.active:hover:after,
+.bg-dark .dk.steps .step.active:hover,
+.bg-dark .dk.steps .step.active:hover:after,
+.bg-dark .dk .steps .step.active:hover,
+.bg-dark .dk .steps .step.active:hover:after {
+  background-color: #06292b;
+}
+
 .bg-dark.dk .list-group-item,
 .bg-dark .dk .list-group-item {
   border-color: #0b4b4f !important;
@@ -9131,6 +13533,64 @@ html, body {
   background-color: #05292c !important;
 }
 
+.bg-dark.dker.steps,
+.bg-dark.dker .steps,
+.bg-dark .dker.steps,
+.bg-dark .dker .steps {
+  border: 1px solid black;
+}
+
+.bg-dark.dker.steps .step:after,
+.bg-dark.dker .steps .step:after,
+.bg-dark .dker.steps .step:after,
+.bg-dark .dker .steps .step:after {
+  border-color: black;
+}
+
+.bg-dark.dker.steps .step:after, .bg-dark.dker.steps .step.disabled:after,
+.bg-dark.dker .steps .step:after,
+.bg-dark.dker .steps .step.disabled:after,
+.bg-dark .dker.steps .step:after,
+.bg-dark .dker.steps .step.disabled:after,
+.bg-dark .dker .steps .step:after,
+.bg-dark .dker .steps .step.disabled:after {
+  background-color: #05292c;
+}
+
+.bg-dark.dker.steps .step:hover, .bg-dark.dker.steps .step:hover:after,
+.bg-dark.dker .steps .step:hover,
+.bg-dark.dker .steps .step:hover:after,
+.bg-dark .dker.steps .step:hover,
+.bg-dark .dker.steps .step:hover:after,
+.bg-dark .dker .steps .step:hover,
+.bg-dark .dker .steps .step:hover:after {
+  background-color: #021415;
+}
+
+.bg-dark.dker.steps .step.active,
+.bg-dark.dker .steps .step.active,
+.bg-dark .dker.steps .step.active,
+.bg-dark .dker .steps .step.active {
+  background-color: black;
+}
+
+.bg-dark.dker.steps .step.active:after,
+.bg-dark.dker .steps .step.active:after,
+.bg-dark .dker.steps .step.active:after,
+.bg-dark .dker .steps .step.active:after {
+  background-color: black;
+}
+
+.bg-dark.dker.steps .step.active:hover, .bg-dark.dker.steps .step.active:hover:after,
+.bg-dark.dker .steps .step.active:hover,
+.bg-dark.dker .steps .step.active:hover:after,
+.bg-dark .dker.steps .step.active:hover,
+.bg-dark .dker.steps .step.active:hover:after,
+.bg-dark .dker .steps .step.active:hover,
+.bg-dark .dker .steps .step.active:hover:after {
+  background-color: #021415;
+}
+
 .bg-dark.dker .list-group-item,
 .bg-dark .dker .list-group-item {
   border-color: #07363a !important;
@@ -9183,6 +13643,64 @@ html, body {
 .bg-dark.bg,
 .bg-dark .bg {
   background-color: #0D5257;
+}
+
+.bg-dark.bg.steps,
+.bg-dark.bg .steps,
+.bg-dark .bg.steps,
+.bg-dark .bg .steps {
+  border: 1px solid #06282b;
+}
+
+.bg-dark.bg.steps .step:after,
+.bg-dark.bg .steps .step:after,
+.bg-dark .bg.steps .step:after,
+.bg-dark .bg .steps .step:after {
+  border-color: #06282b;
+}
+
+.bg-dark.bg.steps .step:after, .bg-dark.bg.steps .step.disabled:after,
+.bg-dark.bg .steps .step:after,
+.bg-dark.bg .steps .step.disabled:after,
+.bg-dark .bg.steps .step:after,
+.bg-dark .bg.steps .step.disabled:after,
+.bg-dark .bg .steps .step:after,
+.bg-dark .bg .steps .step.disabled:after {
+  background-color: #0D5257;
+}
+
+.bg-dark.bg.steps .step:hover, .bg-dark.bg.steps .step:hover:after,
+.bg-dark.bg .steps .step:hover,
+.bg-dark.bg .steps .step:hover:after,
+.bg-dark .bg.steps .step:hover,
+.bg-dark .bg.steps .step:hover:after,
+.bg-dark .bg .steps .step:hover,
+.bg-dark .bg .steps .step:hover:after {
+  background-color: #0a3d41;
+}
+
+.bg-dark.bg.steps .step.active,
+.bg-dark.bg .steps .step.active,
+.bg-dark .bg.steps .step.active,
+.bg-dark .bg .steps .step.active {
+  background-color: #06282b;
+}
+
+.bg-dark.bg.steps .step.active:after,
+.bg-dark.bg .steps .step.active:after,
+.bg-dark .bg.steps .step.active:after,
+.bg-dark .bg .steps .step.active:after {
+  background-color: #06282b;
+}
+
+.bg-dark.bg.steps .step.active:hover, .bg-dark.bg.steps .step.active:hover:after,
+.bg-dark.bg .steps .step.active:hover,
+.bg-dark.bg .steps .step.active:hover:after,
+.bg-dark .bg.steps .step.active:hover,
+.bg-dark .bg.steps .step.active:hover:after,
+.bg-dark .bg .steps .step.active:hover,
+.bg-dark .bg .steps .step.active:hover:after {
+  background-color: #0a3d41;
 }
 
 .bg-dark.bg .list-group-item,
@@ -9330,6 +13848,44 @@ html, body {
   color: #9ca3a5;
 }
 
+.bg-inverse.steps,
+.bg-inverse .steps {
+  border: 1px solid #202222;
+}
+
+.bg-inverse.steps .step:after,
+.bg-inverse .steps .step:after {
+  border-color: #202222;
+}
+
+.bg-inverse.steps .step:after, .bg-inverse.steps .step.disabled:after,
+.bg-inverse .steps .step:after,
+.bg-inverse .steps .step.disabled:after {
+  background-color: #383C3D;
+}
+
+.bg-inverse.steps .step:hover, .bg-inverse.steps .step:hover:after,
+.bg-inverse .steps .step:hover,
+.bg-inverse .steps .step:hover:after {
+  background-color: #2c2f30;
+}
+
+.bg-inverse.steps .step.active,
+.bg-inverse .steps .step.active {
+  background-color: #202222;
+}
+
+.bg-inverse.steps .step.active:after,
+.bg-inverse .steps .step.active:after {
+  background-color: #202222;
+}
+
+.bg-inverse.steps .step.active:hover, .bg-inverse.steps .step.active:hover:after,
+.bg-inverse .steps .step.active:hover,
+.bg-inverse .steps .step.active:hover:after {
+  background-color: #2c2f30;
+}
+
 .bg-inverse .list-group-item {
   border-color: #3f4445 !important;
   background-color: transparent;
@@ -9369,6 +13925,64 @@ html, body {
 .bg-inverse.lt,
 .bg-inverse .lt {
   background-color: #424a4c !important;
+}
+
+.bg-inverse.lt.steps,
+.bg-inverse.lt .steps,
+.bg-inverse .lt.steps,
+.bg-inverse .lt .steps {
+  border: 1px solid #2b3031;
+}
+
+.bg-inverse.lt.steps .step:after,
+.bg-inverse.lt .steps .step:after,
+.bg-inverse .lt.steps .step:after,
+.bg-inverse .lt .steps .step:after {
+  border-color: #2b3031;
+}
+
+.bg-inverse.lt.steps .step:after, .bg-inverse.lt.steps .step.disabled:after,
+.bg-inverse.lt .steps .step:after,
+.bg-inverse.lt .steps .step.disabled:after,
+.bg-inverse .lt.steps .step:after,
+.bg-inverse .lt.steps .step.disabled:after,
+.bg-inverse .lt .steps .step:after,
+.bg-inverse .lt .steps .step.disabled:after {
+  background-color: #424a4c;
+}
+
+.bg-inverse.lt.steps .step:hover, .bg-inverse.lt.steps .step:hover:after,
+.bg-inverse.lt .steps .step:hover,
+.bg-inverse.lt .steps .step:hover:after,
+.bg-inverse .lt.steps .step:hover,
+.bg-inverse .lt.steps .step:hover:after,
+.bg-inverse .lt .steps .step:hover,
+.bg-inverse .lt .steps .step:hover:after {
+  background-color: #373d3e;
+}
+
+.bg-inverse.lt.steps .step.active,
+.bg-inverse.lt .steps .step.active,
+.bg-inverse .lt.steps .step.active,
+.bg-inverse .lt .steps .step.active {
+  background-color: #2b3031;
+}
+
+.bg-inverse.lt.steps .step.active:after,
+.bg-inverse.lt .steps .step.active:after,
+.bg-inverse .lt.steps .step.active:after,
+.bg-inverse .lt .steps .step.active:after {
+  background-color: #2b3031;
+}
+
+.bg-inverse.lt.steps .step.active:hover, .bg-inverse.lt.steps .step.active:hover:after,
+.bg-inverse.lt .steps .step.active:hover,
+.bg-inverse.lt .steps .step.active:hover:after,
+.bg-inverse .lt.steps .step.active:hover,
+.bg-inverse .lt.steps .step.active:hover:after,
+.bg-inverse .lt .steps .step.active:hover,
+.bg-inverse .lt .steps .step.active:hover:after {
+  background-color: #373d3e;
 }
 
 .bg-inverse.lt .list-group-item,
@@ -9425,6 +14039,64 @@ html, body {
   background-color: #4c595c !important;
 }
 
+.bg-inverse.lter.steps,
+.bg-inverse.lter .steps,
+.bg-inverse .lter.steps,
+.bg-inverse .lter .steps {
+  border: 1px solid #353e40;
+}
+
+.bg-inverse.lter.steps .step:after,
+.bg-inverse.lter .steps .step:after,
+.bg-inverse .lter.steps .step:after,
+.bg-inverse .lter .steps .step:after {
+  border-color: #353e40;
+}
+
+.bg-inverse.lter.steps .step:after, .bg-inverse.lter.steps .step.disabled:after,
+.bg-inverse.lter .steps .step:after,
+.bg-inverse.lter .steps .step.disabled:after,
+.bg-inverse .lter.steps .step:after,
+.bg-inverse .lter.steps .step.disabled:after,
+.bg-inverse .lter .steps .step:after,
+.bg-inverse .lter .steps .step.disabled:after {
+  background-color: #4c595c;
+}
+
+.bg-inverse.lter.steps .step:hover, .bg-inverse.lter.steps .step:hover:after,
+.bg-inverse.lter .steps .step:hover,
+.bg-inverse.lter .steps .step:hover:after,
+.bg-inverse .lter.steps .step:hover,
+.bg-inverse .lter.steps .step:hover:after,
+.bg-inverse .lter .steps .step:hover,
+.bg-inverse .lter .steps .step:hover:after {
+  background-color: #414b4e;
+}
+
+.bg-inverse.lter.steps .step.active,
+.bg-inverse.lter .steps .step.active,
+.bg-inverse .lter.steps .step.active,
+.bg-inverse .lter .steps .step.active {
+  background-color: #353e40;
+}
+
+.bg-inverse.lter.steps .step.active:after,
+.bg-inverse.lter .steps .step.active:after,
+.bg-inverse .lter.steps .step.active:after,
+.bg-inverse .lter .steps .step.active:after {
+  background-color: #353e40;
+}
+
+.bg-inverse.lter.steps .step.active:hover, .bg-inverse.lter.steps .step.active:hover:after,
+.bg-inverse.lter .steps .step.active:hover,
+.bg-inverse.lter .steps .step.active:hover:after,
+.bg-inverse .lter.steps .step.active:hover,
+.bg-inverse .lter.steps .step.active:hover:after,
+.bg-inverse .lter .steps .step.active:hover,
+.bg-inverse .lter .steps .step.active:hover:after {
+  background-color: #414b4e;
+}
+
 .bg-inverse.lter .list-group-item,
 .bg-inverse .lter .list-group-item {
   border-color: #536164 !important;
@@ -9477,6 +14149,64 @@ html, body {
 .bg-inverse.ltest,
 .bg-inverse .ltest {
   background-color: #f9fafa !important;
+}
+
+.bg-inverse.ltest.steps,
+.bg-inverse.ltest .steps,
+.bg-inverse .ltest.steps,
+.bg-inverse .ltest .steps {
+  border: 1px solid #dce3e5;
+}
+
+.bg-inverse.ltest.steps .step:after,
+.bg-inverse.ltest .steps .step:after,
+.bg-inverse .ltest.steps .step:after,
+.bg-inverse .ltest .steps .step:after {
+  border-color: #dce3e5;
+}
+
+.bg-inverse.ltest.steps .step:after, .bg-inverse.ltest.steps .step.disabled:after,
+.bg-inverse.ltest .steps .step:after,
+.bg-inverse.ltest .steps .step.disabled:after,
+.bg-inverse .ltest.steps .step:after,
+.bg-inverse .ltest.steps .step.disabled:after,
+.bg-inverse .ltest .steps .step:after,
+.bg-inverse .ltest .steps .step.disabled:after {
+  background-color: #f9fafa;
+}
+
+.bg-inverse.ltest.steps .step:hover, .bg-inverse.ltest.steps .step:hover:after,
+.bg-inverse.ltest .steps .step:hover,
+.bg-inverse.ltest .steps .step:hover:after,
+.bg-inverse .ltest.steps .step:hover,
+.bg-inverse .ltest.steps .step:hover:after,
+.bg-inverse .ltest .steps .step:hover,
+.bg-inverse .ltest .steps .step:hover:after {
+  background-color: #eaeff0;
+}
+
+.bg-inverse.ltest.steps .step.active,
+.bg-inverse.ltest .steps .step.active,
+.bg-inverse .ltest.steps .step.active,
+.bg-inverse .ltest .steps .step.active {
+  background-color: #dce3e5;
+}
+
+.bg-inverse.ltest.steps .step.active:after,
+.bg-inverse.ltest .steps .step.active:after,
+.bg-inverse .ltest.steps .step.active:after,
+.bg-inverse .ltest .steps .step.active:after {
+  background-color: #dce3e5;
+}
+
+.bg-inverse.ltest.steps .step.active:hover, .bg-inverse.ltest.steps .step.active:hover:after,
+.bg-inverse.ltest .steps .step.active:hover,
+.bg-inverse.ltest .steps .step.active:hover:after,
+.bg-inverse .ltest.steps .step.active:hover,
+.bg-inverse .ltest.steps .step.active:hover:after,
+.bg-inverse .ltest .steps .step.active:hover,
+.bg-inverse .ltest .steps .step.active:hover:after {
+  background-color: #eaeff0;
 }
 
 .bg-inverse.ltest .list-group-item,
@@ -9533,6 +14263,64 @@ html, body {
   background-color: #2b3031 !important;
 }
 
+.bg-inverse.dk.steps,
+.bg-inverse.dk .steps,
+.bg-inverse .dk.steps,
+.bg-inverse .dk .steps {
+  border: 1px solid #131516;
+}
+
+.bg-inverse.dk.steps .step:after,
+.bg-inverse.dk .steps .step:after,
+.bg-inverse .dk.steps .step:after,
+.bg-inverse .dk .steps .step:after {
+  border-color: #131516;
+}
+
+.bg-inverse.dk.steps .step:after, .bg-inverse.dk.steps .step.disabled:after,
+.bg-inverse.dk .steps .step:after,
+.bg-inverse.dk .steps .step.disabled:after,
+.bg-inverse .dk.steps .step:after,
+.bg-inverse .dk.steps .step.disabled:after,
+.bg-inverse .dk .steps .step:after,
+.bg-inverse .dk .steps .step.disabled:after {
+  background-color: #2b3031;
+}
+
+.bg-inverse.dk.steps .step:hover, .bg-inverse.dk.steps .step:hover:after,
+.bg-inverse.dk .steps .step:hover,
+.bg-inverse.dk .steps .step:hover:after,
+.bg-inverse .dk.steps .step:hover,
+.bg-inverse .dk.steps .step:hover:after,
+.bg-inverse .dk .steps .step:hover,
+.bg-inverse .dk .steps .step:hover:after {
+  background-color: #1f2223;
+}
+
+.bg-inverse.dk.steps .step.active,
+.bg-inverse.dk .steps .step.active,
+.bg-inverse .dk.steps .step.active,
+.bg-inverse .dk .steps .step.active {
+  background-color: #131516;
+}
+
+.bg-inverse.dk.steps .step.active:after,
+.bg-inverse.dk .steps .step.active:after,
+.bg-inverse .dk.steps .step.active:after,
+.bg-inverse .dk .steps .step.active:after {
+  background-color: #131516;
+}
+
+.bg-inverse.dk.steps .step.active:hover, .bg-inverse.dk.steps .step.active:hover:after,
+.bg-inverse.dk .steps .step.active:hover,
+.bg-inverse.dk .steps .step.active:hover:after,
+.bg-inverse .dk.steps .step.active:hover,
+.bg-inverse .dk.steps .step.active:hover:after,
+.bg-inverse .dk .steps .step.active:hover,
+.bg-inverse .dk .steps .step.active:hover:after {
+  background-color: #1f2223;
+}
+
 .bg-inverse.dk .list-group-item,
 .bg-inverse .dk .list-group-item {
   border-color: #323839 !important;
@@ -9587,6 +14375,64 @@ html, body {
   background-color: #1e2324 !important;
 }
 
+.bg-inverse.dker.steps,
+.bg-inverse.dker .steps,
+.bg-inverse .dker.steps,
+.bg-inverse .dker .steps {
+  border: 1px solid #070808;
+}
+
+.bg-inverse.dker.steps .step:after,
+.bg-inverse.dker .steps .step:after,
+.bg-inverse .dker.steps .step:after,
+.bg-inverse .dker .steps .step:after {
+  border-color: #070808;
+}
+
+.bg-inverse.dker.steps .step:after, .bg-inverse.dker.steps .step.disabled:after,
+.bg-inverse.dker .steps .step:after,
+.bg-inverse.dker .steps .step.disabled:after,
+.bg-inverse .dker.steps .step:after,
+.bg-inverse .dker.steps .step.disabled:after,
+.bg-inverse .dker .steps .step:after,
+.bg-inverse .dker .steps .step.disabled:after {
+  background-color: #1e2324;
+}
+
+.bg-inverse.dker.steps .step:hover, .bg-inverse.dker.steps .step:hover:after,
+.bg-inverse.dker .steps .step:hover,
+.bg-inverse.dker .steps .step:hover:after,
+.bg-inverse .dker.steps .step:hover,
+.bg-inverse .dker.steps .step:hover:after,
+.bg-inverse .dker .steps .step:hover,
+.bg-inverse .dker .steps .step:hover:after {
+  background-color: #121516;
+}
+
+.bg-inverse.dker.steps .step.active,
+.bg-inverse.dker .steps .step.active,
+.bg-inverse .dker.steps .step.active,
+.bg-inverse .dker .steps .step.active {
+  background-color: #070808;
+}
+
+.bg-inverse.dker.steps .step.active:after,
+.bg-inverse.dker .steps .step.active:after,
+.bg-inverse .dker.steps .step.active:after,
+.bg-inverse .dker .steps .step.active:after {
+  background-color: #070808;
+}
+
+.bg-inverse.dker.steps .step.active:hover, .bg-inverse.dker.steps .step.active:hover:after,
+.bg-inverse.dker .steps .step.active:hover,
+.bg-inverse.dker .steps .step.active:hover:after,
+.bg-inverse .dker.steps .step.active:hover,
+.bg-inverse .dker.steps .step.active:hover:after,
+.bg-inverse .dker .steps .step.active:hover,
+.bg-inverse .dker .steps .step.active:hover:after {
+  background-color: #121516;
+}
+
 .bg-inverse.dker .list-group-item,
 .bg-inverse .dker .list-group-item {
   border-color: #252b2c !important;
@@ -9639,6 +14485,64 @@ html, body {
 .bg-inverse.bg,
 .bg-inverse .bg {
   background-color: #383C3D;
+}
+
+.bg-inverse.bg.steps,
+.bg-inverse.bg .steps,
+.bg-inverse .bg.steps,
+.bg-inverse .bg .steps {
+  border: 1px solid #202222;
+}
+
+.bg-inverse.bg.steps .step:after,
+.bg-inverse.bg .steps .step:after,
+.bg-inverse .bg.steps .step:after,
+.bg-inverse .bg .steps .step:after {
+  border-color: #202222;
+}
+
+.bg-inverse.bg.steps .step:after, .bg-inverse.bg.steps .step.disabled:after,
+.bg-inverse.bg .steps .step:after,
+.bg-inverse.bg .steps .step.disabled:after,
+.bg-inverse .bg.steps .step:after,
+.bg-inverse .bg.steps .step.disabled:after,
+.bg-inverse .bg .steps .step:after,
+.bg-inverse .bg .steps .step.disabled:after {
+  background-color: #383C3D;
+}
+
+.bg-inverse.bg.steps .step:hover, .bg-inverse.bg.steps .step:hover:after,
+.bg-inverse.bg .steps .step:hover,
+.bg-inverse.bg .steps .step:hover:after,
+.bg-inverse .bg.steps .step:hover,
+.bg-inverse .bg.steps .step:hover:after,
+.bg-inverse .bg .steps .step:hover,
+.bg-inverse .bg .steps .step:hover:after {
+  background-color: #2c2f30;
+}
+
+.bg-inverse.bg.steps .step.active,
+.bg-inverse.bg .steps .step.active,
+.bg-inverse .bg.steps .step.active,
+.bg-inverse .bg .steps .step.active {
+  background-color: #202222;
+}
+
+.bg-inverse.bg.steps .step.active:after,
+.bg-inverse.bg .steps .step.active:after,
+.bg-inverse .bg.steps .step.active:after,
+.bg-inverse .bg .steps .step.active:after {
+  background-color: #202222;
+}
+
+.bg-inverse.bg.steps .step.active:hover, .bg-inverse.bg.steps .step.active:hover:after,
+.bg-inverse.bg .steps .step.active:hover,
+.bg-inverse.bg .steps .step.active:hover:after,
+.bg-inverse .bg.steps .step.active:hover,
+.bg-inverse .bg.steps .step.active:hover:after,
+.bg-inverse .bg .steps .step.active:hover,
+.bg-inverse .bg .steps .step.active:hover:after {
+  background-color: #2c2f30;
 }
 
 .bg-inverse.bg .list-group-item,
@@ -9786,6 +14690,44 @@ html, body {
   color: #678196;
 }
 
+.bg-black.steps,
+.bg-black .steps {
+  border: 1px solid black;
+}
+
+.bg-black.steps .step:after,
+.bg-black .steps .step:after {
+  border-color: black;
+}
+
+.bg-black.steps .step:after, .bg-black.steps .step.disabled:after,
+.bg-black .steps .step:after,
+.bg-black .steps .step.disabled:after {
+  background-color: #14191d;
+}
+
+.bg-black.steps .step:hover, .bg-black.steps .step:hover:after,
+.bg-black .steps .step:hover,
+.bg-black .steps .step:hover:after {
+  background-color: #0a0c0e;
+}
+
+.bg-black.steps .step.active,
+.bg-black .steps .step.active {
+  background-color: black;
+}
+
+.bg-black.steps .step.active:after,
+.bg-black .steps .step.active:after {
+  background-color: black;
+}
+
+.bg-black.steps .step.active:hover, .bg-black.steps .step.active:hover:after,
+.bg-black .steps .step.active:hover,
+.bg-black .steps .step.active:hover:after {
+  background-color: #0a0c0e;
+}
+
 .bg-black .list-group-item {
   border-color: #1a2126 !important;
   background-color: transparent;
@@ -9825,6 +14767,64 @@ html, body {
 .bg-black.lt,
 .bg-black .lt {
   background-color: #1d262d !important;
+}
+
+.bg-black.lt.steps,
+.bg-black.lt .steps,
+.bg-black .lt.steps,
+.bg-black .lt .steps {
+  border: 1px solid #090c0e;
+}
+
+.bg-black.lt.steps .step:after,
+.bg-black.lt .steps .step:after,
+.bg-black .lt.steps .step:after,
+.bg-black .lt .steps .step:after {
+  border-color: #090c0e;
+}
+
+.bg-black.lt.steps .step:after, .bg-black.lt.steps .step.disabled:after,
+.bg-black.lt .steps .step:after,
+.bg-black.lt .steps .step.disabled:after,
+.bg-black .lt.steps .step:after,
+.bg-black .lt.steps .step.disabled:after,
+.bg-black .lt .steps .step:after,
+.bg-black .lt .steps .step.disabled:after {
+  background-color: #1d262d;
+}
+
+.bg-black.lt.steps .step:hover, .bg-black.lt.steps .step:hover:after,
+.bg-black.lt .steps .step:hover,
+.bg-black.lt .steps .step:hover:after,
+.bg-black .lt.steps .step:hover,
+.bg-black .lt.steps .step:hover:after,
+.bg-black .lt .steps .step:hover,
+.bg-black .lt .steps .step:hover:after {
+  background-color: #13191e;
+}
+
+.bg-black.lt.steps .step.active,
+.bg-black.lt .steps .step.active,
+.bg-black .lt.steps .step.active,
+.bg-black .lt .steps .step.active {
+  background-color: #090c0e;
+}
+
+.bg-black.lt.steps .step.active:after,
+.bg-black.lt .steps .step.active:after,
+.bg-black .lt.steps .step.active:after,
+.bg-black .lt .steps .step.active:after {
+  background-color: #090c0e;
+}
+
+.bg-black.lt.steps .step.active:hover, .bg-black.lt.steps .step.active:hover:after,
+.bg-black.lt .steps .step.active:hover,
+.bg-black.lt .steps .step.active:hover:after,
+.bg-black .lt.steps .step.active:hover,
+.bg-black .lt.steps .step.active:hover:after,
+.bg-black .lt .steps .step.active:hover,
+.bg-black .lt .steps .step.active:hover:after {
+  background-color: #13191e;
 }
 
 .bg-black.lt .list-group-item,
@@ -9881,6 +14881,64 @@ html, body {
   background-color: #26333e !important;
 }
 
+.bg-black.lter.steps,
+.bg-black.lter .steps,
+.bg-black .lter.steps,
+.bg-black .lter .steps {
+  border: 1px solid #13191e;
+}
+
+.bg-black.lter.steps .step:after,
+.bg-black.lter .steps .step:after,
+.bg-black .lter.steps .step:after,
+.bg-black .lter .steps .step:after {
+  border-color: #13191e;
+}
+
+.bg-black.lter.steps .step:after, .bg-black.lter.steps .step.disabled:after,
+.bg-black.lter .steps .step:after,
+.bg-black.lter .steps .step.disabled:after,
+.bg-black .lter.steps .step:after,
+.bg-black .lter.steps .step.disabled:after,
+.bg-black .lter .steps .step:after,
+.bg-black .lter .steps .step.disabled:after {
+  background-color: #26333e;
+}
+
+.bg-black.lter.steps .step:hover, .bg-black.lter.steps .step:hover:after,
+.bg-black.lter .steps .step:hover,
+.bg-black.lter .steps .step:hover:after,
+.bg-black .lter.steps .step:hover,
+.bg-black .lter.steps .step:hover:after,
+.bg-black .lter .steps .step:hover,
+.bg-black .lter .steps .step:hover:after {
+  background-color: #1d262e;
+}
+
+.bg-black.lter.steps .step.active,
+.bg-black.lter .steps .step.active,
+.bg-black .lter.steps .step.active,
+.bg-black .lter .steps .step.active {
+  background-color: #13191e;
+}
+
+.bg-black.lter.steps .step.active:after,
+.bg-black.lter .steps .step.active:after,
+.bg-black .lter.steps .step.active:after,
+.bg-black .lter .steps .step.active:after {
+  background-color: #13191e;
+}
+
+.bg-black.lter.steps .step.active:hover, .bg-black.lter.steps .step.active:hover:after,
+.bg-black.lter .steps .step.active:hover,
+.bg-black.lter .steps .step.active:hover:after,
+.bg-black .lter.steps .step.active:hover,
+.bg-black .lter.steps .step.active:hover:after,
+.bg-black .lter .steps .step.active:hover,
+.bg-black .lter .steps .step.active:hover:after {
+  background-color: #1d262e;
+}
+
 .bg-black.lter .list-group-item,
 .bg-black .lter .list-group-item {
   border-color: #2c3b47 !important;
@@ -9933,6 +14991,64 @@ html, body {
 .bg-black.ltest,
 .bg-black .ltest {
   background-color: #cdd9e3 !important;
+}
+
+.bg-black.ltest.steps,
+.bg-black.ltest .steps,
+.bg-black .ltest.steps,
+.bg-black .ltest .steps {
+  border: 1px solid #acc0d1;
+}
+
+.bg-black.ltest.steps .step:after,
+.bg-black.ltest .steps .step:after,
+.bg-black .ltest.steps .step:after,
+.bg-black .ltest .steps .step:after {
+  border-color: #acc0d1;
+}
+
+.bg-black.ltest.steps .step:after, .bg-black.ltest.steps .step.disabled:after,
+.bg-black.ltest .steps .step:after,
+.bg-black.ltest .steps .step.disabled:after,
+.bg-black .ltest.steps .step:after,
+.bg-black .ltest.steps .step.disabled:after,
+.bg-black .ltest .steps .step:after,
+.bg-black .ltest .steps .step.disabled:after {
+  background-color: #cdd9e3;
+}
+
+.bg-black.ltest.steps .step:hover, .bg-black.ltest.steps .step:hover:after,
+.bg-black.ltest .steps .step:hover,
+.bg-black.ltest .steps .step:hover:after,
+.bg-black .ltest.steps .step:hover,
+.bg-black .ltest.steps .step:hover:after,
+.bg-black .ltest .steps .step:hover,
+.bg-black .ltest .steps .step:hover:after {
+  background-color: #bccdda;
+}
+
+.bg-black.ltest.steps .step.active,
+.bg-black.ltest .steps .step.active,
+.bg-black .ltest.steps .step.active,
+.bg-black .ltest .steps .step.active {
+  background-color: #acc0d1;
+}
+
+.bg-black.ltest.steps .step.active:after,
+.bg-black.ltest .steps .step.active:after,
+.bg-black .ltest.steps .step.active:after,
+.bg-black .ltest .steps .step.active:after {
+  background-color: #acc0d1;
+}
+
+.bg-black.ltest.steps .step.active:hover, .bg-black.ltest.steps .step.active:hover:after,
+.bg-black.ltest .steps .step.active:hover,
+.bg-black.ltest .steps .step.active:hover:after,
+.bg-black .ltest.steps .step.active:hover,
+.bg-black .ltest.steps .step.active:hover:after,
+.bg-black .ltest .steps .step.active:hover,
+.bg-black .ltest .steps .step.active:hover:after {
+  background-color: #bccdda;
 }
 
 .bg-black.ltest .list-group-item,
@@ -9989,6 +15105,64 @@ html, body {
   background-color: #090c0e !important;
 }
 
+.bg-black.dk.steps,
+.bg-black.dk .steps,
+.bg-black .dk.steps,
+.bg-black .dk .steps {
+  border: 1px solid black;
+}
+
+.bg-black.dk.steps .step:after,
+.bg-black.dk .steps .step:after,
+.bg-black .dk.steps .step:after,
+.bg-black .dk .steps .step:after {
+  border-color: black;
+}
+
+.bg-black.dk.steps .step:after, .bg-black.dk.steps .step.disabled:after,
+.bg-black.dk .steps .step:after,
+.bg-black.dk .steps .step.disabled:after,
+.bg-black .dk.steps .step:after,
+.bg-black .dk.steps .step.disabled:after,
+.bg-black .dk .steps .step:after,
+.bg-black .dk .steps .step.disabled:after {
+  background-color: #090c0e;
+}
+
+.bg-black.dk.steps .step:hover, .bg-black.dk.steps .step:hover:after,
+.bg-black.dk .steps .step:hover,
+.bg-black.dk .steps .step:hover:after,
+.bg-black .dk.steps .step:hover,
+.bg-black .dk.steps .step:hover:after,
+.bg-black .dk .steps .step:hover,
+.bg-black .dk .steps .step:hover:after {
+  background-color: black;
+}
+
+.bg-black.dk.steps .step.active,
+.bg-black.dk .steps .step.active,
+.bg-black .dk.steps .step.active,
+.bg-black .dk .steps .step.active {
+  background-color: black;
+}
+
+.bg-black.dk.steps .step.active:after,
+.bg-black.dk .steps .step.active:after,
+.bg-black .dk.steps .step.active:after,
+.bg-black .dk .steps .step.active:after {
+  background-color: black;
+}
+
+.bg-black.dk.steps .step.active:hover, .bg-black.dk.steps .step.active:hover:after,
+.bg-black.dk .steps .step.active:hover,
+.bg-black.dk .steps .step.active:hover:after,
+.bg-black .dk.steps .step.active:hover,
+.bg-black .dk.steps .step.active:hover:after,
+.bg-black .dk .steps .step.active:hover,
+.bg-black .dk .steps .step.active:hover:after {
+  background-color: black;
+}
+
 .bg-black.dk .list-group-item,
 .bg-black .dk .list-group-item {
   border-color: #0f1417 !important;
@@ -10043,6 +15217,64 @@ html, body {
   background-color: black !important;
 }
 
+.bg-black.dker.steps,
+.bg-black.dker .steps,
+.bg-black .dker.steps,
+.bg-black .dker .steps {
+  border: 1px solid black;
+}
+
+.bg-black.dker.steps .step:after,
+.bg-black.dker .steps .step:after,
+.bg-black .dker.steps .step:after,
+.bg-black .dker .steps .step:after {
+  border-color: black;
+}
+
+.bg-black.dker.steps .step:after, .bg-black.dker.steps .step.disabled:after,
+.bg-black.dker .steps .step:after,
+.bg-black.dker .steps .step.disabled:after,
+.bg-black .dker.steps .step:after,
+.bg-black .dker.steps .step.disabled:after,
+.bg-black .dker .steps .step:after,
+.bg-black .dker .steps .step.disabled:after {
+  background-color: black;
+}
+
+.bg-black.dker.steps .step:hover, .bg-black.dker.steps .step:hover:after,
+.bg-black.dker .steps .step:hover,
+.bg-black.dker .steps .step:hover:after,
+.bg-black .dker.steps .step:hover,
+.bg-black .dker.steps .step:hover:after,
+.bg-black .dker .steps .step:hover,
+.bg-black .dker .steps .step:hover:after {
+  background-color: black;
+}
+
+.bg-black.dker.steps .step.active,
+.bg-black.dker .steps .step.active,
+.bg-black .dker.steps .step.active,
+.bg-black .dker .steps .step.active {
+  background-color: black;
+}
+
+.bg-black.dker.steps .step.active:after,
+.bg-black.dker .steps .step.active:after,
+.bg-black .dker.steps .step.active:after,
+.bg-black .dker .steps .step.active:after {
+  background-color: black;
+}
+
+.bg-black.dker.steps .step.active:hover, .bg-black.dker.steps .step.active:hover:after,
+.bg-black.dker .steps .step.active:hover,
+.bg-black.dker .steps .step.active:hover:after,
+.bg-black .dker.steps .step.active:hover,
+.bg-black .dker.steps .step.active:hover:after,
+.bg-black .dker .steps .step.active:hover,
+.bg-black .dker .steps .step.active:hover:after {
+  background-color: black;
+}
+
 .bg-black.dker .list-group-item,
 .bg-black .dker .list-group-item {
   border-color: #080808 !important;
@@ -10095,6 +15327,64 @@ html, body {
 .bg-black.bg,
 .bg-black .bg {
   background-color: #14191d;
+}
+
+.bg-black.bg.steps,
+.bg-black.bg .steps,
+.bg-black .bg.steps,
+.bg-black .bg .steps {
+  border: 1px solid black;
+}
+
+.bg-black.bg.steps .step:after,
+.bg-black.bg .steps .step:after,
+.bg-black .bg.steps .step:after,
+.bg-black .bg .steps .step:after {
+  border-color: black;
+}
+
+.bg-black.bg.steps .step:after, .bg-black.bg.steps .step.disabled:after,
+.bg-black.bg .steps .step:after,
+.bg-black.bg .steps .step.disabled:after,
+.bg-black .bg.steps .step:after,
+.bg-black .bg.steps .step.disabled:after,
+.bg-black .bg .steps .step:after,
+.bg-black .bg .steps .step.disabled:after {
+  background-color: #14191d;
+}
+
+.bg-black.bg.steps .step:hover, .bg-black.bg.steps .step:hover:after,
+.bg-black.bg .steps .step:hover,
+.bg-black.bg .steps .step:hover:after,
+.bg-black .bg.steps .step:hover,
+.bg-black .bg.steps .step:hover:after,
+.bg-black .bg .steps .step:hover,
+.bg-black .bg .steps .step:hover:after {
+  background-color: #0a0c0e;
+}
+
+.bg-black.bg.steps .step.active,
+.bg-black.bg .steps .step.active,
+.bg-black .bg.steps .step.active,
+.bg-black .bg .steps .step.active {
+  background-color: black;
+}
+
+.bg-black.bg.steps .step.active:after,
+.bg-black.bg .steps .step.active:after,
+.bg-black .bg.steps .step.active:after,
+.bg-black .bg .steps .step.active:after {
+  background-color: black;
+}
+
+.bg-black.bg.steps .step.active:hover, .bg-black.bg.steps .step.active:hover:after,
+.bg-black.bg .steps .step.active:hover,
+.bg-black.bg .steps .step.active:hover:after,
+.bg-black .bg.steps .step.active:hover,
+.bg-black .bg.steps .step.active:hover:after,
+.bg-black .bg .steps .step.active:hover,
+.bg-black .bg .steps .step.active:hover:after {
+  background-color: #0a0c0e;
 }
 
 .bg-black.bg .list-group-item,
@@ -10660,169 +15950,4 @@ html, body {
   .slimScrollRail {
     display: none !important;
   }
-}
-
-.avatar {
-  position: relative;
-  width: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  font-size: 1.2rem;
-  vertical-align: middle;
-}
-
-.avatar i {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 30%;
-  height: 30%;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 100%;
-}
-
-.avatar i.md {
-  width: 40%;
-  height: 40%;
-}
-
-.avatar i.right {
-  left: auto;
-  right: 0;
-}
-
-.avatar i.left {
-  left: 0;
-  right: auto;
-}
-
-.avatar i.top {
-  top: 0;
-  bottom: auto;
-}
-
-.avatar i.bottom {
-  top: auto;
-  bottom: 0;
-}
-
-.avatar i.on {
-  background-color: #5cb85c;
-}
-
-.avatar i.off {
-  background-color: #828E96;
-}
-
-.avatar i.busy {
-  background-color: #d9534f;
-}
-
-.avatar i.away {
-  background-color: #f0ad4e;
-}
-
-.avatar-text {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  width: 100%;
-  line-height: 50px;
-}
-
-.avatar-lg .avatar-text {
-  height: 128px;
-  line-height: 128px;
-  font-size: 3rem;
-}
-
-.avatar-md .avatar-text {
-  height: 64px;
-  line-height: 64px;
-  font-size: 1.8rem;
-}
-
-.avatar-sm .avatar-text {
-  height: 34px;
-  line-height: 34px;
-  font-size: .9rem;
-}
-
-.avatar-xs .avatar-text {
-  height: 24px;
-  line-height: 24px;
-  font-size: .7rem;
-}
-
-.avatar-lg {
-  width: 128px;
-}
-
-.avatar-md {
-  width: 64px;
-}
-
-.avatar-sm {
-  width: 34px;
-}
-
-.avatar-xs {
-  width: 24px;
-}
-
-.rating {
-  float: left;
-}
-
-.rating:not(:checked) > input {
-  clip: rect(0px, 0px, 0px, 0px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.rating:not(:checked) > label {
-  float: right;
-  width: 1em;
-  padding: 0 .1em;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  font-family: FontAwesome;
-  color: #e3e3ec;
-}
-
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-  content: "\f005";
-  color: #f0ad4e;
-}
-
-.rating:not(:checked) > label:before {
-  content: "\f005";
-}
-
-.rating > input:checked ~ label {
-  content: "\f005";
-  color: #f0ad4e;
-}
-
-.rating > label:active {
-  position: relative;
-  top: 0px;
-  left: 0px;
-}
-
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-  content: "\f005";
-  color: #f0ad4e;
 }

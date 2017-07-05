@@ -121,7 +121,7 @@ $brand-inverse:             $gray-dark !default;
 ////////////////////////////////////////////////////////////////////////
 // App - custom color
 
-$border-color: rgba($black,0.05) !default;
+$border-color: rgba($black,0.125) !default; //rgba($black,0.05) !default;
 
 $brand-black:           #14191d;
 $brand-dark:            #0D5257;
@@ -453,7 +453,7 @@ $input-bg:                       $white !default;
 $input-bg-disabled:              $gray-lighter !default;
 
 $input-color:                    $gray !default;
-$input-border-color:             rgba($black,.15) !default;
+$input-border-color:             rgba($black,.2) !default;
 $input-btn-border-width:         $border-width !default; // For form controls and buttons
 $input-box-shadow:               inset 0 1px 1px rgba($black,.075) !default;
 

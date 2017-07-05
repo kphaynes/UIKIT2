@@ -31,6 +31,44 @@
 }
 
 //
+// Step - Color Variation 
+//
+
+@mixin step-variant($bg-color) {
+  &.steps,
+    .steps {
+        border: 1px solid darken($bg-color, 10%);
+        .step {
+
+            // Arrow 
+            &:after {           
+                border-color: darken($bg-color, 10%);    
+            }
+            &:after,
+            &.disabled:after {
+                background-color: $bg-color;
+            }
+        
+            &:hover,
+            &:hover:after {
+                background-color: darken($bg-color, 5%);
+            }
+            
+            &.active {
+                background-color: darken($bg-color, 10%);
+                &:after{
+                      background-color: darken($bg-color, 10%);
+                }
+                &:hover,
+                &:hover:after {
+                      background-color: darken($bg-color, 5%);
+                }
+            }
+        }
+    }
+}
+
+//
 // Font
 //
 
@@ -134,35 +172,42 @@
 @mixin color-variant($bg-color: #555, $lt-percent: 10%, $lter-percent: 15%, $ltest-percent: 40%, $dk-percent: 10%, $dker-percent: 15%) {
 	background-color: $bg-color!important;
     //border-radius: inherit;
+    @include step-variant($bg-color);
     @include list-group-item($bg-color)
 	&.lt,
 	.lt {
         background-color: saturate(lighten($bg-color, $lt-percent), 2.5%)!important;
+        @include step-variant(saturate(lighten($bg-color, $lt-percent), 2.5%));
         @include list-group-item(saturate(lighten($bg-color, $lt-percent), 2.5%))
 	}
 	&.lter,
 	.lter {
         background-color: saturate(lighten($bg-color, $lter-percent), 5%)!important;
+        @include step-variant(saturate(lighten($bg-color, $lter-percent), 5%));
         @include list-group-item(saturate(lighten($bg-color, $lter-percent), 5%))
 	}
     &.ltest,
     .ltest {
         background-color: saturate(lighten($bg-color, $ltest-percent), 10%)!important;
+        @include step-variant(saturate(lighten($bg-color, $ltest-percent), 10%));
         @include list-group-item(saturate(lighten($bg-color, $ltest-percent), 10%))
     }
 	&.dk,
 	.dk {
         background-color: saturate(darken($bg-color, $dk-percent), 2.5%)!important;
+        @include step-variant(saturate(darken($bg-color, $dk-percent), 2.5%));
         @include list-group-item(saturate(darken($bg-color, $dk-percent), 2.5%))
 	}
 	&.dker,
 	.dker {
         background-color: saturate(darken($bg-color, $dker-percent), 5%)!important;
+        @include step-variant(saturate(darken($bg-color, $dker-percent), 5%));
         @include list-group-item(saturate(darken($bg-color, $dker-percent), 5%))
 	}
     &.bg,
     .bg{
         background-color: $bg-color;
+        @include step-variant($bg-color);
         @include list-group-item($bg-color)
     }
 }
